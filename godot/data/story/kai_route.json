@@ -1,0 +1,760 @@
+{
+ "k_a1_pod": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 1. The design pod looks like a bookshop exploded inside a greenhouse. Kai is pinning colour swatches to a board, humming.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Kai",
+    "text": "Fresh blood! Settle an argument for me. Lighthouse launch screen: calm ocean blue, or 'the future is now' electric violet?",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Violet. Make them feel something.'",
+      "effects": {
+       "affection_kai": 7
+      },
+      "next": "violet"
+     },
+     {
+      "text": "'Blue. People trust blue.'",
+      "effects": {
+       "affection_kai": 4,
+       "career": 2
+      },
+      "next": "blue"
+     },
+     {
+      "text": "'Why not the green from your plant there? It's lovely.'",
+      "effects": {
+       "affection_kai": 8
+      },
+      "next": "green"
+     }
+    ]
+   },
+   "violet": {
+    "speaker": "Kai",
+    "text": "YES. Finally, someone with a pulse. Marcus said violet was 'a lot.' Marcus thinks beige is 'a lot.'",
+    "next": "end"
+   },
+   "blue": {
+    "speaker": "Kai",
+    "text": "Ugh, sensible. Correct, probably. I'll make the blue sing, just for you.",
+    "next": "end"
+   },
+   "green": {
+    "speaker": "Kai",
+    "text": "...Oh. Oh, that's actually perfect. That's alive. You just did my job better than me in four seconds. Rude. I love it.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "Kai",
+    "text": "Come back any time. The pod has snacks and zero deadlines we respect.",
+    "terminal": true
+   }
+  }
+ },
+ "k_a1_lunch": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 2. You're eating a sad sandwich over your keyboard when a shadow falls across your desk.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Kai",
+    "text": "Absolutely not. Lunch is not a keyboard activity. Come on. Café. Real food. Laptops stay here, they'll survive without us.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "Close the laptop and go.",
+      "effects": {
+       "affection_kai": 8,
+       "energy": 8
+      },
+      "next": "go"
+     },
+     {
+      "text": "'I have a deadline at two.'",
+      "effects": {
+       "affection_kai": 2,
+       "career": 2
+      },
+      "next": "deadline"
+     }
+    ]
+   },
+   "go": {
+    "speaker": "",
+    "text": "Down in the café, Kai orders for both of you without asking, and is right about everything.",
+    "next": "n5"
+   },
+   "n5": {
+    "speaker": "Kai",
+    "text": "See? You look human again. People forget that the work gets better when you leave it alone for an hour.",
+    "next": "end"
+   },
+   "deadline": {
+    "speaker": "Kai",
+    "text": "There's always a deadline at two. There'll be one at two tomorrow, and the day after. I'll bring you a muffin. That's my compromise.",
+    "next": "n7"
+   },
+   "n7": {
+    "speaker": "",
+    "text": "Twenty minutes later, a muffin appears beside your keyboard, with a tiny drawing of you on the napkin, scowling at a spreadsheet.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "You catch yourself smiling at nothing in particular for the rest of the afternoon.",
+    "terminal": true
+   }
+  }
+ },
+ "k_a1_sketch": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 3. Lunch on the rooftop. Kai is sketching the skyline and, you slowly realise, also you.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Kai",
+    "text": "Don't move. You've got a very good 'thinking about something you shouldn't be' face. It's very drawable.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "Hold still and let them finish.",
+      "effects": {
+       "affection_kai": 7
+      },
+      "next": "still"
+     },
+     {
+      "text": "Lean over to see the sketchbook.",
+      "effects": {
+       "affection_kai": 5
+      },
+      "next": "peek"
+     },
+     {
+      "text": "'What are you thinking about, when you draw?'",
+      "effects": {
+       "affection_kai": 8
+      },
+      "next": "think"
+     }
+    ]
+   },
+   "still": {
+    "speaker": "",
+    "text": "Ten minutes. You don't move. Kai tears the page out and hands it to you. It's really, really good.",
+    "next": "end"
+   },
+   "peek": {
+    "speaker": "Kai",
+    "text": "Hey! Unfinished work is private. ...Fine. It's you, looking out at the city like you're trying to decide whether to jump into it.",
+    "next": "end"
+   },
+   "think": {
+    "speaker": "Kai",
+    "text": "Honestly? That I'm happy. It's a weird thing to notice. I didn't used to be. Drawing is how I check.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "The sketch ends up pinned to your monitor. People ask who drew it. You find you like saying their name.",
+    "terminal": true
+   }
+  }
+ },
+ "k_a2_crunch": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 4. After the all-hands. Marcus announces mandatory weekend work until launch. The floor groans. Kai doesn't groan. Kai stands up.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Kai",
+    "text": "I'll do my hours, and I'll do them brilliantly. But I'm not working weekends. Not again. I'll put it in writing if you'd like.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "",
+    "text": "Later, in the pod, Kai is shaking slightly and pretending not to be.",
+    "next": "n4"
+   },
+   "n4": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'That took guts. Why does it matter so much to you?'",
+      "effects": {
+       "affection_kai": 9,
+       "set_flags": [
+        "kai_values_clash"
+       ]
+      },
+      "next": "why"
+     },
+     {
+      "text": "'You might have just made yourself a target.'",
+      "effects": {
+       "affection_kai": 3,
+       "career": 2
+      },
+      "next": "target"
+     },
+     {
+      "text": "'I'm going to work the weekends. I need this launch.'",
+      "effects": {
+       "affection_kai": 1,
+       "career": 4,
+       "set_flags": [
+        "kai_values_clash"
+       ]
+      },
+      "next": "honest"
+     }
+    ]
+   },
+   "why": {
+    "speaker": "Kai",
+    "text": "Because the last place I worked, I said yes to every weekend for two years. Then one Tuesday I couldn't get out of bed. I'm not going back there. Not for any launch.",
+    "next": "end"
+   },
+   "target": {
+    "speaker": "Kai",
+    "text": "Maybe. Probably. Better a target than a ghost. I've been a ghost, it's worse.",
+    "next": "end"
+   },
+   "honest": {
+    "speaker": "Kai",
+    "text": "...Okay. That's honest, and I respect honest. Just promise me you'll notice if it starts costing more than it's paying.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "On your way home you realise Kai is the only person on the floor who looked relieved after the meeting. Everyone else just looked tired.",
+    "terminal": true
+   }
+  }
+ },
+ "k_a2_tired": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 5. You've had four hours of sleep. Your eyes feel like they've been sandpapered. Kai puts a hand flat on your keyboard.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Kai",
+    "text": "Okay. Intervention. Afternoon off. Rooftop, me, a terrible paperback and a flask of tea. Marcus will survive.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "Take the afternoon off with Kai.",
+      "effects": {
+       "affection_kai": 9,
+       "energy": 25,
+       "career": -3,
+       "set_flags": [
+        "kai_balance"
+       ]
+      },
+      "next": "off"
+     },
+     {
+      "text": "'An hour. I can give you an hour.'",
+      "effects": {
+       "affection_kai": 6,
+       "energy": 12
+      },
+      "next": "hour"
+     },
+     {
+      "text": "'Kai, I can't. Not this week.'",
+      "effects": {
+       "affection_kai": -2,
+       "career": 3
+      },
+      "next": "no"
+     }
+    ]
+   },
+   "off": {
+    "speaker": "",
+    "text": "You nap on a rooftop bench with your head on a rolled-up jacket while Kai reads aloud from the worst detective novel ever written. It is the best afternoon of the quarter.",
+    "next": "end"
+   },
+   "hour": {
+    "speaker": "Kai",
+    "text": "An hour I can work with. Phone in my bag. No, the whole phone. Thank you.",
+    "next": "end"
+   },
+   "no": {
+    "speaker": "Kai",
+    "text": "Not this week. It's never this week. ...Okay. I'll stop pushing. But the offer doesn't expire.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "Kai doesn't say 'I told you so' later. They just quietly leave a bottle of water on your desk every morning that week.",
+    "terminal": true
+   }
+  }
+ },
+ "k_a2_market": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 6. Friday, 6pm. Kai leans over the partition with a flyer for a Saturday flea market.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Kai",
+    "text": "Vintage lamps, terrible jewellery, dumplings the size of your fist. I go every month. Come with me. Bring nothing but appetite.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'I'm in. I'll even leave my laptop at home.'",
+      "effects": {
+       "affection_kai": 9,
+       "energy": 10,
+       "set_flags": [
+        "kai_balance",
+        "kai_date"
+       ]
+      },
+      "next": "yes"
+     },
+     {
+      "text": "'I've got launch prep. Rain check?'",
+      "effects": {
+       "affection_kai": -1,
+       "career": 4
+      },
+      "next": "no"
+     }
+    ]
+   },
+   "yes": {
+    "speaker": "",
+    "text": "Saturday. Kai haggles for a hideous ceramic frog with total conviction and gives it to you. You eat dumplings on a kerb. Nobody mentions Lighthouse once.",
+    "next": "n5"
+   },
+   "n5": {
+    "speaker": "Kai",
+    "text": "This. This is what I mean. Life is supposed to have a weekend in it. ...Thanks for coming. Really.",
+    "next": "end"
+   },
+   "no": {
+    "speaker": "Kai",
+    "text": "Rain check. Sure. My rain checks expire, by the way. Very quietly. Just so you know.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "Monday morning, there's a tiny drawing of a ceramic frog on a sticky note on your screen.",
+    "terminal": true
+   }
+  }
+ },
+ "k_a2_why": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 7. Late. Kai is still at the office, which is so unusual that you stop.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Kai",
+    "text": "Don't look at me like that. I'm leaving in five minutes. I just... got an email from my old agency. They want me back. Double the money.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "Kai",
+    "text": "It would be the same thing again. The weekends. The 2am calls. The bit where I stop drawing for fun. But it's double the money.",
+    "next": "n4"
+   },
+   "n4": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'You already know the answer. You told it to me in week four.'",
+      "effects": {
+       "affection_kai": 9,
+       "set_flags": [
+        "kai_open"
+       ]
+      },
+      "next": "know"
+     },
+     {
+      "text": "'Double is a lot. Maybe it'd be different this time.'",
+      "effects": {
+       "affection_kai": -3,
+       "career": 1
+      },
+      "next": "money"
+     },
+     {
+      "text": "'Whatever you choose, I'll still be here.'",
+      "effects": {
+       "affection_kai": 7,
+       "set_flags": [
+        "kai_open"
+       ]
+      },
+      "next": "here"
+     }
+    ]
+   },
+   "know": {
+    "speaker": "Kai",
+    "text": "...Yeah. I did. I just wanted someone to say it back to me in my own words. Thanks. Delete. Done.",
+    "next": "end"
+   },
+   "money": {
+    "speaker": "Kai",
+    "text": "Maybe. People always think it'll be different. ...I'm going to sleep on it.",
+    "next": "end"
+   },
+   "here": {
+    "speaker": "Kai",
+    "text": "That's... a very good reason not to go somewhere else, actually. Huh.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "They switch the lamp off, and for once they leave before you do.",
+    "terminal": true
+   }
+  }
+ },
+ "k_a2_deadline": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 8. The launch visuals are late. Marcus wants them tonight. Kai has already left, on time, as promised.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Marcus",
+    "text": "I need those files by morning. Can you reach Kai, or do I need to escalate?",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'I'll finish what I can myself. Leave Kai out of it tonight.'",
+      "effects": {
+       "affection_kai": 8,
+       "energy": -15,
+       "career": 2
+      },
+      "next": "cover"
+     },
+     {
+      "text": "Call Kai and ask them to come back in.",
+      "effects": {
+       "affection_kai": -5,
+       "career": 3
+      },
+      "next": "call"
+     },
+     {
+      "text": "'Give us until noon. They'll be better for it.'",
+      "effects": {
+       "affection_kai": 6,
+       "career": -1,
+       "reputation": 2
+      },
+      "next": "noon"
+     }
+    ]
+   },
+   "cover": {
+    "speaker": "",
+    "text": "You stay until midnight wrestling with layer masks. Your version is functional. Kai's version, at 9am, is art. They see your file and go very quiet.",
+    "next": "n5"
+   },
+   "n5": {
+    "speaker": "Kai",
+    "text": "You did this for me? Badly — sorry, but badly. You did it badly for me. Nobody's ever done anything badly for me before.",
+    "next": "end"
+   },
+   "call": {
+    "speaker": "Kai",
+    "text": "...Right. Of course. I'm coming in. It's fine. It's fine. It's fine.",
+    "next": "n7"
+   },
+   "n7": {
+    "speaker": "",
+    "text": "It is not fine. You can hear it in the way they say it three times.",
+    "next": "end"
+   },
+   "noon": {
+    "speaker": "Marcus",
+    "text": "Noon. Not a minute later. ...You're getting good at this, you know. Protecting people.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "The files arrive at 11:52, and they are gorgeous.",
+    "terminal": true
+   }
+  }
+ },
+ "k_a3_offer": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 10. Kai finds you at the café with a printed email and a face that can't decide what it's doing.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Kai",
+    "text": "A studio across the sea wants me. Four-day week. Design lead. They saw the Lighthouse visuals. It's the dream. It's also very, very far from here.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Go. And let me visit on all your Fridays off.'",
+      "effects": {
+       "affection_kai": 9,
+       "set_flags": [
+        "kai_balance"
+       ]
+      },
+      "next": "go"
+     },
+     {
+      "text": "'Stay. Make this place better instead. With me.'",
+      "effects": {
+       "affection_kai": 8
+      },
+      "next": "stay"
+     },
+     {
+      "text": "'That's amazing. You should take it.'",
+      "effects": {
+       "affection_kai": 3
+      },
+      "next": "polite"
+     }
+    ]
+   },
+   "go": {
+    "speaker": "Kai",
+    "text": "...You'd visit. On Fridays. You'd take Fridays off to visit me. Who even are you now? I'm so proud of you, it's unbearable.",
+    "next": "end"
+   },
+   "stay": {
+    "speaker": "Kai",
+    "text": "With you. Okay. That's... a bigger reason than a four-day week, possibly. Let me sit with it.",
+    "next": "end"
+   },
+   "polite": {
+    "speaker": "Kai",
+    "text": "Yeah. Yeah, I should. Thanks. ...I kind of hoped you'd say something else. Ignore me.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "Kai folds the email into a tiny paper frog and puts it in your pocket.",
+    "terminal": true
+   }
+  }
+ },
+ "k_a3_before": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 11. Launch week. Kai's violet-and-plant-green launch screen goes up in the lobby. People stop to take photos of it.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Kai",
+    "text": "They're photographing my colours. My actual colours. ...Gala's next week. Are you going to look at me like that at the gala? Because I'll need to prepare.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'I'm going to look at you exactly like this.'",
+      "effects": {
+       "affection_kai": 8
+      },
+      "next": "yes"
+     },
+     {
+      "text": "'Like what?' (You know exactly like what.)",
+      "effects": {
+       "affection_kai": 6
+      },
+      "next": "coy"
+     }
+    ]
+   },
+   "yes": {
+    "speaker": "Kai",
+    "text": "Okay. Good. Preparing. Heavily.",
+    "next": "end"
+   },
+   "coy": {
+    "speaker": "Kai",
+    "text": "Like the plant-green. Alive. Don't pretend. I've drawn your face too many times to fall for it.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "The gala is next week.",
+    "terminal": true
+   }
+  }
+ },
+ "kai_end_together": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 12. The Gala. Kai's launch screen glows violet and green behind the stage. At exactly 10pm, they find you and hold out a hand.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Kai",
+    "text": "It's ten. We said we'd leave at ten, remember? Real life. Dumplings. The frog misses you.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "",
+    "text": "You leave a work party early, on purpose, laughing, hand in hand. Behind you the gala goes on perfectly well without you.",
+    "next": "n4"
+   },
+   "n4": {
+    "speaker": "",
+    "text": "Months later there's a four-day week, a flat with too many plants, and a sketchbook full of you.",
+    "next": "n5"
+   },
+   "n5": {
+    "speaker": "",
+    "text": "♥ ROMANCE ENDING: 'Log Off.' You chose a life with a weekend in it, and someone to share it with. Thanks for playing Kai's route.",
+    "terminal": true
+   }
+  }
+ },
+ "kai_end_almost": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 12. The Gala. Kai dances with everyone, and with you twice. But at ten they leave, and you stay for the after-party with the directors.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Kai",
+    "text": "You're brilliant, you know. I just can't be the person waiting for you to log off. Call me when you're ready. I mean it. I'll pick up.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "",
+    "text": "♡ BITTERSWEET ENDING: 'Call Me When You Log Off.' The feeling was real. The timing wasn't. Thanks for playing Kai's route.",
+    "terminal": true
+   }
+  }
+ },
+ "kai_end_friends": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 12. The Gala. Kai drags you onto the dance floor and declares you their 'official work best friend' to the entire design team.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "",
+    "text": "It's not a love story. It's something sturdy and warm and full of muffins with tiny drawings on the napkins.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "",
+    "text": "◆ FRIENDSHIP ENDING: 'Official Work Best Friend.' Thanks for playing Kai's route.",
+    "terminal": true
+   }
+  }
+ },
+ "kai_end_missed": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 12. The Gala. Kai's colours fill the room. You realise you've barely spoken to them in weeks.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "",
+    "text": "They wave from across the room, friendly and far away. The rain checks expired quietly, just like they said.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "",
+    "text": "○ ENDING: 'Rain Check.' Thanks for playing Kai's route.",
+    "terminal": true
+   }
+  }
+ },
+ "kai_filler": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "Kai",
+    "text": "Deep in the colour zone right now. Come back with snacks and a strong opinion about fonts.",
+    "terminal": true
+   }
+  }
+ },
+ "kai_after": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "Kai",
+    "text": "Saturday market? The frog wants a friend. A matching frog. Don't argue.",
+    "terminal": true
+   }
+  }
+ }
+}

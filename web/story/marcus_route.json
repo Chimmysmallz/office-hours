@@ -1,0 +1,914 @@
+{
+ "m_a1_late": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 1. 8:40pm. The ninth floor is dark except for your monitor and the glow from the corner office.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "",
+    "text": "Marcus appears at the edge of your desk with two takeaway teas and the expression of a man who did not expect company.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "Marcus",
+    "text": "You're new. New people go home at six and pretend they don't check email. What's keeping you?",
+    "next": "n4"
+   },
+   "n4": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'The handover file has a broken formula. I couldn't leave it.'",
+      "effects": {
+       "affection_marcus": 6,
+       "career": 2
+      },
+      "next": "fix"
+     },
+     {
+      "text": "'Honestly? Trying to impress you.'",
+      "effects": {
+       "affection_marcus": 4
+      },
+      "next": "honest"
+     },
+     {
+      "text": "'Could ask you the same thing.'",
+      "effects": {
+       "affection_marcus": 7
+      },
+      "next": "same"
+     }
+    ]
+   },
+   "fix": {
+    "speaker": "Marcus",
+    "text": "...So did I, three years ago. I just never fixed it. That's on me. Show me.",
+    "next": "tea"
+   },
+   "honest": {
+    "speaker": "Marcus",
+    "text": "Bold thing to say to your manager in week one. Wrong method, though. Sleep impresses me more than overtime.",
+    "next": "tea"
+   },
+   "same": {
+    "speaker": "Marcus",
+    "text": "Fair. Fifteen years of habit. The building's quieter after eight. I think better when nobody needs anything from me.",
+    "next": "tea"
+   },
+   "tea": {
+    "speaker": "",
+    "text": "He sets one of the teas down by your keyboard. It isn't a gesture he makes a show of. He just does it.",
+    "next": "n9"
+   },
+   "n9": {
+    "speaker": "Marcus",
+    "text": "Go home. That's an instruction, not advice. ...And the formula thing. That's solid.",
+    "next": "n10"
+   },
+   "n10": {
+    "speaker": "",
+    "text": "He goes back to his office. The light stays on long after you leave.",
+    "terminal": true
+   }
+  }
+ },
+ "m_a1_coffee": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 2. The office coffee machine is making a noise like a dying jet engine. Marcus is crouched in front of it, sleeves rolled, losing.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Marcus",
+    "text": "Don't say anything. I have a master's degree. I've run teams of forty. This machine is beating me in front of a junior.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "Kneel down and help him take the back panel off.",
+      "effects": {
+       "affection_marcus": 7,
+       "energy": -3
+      },
+      "next": "help"
+     },
+     {
+      "text": "'Should I call facilities, or let you keep your dignity?'",
+      "effects": {
+       "affection_marcus": 6
+      },
+      "next": "tease"
+     },
+     {
+      "text": "Quietly hand him the manual from the drawer.",
+      "effects": {
+       "affection_marcus": 5
+      },
+      "next": "manual"
+     }
+    ]
+   },
+   "help": {
+    "speaker": "",
+    "text": "Ten minutes, one exploded filter and a lot of laughing later, it works. He has coffee grounds on his very expensive cuff.",
+    "next": "talk"
+   },
+   "tease": {
+    "speaker": "Marcus",
+    "text": "Facilities, please. My dignity left at 'dying jet engine.' ...You're funny. Nobody told me you were funny.",
+    "next": "talk"
+   },
+   "manual": {
+    "speaker": "Marcus",
+    "text": "There's a manual. Of course there's a manual. Don't tell Zara. She'll put it in the team newsletter.",
+    "next": "talk"
+   },
+   "talk": {
+    "speaker": "Marcus",
+    "text": "I used to be the one who fixed things myself. Somewhere along the way I became the one who sends emails about things being fixed.",
+    "next": "n8"
+   },
+   "n8": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'You could still be both.'",
+      "effects": {
+       "affection_marcus": 6
+      },
+      "next": "both"
+     },
+     {
+      "text": "'Sounds lonely, up in the corner office.'",
+      "effects": {
+       "affection_marcus": 4,
+       "set_flags": [
+        "marcus_noticed_lonely"
+       ]
+      },
+      "next": "lonely"
+     }
+    ]
+   },
+   "both": {
+    "speaker": "Marcus",
+    "text": "Maybe. Don't spread that around. I have a reputation for being unreadable to protect.",
+    "next": "out"
+   },
+   "lonely": {
+    "speaker": "Marcus",
+    "text": "...That's a very direct thing to say to your boss. It's also not wrong. Let's leave it there.",
+    "next": "out"
+   },
+   "out": {
+    "speaker": "",
+    "text": "He hands you the first cup from the resurrected machine. It's terrible. You both drink it anyway.",
+    "terminal": true
+   }
+  }
+ },
+ "m_a1_review": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 3. Your first one-to-one. Marcus has printed your work. Printed it. With notes in the margins, in very neat handwriting.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Marcus",
+    "text": "Your analysis is sharp. Your slides are a crime scene. Both are fixable. Which do you want first?",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'The crime scene. Hit me.'",
+      "effects": {
+       "affection_marcus": 5,
+       "career": 4
+      },
+      "next": "slides"
+     },
+     {
+      "text": "'What would you do differently, in my seat?'",
+      "effects": {
+       "affection_marcus": 7,
+       "career": 2
+      },
+      "next": "seat"
+     }
+    ]
+   },
+   "slides": {
+    "speaker": "Marcus",
+    "text": "Twenty-three bullet points on one slide. Twenty-three. I counted twice because I didn't believe it. One idea per slide. Make them hungry for the next one.",
+    "next": "q"
+   },
+   "seat": {
+    "speaker": "Marcus",
+    "text": "In your seat? I'd ask more questions out loud. You have good ones. You keep them in your notebook like they're contraband.",
+    "next": "q"
+   },
+   "q": {
+    "speaker": "",
+    "text": "There's a pause at the end. The kind where a meeting could end, or something else could start.",
+    "next": "n7"
+   },
+   "n7": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Can I ask you something that isn't about work?'",
+      "effects": {
+       "affection_marcus": 6
+      },
+      "next": "personal"
+     },
+     {
+      "text": "'Thank you. Same time next month?'",
+      "effects": {
+       "affection_marcus": 3,
+       "career": 2
+      },
+      "next": "proper"
+     }
+    ]
+   },
+   "personal": {
+    "speaker": "Marcus",
+    "text": "...You can ask. I may not answer. I'm your manager, and there's a line, and I'm usually very good at standing on the right side of it. Go on.",
+    "next": "n9"
+   },
+   "n9": {
+    "speaker": "",
+    "text": "You ask why he stayed fifteen years. He looks at the window for a long time.",
+    "next": "n10"
+   },
+   "n10": {
+    "speaker": "Marcus",
+    "text": "Because the work mattered, and then because I was good at it, and then because leaving felt like admitting the first two weren't enough. That's more than I meant to say.",
+    "next": "close"
+   },
+   "proper": {
+    "speaker": "Marcus",
+    "text": "Same time next month. Bring fewer bullet points.",
+    "next": "close"
+   },
+   "close": {
+    "speaker": "",
+    "text": "You leave with a page of margin notes. At the bottom, in the same neat hand: 'Good start. Keep going.'",
+    "terminal": true
+   }
+  }
+ },
+ "m_a2_pressure": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 4. After the all-hands. Marcus's door is open, which it never is when he's angry. He's angry.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Marcus",
+    "text": "Vaughn wants the Lighthouse team cut by two after launch. He wants me to pick the names. He wants it 'by Friday, discreetly.'",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "Marcus",
+    "text": "...I shouldn't be telling a junior this. Forget I said it.",
+    "next": "n4"
+   },
+   "n4": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'I won't repeat it. But you can't carry that alone.'",
+      "effects": {
+       "affection_marcus": 8
+      },
+      "next": "carry"
+     },
+     {
+      "text": "'Is my name on that list?'",
+      "effects": {
+       "affection_marcus": 2,
+       "career": 1
+      },
+      "next": "list"
+     },
+     {
+      "text": "'Then don't pick. Make the case that the team is the product.'",
+      "effects": {
+       "affection_marcus": 6,
+       "career": 3
+      },
+      "next": "case"
+     }
+    ]
+   },
+   "carry": {
+    "speaker": "Marcus",
+    "text": "I've carried worse alone. But... thank you. It's strange, hearing someone worry about me in this building.",
+    "next": "end"
+   },
+   "list": {
+    "speaker": "Marcus",
+    "text": "There is no list yet. And you'd be the last name on it, not that I'm supposed to say that either. Stop making me say things.",
+    "next": "end"
+   },
+   "case": {
+    "speaker": "Marcus",
+    "text": "...That's not a bad argument. Write it up. Not for me — for Vaughn, with your name on it. Brave people get noticed.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "When you leave, he closes the door behind you. Through the glass you see him sit very still, then pick up the phone.",
+    "terminal": true
+   }
+  }
+ },
+ "m_a2_rooftop": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 5. After work. You head up to the rooftop for air and find Marcus on a bench, tie off, phone face down beside him.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Marcus",
+    "text": "My sister's getting married. Tonight. In another city. I'm here because Vaughn moved the launch review to tomorrow morning.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "Marcus",
+    "text": "I told her I'd watch the video. She said, 'You always watch the video, Marcus.' She's right. I'm a world-class video watcher.",
+    "next": "n4"
+   },
+   "n4": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "Sit down next to him and say nothing for a while.",
+      "effects": {
+       "affection_marcus": 9,
+       "set_flags": [
+        "marcus_wall_broken"
+       ]
+      },
+      "next": "sit"
+     },
+     {
+      "text": "'There's a late train. Go. I'll cover the review prep.'",
+      "effects": {
+       "affection_marcus": 7,
+       "energy": -8,
+       "career": 2
+      },
+      "next": "go"
+     },
+     {
+      "text": "'You chose the job. That's allowed. Just make sure it's still a choice.'",
+      "effects": {
+       "affection_marcus": 6,
+       "set_flags": [
+        "marcus_wall_broken"
+       ]
+      },
+      "next": "choice"
+     }
+    ]
+   },
+   "sit": {
+    "speaker": "",
+    "text": "The city hums below. After a while he laughs, quietly, at nothing.",
+    "next": "n6"
+   },
+   "n6": {
+    "speaker": "Marcus",
+    "text": "Fifteen years and I can't remember the last time someone just sat with me. Everyone wants a decision. You just... stayed.",
+    "next": "end"
+   },
+   "go": {
+    "speaker": "Marcus",
+    "text": "You'd do that? ...No. I can't let a junior stay up all night so I can go dance at a wedding. But the fact you offered — I'll remember it.",
+    "next": "end"
+   },
+   "choice": {
+    "speaker": "Marcus",
+    "text": "Is it still a choice? I genuinely don't know. That frightens me more than Vaughn does.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "For the first time, he isn't unreadable at all. He looks tired, and a little lonely, and very human.",
+    "terminal": true
+   }
+  }
+ },
+ "m_a2_vaughn": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 6. Vaughn intercepts you in the meeting room, all charm and expensive watch.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Vaughn",
+    "text": "I'll be quick. Marcus is a good man, sentimental about his team. I need someone close to him to tell me what he's planning before he plans it. Help me, and the lead role gets a lot less competitive.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'No. And I'm going to tell Marcus you asked.'",
+      "effects": {
+       "affection_marcus": 9,
+       "reputation": 4,
+       "set_flags": [
+        "exposed_vaughn",
+        "marcus_loyal"
+       ]
+      },
+      "next": "expose"
+     },
+     {
+      "text": "'I'll think about it.' Then quietly warn Marcus anyway.",
+      "effects": {
+       "affection_marcus": 6,
+       "set_flags": [
+        "marcus_loyal"
+       ]
+      },
+      "next": "quiet"
+     },
+     {
+      "text": "'What exactly would you need?'",
+      "effects": {
+       "career": 6,
+       "affection_marcus": -8,
+       "set_flags": [
+        "marcus_spy"
+       ]
+      },
+      "next": "spy"
+     }
+    ]
+   },
+   "expose": {
+    "speaker": "Vaughn",
+    "text": "...Brave. Unwise. We'll see how brave you feel in Week 10.",
+    "next": "n5"
+   },
+   "n5": {
+    "speaker": "",
+    "text": "You walk straight into Marcus's office and tell him everything. He listens without blinking, then forwards one email to HR and one to the CFO.",
+    "next": "n6"
+   },
+   "n6": {
+    "speaker": "Marcus",
+    "text": "You understand you just picked a side against a senior director. For me. ...Nobody's done that before. Thank you. Now go — and stay out of rooms alone with him.",
+    "next": "end"
+   },
+   "quiet": {
+    "speaker": "",
+    "text": "You give Vaughn a non-answer. That evening you leave a note on Marcus's keyboard: 'Vaughn is asking about you. Be careful.'",
+    "next": "n8"
+   },
+   "n8": {
+    "speaker": "Marcus",
+    "text": "Found your note. Unsigned, but your handwriting is as bad as your early slides. Thank you. I owe you one.",
+    "next": "end"
+   },
+   "spy": {
+    "speaker": "Vaughn",
+    "text": "Smart. Just small things. Who he meets. What he says about the cuts. Nothing that would hurt anyone.",
+    "next": "n10"
+   },
+   "n10": {
+    "speaker": "",
+    "text": "It feels like it hurts someone already.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "Marcus waves at you through the glass on your way out. You don't quite manage to wave back.",
+    "terminal": true
+   }
+  }
+ },
+ "m_a2_line": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 7. The launch review runs until 11pm. The rain is biblical. You and Marcus end up sharing the last taxi.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "",
+    "text": "The city smears past the window. Neither of you is talking about work. You haven't for twenty minutes.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "Marcus",
+    "text": "I need to say something, and then I need you to help me be sensible about it.",
+    "next": "n4"
+   },
+   "n4": {
+    "speaker": "Marcus",
+    "text": "I look forward to our one-to-ones more than I should. I find reasons to walk past your desk. I'm your manager. That's not a small thing. It's the whole thing.",
+    "next": "n5"
+   },
+   "n5": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Then we wait until it isn't the whole thing.'",
+      "effects": {
+       "affection_marcus": 10,
+       "set_flags": [
+        "marcus_boundary"
+       ]
+      },
+      "next": "wait"
+     },
+     {
+      "text": "'I feel it too. I don't care about the org chart.'",
+      "effects": {
+       "affection_marcus": 8
+      },
+      "next": "push"
+     },
+     {
+      "text": "'You're right. Let's keep it professional.'",
+      "effects": {
+       "affection_marcus": -2,
+       "reputation": 2,
+       "set_flags": [
+        "marcus_closed"
+       ]
+      },
+      "next": "close"
+     }
+    ]
+   },
+   "wait": {
+    "speaker": "Marcus",
+    "text": "...Wait. Yes. That's the sensible answer, and it's also the kind one. You keep doing that. Being both.",
+    "next": "n7"
+   },
+   "n7": {
+    "speaker": "",
+    "text": "He doesn't touch your hand. He doesn't need to. The taxi stops outside your building, and he says goodnight like it costs him something.",
+    "next": "end"
+   },
+   "push": {
+    "speaker": "Marcus",
+    "text": "You should care. I have to. If anything happened while I sign off your reviews, everything you earn here gets a question mark next to it. I won't do that to you.",
+    "next": "n9"
+   },
+   "n9": {
+    "speaker": "",
+    "text": "He says it gently. It doesn't land gently.",
+    "next": "end"
+   },
+   "close": {
+    "speaker": "Marcus",
+    "text": "Thank you. You're right. I'm sorry I made it awkward.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "Monday he is exactly, perfectly professional. It's what you asked for. It still feels like a door closing quietly.",
+    "terminal": true
+   }
+  }
+ },
+ "m_a2_hr": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 8. A rumour reaches the ninth floor: someone saw you and Marcus get into a taxi together. Someone, it turns out, who reports to Vaughn.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Zara",
+    "text": "Heads up. The kitchen is talking about you and the corner office. I'm not asking. I'm telling you so you're not blindsided.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "",
+    "text": "An HR meeting appears in your calendar. Marcus is already in the room when you arrive.",
+    "next": "n4"
+   },
+   "n4": {
+    "speaker": "Marcus",
+    "text": "I've told HR the facts. We shared a taxi in a storm after a work event. I've also told them, voluntarily, that if anything ever changes, I'll declare it before it does.",
+    "next": "n5"
+   },
+   "n5": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "Back him up calmly, with the same facts.",
+      "effects": {
+       "affection_marcus": 7,
+       "reputation": 4
+      },
+      "next": "calm"
+     },
+     {
+      "text": "'This is Vaughn. He's trying to get to Marcus through me.'",
+      "effects": {
+       "affection_marcus": 5,
+       "reputation": -2,
+       "career": -2
+      },
+      "next": "accuse"
+     }
+    ]
+   },
+   "calm": {
+    "speaker": "",
+    "text": "HR closes the file in ten minutes. Outside, Marcus exhales for what seems like the first time all week.",
+    "next": "n7"
+   },
+   "n7": {
+    "speaker": "Marcus",
+    "text": "You handled that better than most directors would. ...I meant what I said in there. About declaring it. Before, not after.",
+    "next": "end"
+   },
+   "accuse": {
+    "speaker": "",
+    "text": "HR goes very still and writes something down. Marcus closes his eyes for just a second.",
+    "next": "n9"
+   },
+   "n9": {
+    "speaker": "Marcus",
+    "text": "You're not wrong. But you can't win that fight in that room. Next time, let me take the hit. That's my job.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "It blows over. Mostly. People look at the two of you slightly longer than they used to.",
+    "terminal": true
+   }
+  }
+ },
+ "m_a3_offer": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 10. Marcus asks you to the rooftop. It's the first time he's ever asked you anywhere that isn't a meeting room.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Marcus",
+    "text": "The CFO has offered me a director role. Strategy, two floors up. After launch I wouldn't run Lighthouse anymore. Someone else would. I wouldn't manage you.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "Marcus",
+    "text": "I haven't said yes. I wanted to ask you first, which is a very unprofessional sentence, and I'm saying it anyway.",
+    "next": "n4"
+   },
+   "n4": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Take it because it's right for you. Not because of me.'",
+      "effects": {
+       "affection_marcus": 9,
+       "set_flags": [
+        "marcus_boundary"
+       ]
+      },
+      "next": "right"
+     },
+     {
+      "text": "'Take it. Then ask me to dinner.'",
+      "effects": {
+       "affection_marcus": 8
+      },
+      "next": "dinner"
+     },
+     {
+      "text": "'Stay. Lighthouse needs you more than strategy does.'",
+      "effects": {
+       "affection_marcus": 3,
+       "career": 3
+      },
+      "next": "stay"
+     }
+    ]
+   },
+   "right": {
+    "speaker": "Marcus",
+    "text": "It is right for me. I've known that for a year. I just needed someone to say it was allowed. ...You keep giving me permission to be a person.",
+    "next": "end"
+   },
+   "dinner": {
+    "speaker": "Marcus",
+    "text": "...That is the most direct thing anyone has ever said to me on this roof. Ask me again after launch. I suspect the answer will be yes.",
+    "next": "end"
+   },
+   "stay": {
+    "speaker": "Marcus",
+    "text": "Maybe. Or maybe it needs someone new. Someone like you. Think about that before you tell me to stay.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "The sun goes down behind the city. He doesn't check his phone once.",
+    "terminal": true
+   }
+  }
+ },
+ "m_a3_before": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 11. Launch week. Everything is on fire in the normal, survivable way. Marcus finds you at your desk at 7am.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Marcus",
+    "text": "Whatever happens at the gala, I want you to know: you were the best hire I've made in a decade. That's not your manager talking. Well. It is. But it's also me.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Save me a dance. Strictly professional.'",
+      "effects": {
+       "affection_marcus": 7
+      },
+      "next": "dance"
+     },
+     {
+      "text": "'Same to you. Best boss I've had. Also, the slides are down to eight bullets.'",
+      "effects": {
+       "affection_marcus": 6,
+       "career": 2
+      },
+      "next": "slides"
+     }
+    ]
+   },
+   "dance": {
+    "speaker": "Marcus",
+    "text": "Strictly. I'll be counting the bullet points the whole time.",
+    "next": "end"
+   },
+   "slides": {
+    "speaker": "Marcus",
+    "text": "Eight. I'm moved. Genuinely. That's solid.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "The gala is next week. Whatever this is, it's waiting for you there.",
+    "terminal": true
+   }
+  }
+ },
+ "marcus_end_after": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 12. The Gala. Lighthouse launches without a hitch. Two floors up, a new name plate reads 'Marcus, Director of Strategy.' Your reviews now go to someone else entirely.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "",
+    "text": "He declared it to HR on Monday, exactly as promised. Before, not after. The form took four minutes. He says it was the bravest four minutes of his career.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "Marcus",
+    "text": "So. I'm not your manager. I've checked twice. HR has checked three times. Would you like to have dinner with me? Not a meeting. No slides.",
+    "next": "n4"
+   },
+   "n4": {
+    "speaker": "",
+    "text": "You say yes. He laughs like a man who's been holding his breath since a taxi in the rain.",
+    "next": "n5"
+   },
+   "n5": {
+    "speaker": "",
+    "text": "♥ ROMANCE ENDING: 'Before, Not After.' You waited until it was right, and it was worth the wait. Thanks for playing Marcus's route.",
+    "terminal": true
+   }
+  }
+ },
+ "marcus_end_almost": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 12. The Gala. Marcus stayed on Lighthouse. You stayed on his team. Everything the two of you feel is still there, standing politely on the right side of a line.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Marcus",
+    "text": "One dance. Strictly professional. ...I'm not good at this part. Waiting. But I'd rather wait than put a question mark next to anything you earn.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "",
+    "text": "You dance. You don't kiss. Something in the way he says goodnight sounds like 'not yet' rather than 'no.'",
+    "next": "n4"
+   },
+   "n4": {
+    "speaker": "",
+    "text": "♡ BITTERSWEET ENDING: 'Not Yet.' Close, so close. The door is open, if either of you is ever brave enough to change the org chart. Thanks for playing Marcus's route.",
+    "terminal": true
+   }
+  }
+ },
+ "marcus_end_mentor": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 12. The Gala. Marcus raises a glass to the new Lighthouse team, then stops beside you.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Marcus",
+    "text": "I've put your name forward for the leadership programme. I'll sponsor you. Whatever you need — a reference, a hard conversation, a slide with fewer than twenty-three bullets — you have my number.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "",
+    "text": "It isn't romance. It's something rarer in this building: someone senior who is completely on your side.",
+    "next": "n4"
+   },
+   "n4": {
+    "speaker": "",
+    "text": "▲ CAREER ENDING: 'That's Solid.' You gained a mentor for life. Thanks for playing Marcus's route.",
+    "terminal": true
+   }
+  }
+ },
+ "marcus_end_distance": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 12. The Gala. Marcus gives a gracious speech, thanks the team by name, and shakes your hand like he shakes everyone's.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "",
+    "text": "Whatever almost started on that rooftop never quite did. He's a good manager. You're a good employee. That's all it ever needed to be, apparently.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "",
+    "text": "○ ENDING: 'Professional Distance.' Some lines stay uncrossed. Thanks for playing Marcus's route.",
+    "terminal": true
+   }
+  }
+ },
+ "marcus_filler": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "Marcus",
+    "text": "Back-to-back meetings until six, I'm afraid. Leave it in my inbox and I'll give it real attention tonight.",
+    "terminal": true
+   }
+  }
+ },
+ "marcus_after": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "Marcus",
+    "text": "Lunch on Thursday? I found a place with no whiteboards. It's very relaxing. Slightly unsettling.",
+    "terminal": true
+   }
+  }
+ }
+}

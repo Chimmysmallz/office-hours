@@ -1,0 +1,199 @@
+{
+	"a3_looms": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 9. The offsite glow is gone. The decision lands next week and the whole floor can feel it, like weather coming in. Zara catches your eye over the top of her monitor.", "next": "n2" },
+			"n2": { "speaker": "Zara", "text": "I need to ask you something and I need the real answer. Not the kind one. If they offer it to you — the lead — do you take it?", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'I don't know yet. But I won't take it in a way that costs me you.'", "effects": { "affection_zara": 9 }, "next": "honest" },
+				{ "text": "'Yes. I'd take it. And I'd still want you. Both true.'", "effects": { "affection_zara": 5, "career": 5 }, "next": "ambitious" },
+				{ "text": "'If it's you or the job, it was never really a contest.'", "effects": { "affection_zara": 7 }, "next": "devoted" }
+			]},
+			"honest": { "speaker": "Zara", "text": "That's the real answer. I can build on the real answer. Thank you for not handing me the comfortable one — I'd have known, and it would've been worse.", "next": "end" },
+			"ambitious": { "speaker": "Zara", "text": "At least you're honest about it. I respect the honesty. And I'm going to fight you for it — fairly, out loud, no Vaughn nonsense. But I'm going to fight. Fair warning.", "next": "end" },
+			"devoted": { "speaker": "Zara", "text": "...Don't. Don't make yourself small for me. That's not what I want and it's not what you want either, and I'd resent us both for it eventually. But — god, it's a nice thing to hear once.", "next": "end" },
+			"end": { "speaker": "", "text": "Whatever comes next week, at least you're walking into it with your eyes open and your cards on the table.", "terminal": true }
+		}
+	},
+
+	"a3_priya_final": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Priya requests a 'quick sync.' It is not quick and it is not a sync. It's a last play.", "next": "n2" },
+			"n2": { "speaker": "Priya", "text": "I'll be direct, because we're past pretending. Leadership's down to you and Zara — I read the room, I'm out. So here's my offer: back my read on the launch strategy publicly, and I'll tell Marcus you're the one who should lead. My word still carries.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'I don't need your endorsement bought. But thanks.'", "effects": { "reputation": 6, "affection_priya": 4 }, "next": "decline" },
+				{ "text": "'Why not back Zara? She's earned it more than I have.'", "effects": { "affection_zara": 8 }, "next": "zara" },
+				{ "text": "'...I'm listening.' Take the endorsement.", "effects": { "career": 10, "affection_zara": -3, "set_flags": ["priya_deal"] }, "next": "deal" }
+			]},
+			"decline": { "speaker": "Priya", "text": "Clean. Unbought. You know, I came in here sure you'd take it. I'm oddly pleased you didn't. Don't tell anyone I said that. Ever.", "next": "end" },
+			"zara": { "speaker": "Priya", "text": "Because Zara never once tried to charm me and you're at least fun to lose to. But — noted. You'd throw your own weight behind her. That's either love or a strategy, and I genuinely can't tell which. Impressive either way.", "next": "end" },
+			"deal": { "speaker": "Priya", "text": "There he is. The realist. I'll talk to Marcus. Just remember — the second Zara finds out how you got the nudge, and she will, this stops being free.", "next": "end" },
+			"end": { "speaker": "", "text": "Priya folds her cards and leaves the table. The field is down to two now — you and the person you're falling for.", "terminal": true }
+		}
+	},
+
+	"a3_offer": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 10. It comes early. Marcus pulls you into his office and closes the door — the first time he's ever closed the door.", "next": "n2" },
+			"n2": { "speaker": "Marcus", "text": "The lead is yours, if you want it. You've done the work, you lift the team, and — off the record — you didn't play dirty when you had chances to. That mattered to me. Zara doesn't know yet. What do you want to do?", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'Make us co-leads. Lighthouse is better with both of us running it.'", "effects": { "affection_zara": 10, "career": 6, "set_flags": ["co_leads", "zara_integrity"] }, "next": "coleads" },
+				{ "text": "'I'll take it. I earned it. I'll make things right with her after.'", "effects": { "career": 14, "set_flags": ["took_lead"] }, "next": "took" },
+				{ "text": "'Give it to Zara. She's the right lead, and you know it.'", "effects": { "affection_zara": 12, "career": -6, "set_flags": ["stepped_aside", "zara_integrity"] }, "next": "aside" }
+			]},
+			"coleads": { "speaker": "Marcus", "text": "A co-lead structure. Unusual. Reckless, maybe. But you'd be surprised how rarely anyone offers to share a win. Pitch it to me properly and I'll take it upstairs. Go tell her yourself — she should hear it from you.", "next": "end" },
+			"took": { "speaker": "Marcus", "text": "Then it's yours. Congratulations — you earned every bit of it. For what it's worth: how you handle the next hour, walking out past her desk, is the part people will actually remember. Choose it carefully.", "next": "end" },
+			"aside": { "speaker": "Marcus", "text": "...That's a big thing to give away. I'll be honest, I didn't expect it, and I'll need you to be sure. ...You're sure. Okay. That tells me something about you I won't forget. Leave it with me.", "next": "end" },
+			"end": { "speaker": "", "text": "You walk out of that office a different person than you walked in. Somewhere down the aisle, Zara is about to find out what you chose.", "terminal": true }
+		}
+	},
+
+	"a3_reaction_coleads": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "You find her at desk 13 and tell her before anyone else can. That you had it outright. That you asked them to split it.", "next": "n2" },
+			"n2": { "speaker": "Zara", "text": "You did WHAT? You had it. Clean. Yours. And you walked in there and asked them to give me half?", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'Lighthouse is ours. It was never going to feel right any other way.'", "effects": { "affection_zara": 10 }, "next": "a" },
+				{ "text": "'I don't want a version of this where winning means beating you.'", "effects": { "affection_zara": 11 }, "next": "a" }
+			]},
+			"a": { "speaker": "Zara", "text": "...That is either the smartest or the most reckless thing anyone has ever done for me. Knowing you, both. Okay. OKAY. Co-leads. Partners. Let's go win this thing and terrify everyone with how good we are together.", "next": "end" },
+			"end": { "speaker": "", "text": "For the first time since the announcement, the wall isn't just down — it's like it was never there.", "terminal": true }
+		}
+	},
+
+	"a3_reaction_took": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "You take it. It feels the way you imagined — for about an hour. Then you have to walk past desk 13, where Zara is finding out from the org chart, not from you.", "next": "n2" },
+			"n2": { "speaker": "Zara", "text": "Congratulations. Genuinely. You were good. You were better than me where it counted with Marcus. I mean that.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'I should have told you first. I'm sorry. Let me make this right.'", "effects": { "affection_zara": 4 }, "next": "sorry" },
+				{ "text": "'You'd have taken it too. We both know that.'", "effects": { "affection_zara": -2, "career": 3 }, "next": "cold" }
+			]},
+			"sorry": { "speaker": "Zara", "text": "Maybe you can. Maybe not. Right now I need to go be professional in the bathroom for a while. We'll talk. Later. When it doesn't feel like this.", "next": "end" },
+			"cold": { "speaker": "Zara", "text": "...Maybe I would have. But I'd have told you to your face first. That's the whole difference, and it turns out it's the entire thing.", "next": "end" },
+			"end": { "speaker": "", "text": "The office is yours. There's a crack running through the other thing now, and you'll spend the last stretch finding out if it can be mended — or if this was the trade all along.", "terminal": true }
+		}
+	},
+
+	"a3_reaction_aside": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Word travels before you can. By afternoon Zara knows you were offered the lead — and told Marcus to give it to her instead. She corners you by the rooftop door, furious and glassy-eyed.", "next": "n2" },
+			"n2": { "speaker": "Zara", "text": "I didn't ASK you to do that. I don't want to win it because you handed it to me out of some — some grand gesture. What am I supposed to do with that?", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'You didn't need me to hand it to you. You needed someone to stop pretending you hadn't already earned it.'", "effects": { "affection_zara": 10 }, "next": "a" },
+				{ "text": "'I'd rather see you have it than have it myself. That's not a gesture. That's just true.'", "effects": { "affection_zara": 9 }, "next": "a" }
+			]},
+			"a": { "speaker": "Zara", "text": "...God, you infuriating, generous idiot. You don't get to be this person and also expect me not to fall completely — okay. Okay. I'm keeping it. And I'm keeping you. Both. Don't argue.", "next": "end" },
+			"end": { "speaker": "", "text": "She's angry and she's undone and she's yours, all at once. One week to the gala.", "terminal": true }
+		}
+	},
+
+	"a3_marcus_final": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Marcus catches you at the coffee point. No door to close here, so he just lowers his voice.", "next": "n2" },
+			"n2": { "speaker": "Marcus", "text": "Whatever shakes out at the gala — the launch, the title, you and Zara, which is not as much of a secret as you two think — I want to say one thing. In fifteen years here, the people who lasted weren't the ones who won the most. They were the ones who stayed someone they could live with. You're on the right list. Don't fall off it.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'That means a lot coming from you, Marcus.'", "effects": { "affection_marcus": 5, "reputation": 4 }, "next": "a" },
+				{ "text": "'Was it that obvious? Me and Zara?'", "effects": { "affection_zara": 4 }, "next": "b" }
+			]},
+			"a": { "speaker": "Marcus", "text": "It's meant to. Now go get ready. Wear the good shoes. Big nights deserve the good shoes.", "next": "end" },
+			"b": { "speaker": "Marcus", "text": "You finish each other's slides and you fight like people who are scared of how much they like each other. Painfully obvious. It's fine. It's good, actually. Just don't let the launch decide it for you.", "next": "end" },
+			"end": { "speaker": "", "text": "He wanders off with his coffee. Somehow the weight on your shoulders sits a little easier.", "terminal": true }
+		}
+	},
+
+	"a3_before": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 11. The night before the launch and the gala. You find Zara on the rooftop, of course. Where else would either of you be.", "next": "n2" },
+			"n2": { "speaker": "Zara", "text": "Big day tomorrow. Lighthouse goes live, everyone gets dressed up, and we find out what we actually are — the project and the... us.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'Whatever the launch does tomorrow, I already know what I want us to be.'", "effects": { "affection_zara": 8 }, "next": "sure" },
+				{ "text": "'One thing at a time. Let's get through tomorrow and see.'", "effects": { "affection_zara": 3 }, "next": "unsure" }
+			]},
+			"sure": { "speaker": "Zara", "text": "Yeah. Me too. Save me a dance tomorrow. Don't make it weird. ...Actually, do make it a little weird. That's kind of our whole thing now.", "next": "end" },
+			"unsure": { "speaker": "Zara", "text": "Fair. One thing at a time. ...Save me a dance anyway. Just in case tomorrow decides to be brave for us.", "next": "end" },
+			"end": { "speaker": "", "text": "The city glows below you, indifferent and beautiful. Tomorrow, everything you've built — the project and the person — finally comes due.", "terminal": true }
+		}
+	},
+
+	"a3_prep": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Gala day. Kai ambushes you an hour before with a garment bag and the intensity of a general.", "next": "n2" },
+			"n2": { "speaker": "Kai", "text": "Absolutely not, you were going to wear THAT? On the night the whole quarter comes to a head AND you make your move? Over my beautifully-dressed body. Sit. Trust the process.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'Kai — what if tonight doesn't go the way I want?'", "effects": { "affection_kai": 4 }, "next": "nerves" },
+				{ "text": "'Make me look like someone she can't look away from.'", "effects": { "affection_zara": 5, "affection_kai": 4 }, "next": "confident" }
+			]},
+			"nerves": { "speaker": "Kai", "text": "Then it doesn't, and you'll survive it in a truly excellent jacket, which is more than most people can say about their heartbreak. But it's going to go the way you want. I've seen how she looks at you. Now — shoulders back.", "next": "end" },
+			"confident": { "speaker": "Kai", "text": "Oh, THAT'S the energy. Yes. Okay. When you walk into that room, walk in like the launch already went perfectly and so did the rest of your life. Confidence is the accessory. Also this jacket. Go.", "next": "end" },
+			"end": { "speaker": "", "text": "You look in the mirror and barely recognise the person looking back — steadier, ready. It's time. The gala. The launch. Her. Go find Zara.", "terminal": true }
+		}
+	},
+
+	"zara_end_both": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 12. The Gala. Lighthouse goes live to a room full of applause and one wildly over-catered dessert table.", "next": "n2" },
+			"n2": { "speaker": "", "text": "You built it honestly and you built it together — and when leadership calls the launch a triumph, they say both your names in the same breath. No knives. No quiet cost. Just the work, and the truth of it, standing up in front of everyone.", "next": "n3" },
+			"n3": { "speaker": "Priya", "text": "Co-leads. Ugh. It's revoltingly charming and it clearly works. Congratulations, both of you. I hate it. Save me a seat at whatever you build next.", "next": "n4" },
+			"n4": { "speaker": "Zara", "text": "We actually did it. The job AND the terrifying other thing. Turns out I could have both the whole time. Turns out you just have to be brave enough — and stubborn enough — to refuse to pick.", "next": "n5" },
+			"n5": { "speaker": "", "text": "The band starts up. She holds out her hand on the dance floor, in front of the whole company, and doesn't let go.", "next": "n6" },
+			"n6": { "speaker": "Zara", "text": "You promised me a dance. Make it a little weird. It's our thing.", "next": "end" },
+			"end": { "speaker": "", "text": "★ TRUE ENDING — 'Both of Us'. You didn't win the game by beating her. You won it by refusing to. Fade to black. — Thanks for playing Zara's route.", "terminal": true }
+		}
+	},
+
+	"zara_end_longway": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 12. The Gala. Lighthouse launches. The applause is real — and so is the tension you two never quite finished untangling this quarter.", "next": "n2" },
+			"n2": { "speaker": "Zara", "text": "We took the long way here. Some cold weeks. A fortress I built and made you talk me out of, brick by brick. But you stayed the whole time. Do you know how rare that is? You just... stayed.", "next": "n3" },
+			"n3": { "speaker": "", "text": "One of you got the lead; the other got an honest, warm 'next time' and meant it. It isn't tidy. Careers rarely are. But she finds you by that ridiculous dessert table, and she stays, and that's the part that was ever going to matter.", "next": "n4" },
+			"n4": { "speaker": "Zara", "text": "For the record — I'd take the long way again. As long as it ends with you at the weird dessert table.", "next": "end" },
+			"end": { "speaker": "", "text": "♥ BITTERSWEET ENDING — 'The Long Way'. Not perfect. Real, though. Real was always the point. Fade to black. — Thanks for playing Zara's route.", "terminal": true }
+		}
+	},
+
+	"zara_end_corner": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 12. The Gala. You are the new lead of Lighthouse. The corner office is yours. You earned it — mostly. You earned it the way winners usually do, with a few things left off the receipt.", "next": "n2" },
+			"n2": { "speaker": "Zara", "text": "Congratulations. Genuinely — no bitterness, I'm too tired for bitterness. You were good. You were also willing to be a little ruthless when it counted, and I noticed. I always notice. It's my gift and my personality flaw, remember.", "next": "n3" },
+			"n3": { "speaker": "", "text": "She lifts her glass, a professional smile locked in place, and moves on to the next conversation. Across the room Vaughn raises his own glass to you, one operator to another. It doesn't feel like the compliment he thinks it is.", "next": "n4" },
+			"n4": { "speaker": "", "text": "The office is yours. The desk beside it is already being cleared for whoever comes next. It's very quiet up here in the corner.", "next": "end" },
+			"end": { "speaker": "", "text": "▲ CAREER ENDING — 'The Corner Office'. You got exactly what you came for. Every bit of it. Fade to black. — Thanks for playing Zara's route.", "terminal": true }
+		}
+	},
+
+	"zara_end_colleagues": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 12. The Gala. Lighthouse launches. You and Zara clink glasses as exactly what you always safely stayed: colleagues. Good ones. Nothing more, in the end.", "next": "n2" },
+			"n2": { "speaker": "Zara", "text": "Good run, neighbour. We made a genuinely decent team. And that almost-thing, a few weeks back, up on the roof — I guess we'll just never quite know, will we.", "next": "n3" },
+			"n3": { "speaker": "", "text": "There's no bad blood. No dramatic goodbye. Just a door that neither of you ever fully walked through, swinging gently shut on its own while the band plays something you'll both half-remember later.", "next": "end" },
+			"end": { "speaker": "", "text": "— ENDING — 'Just Colleagues'. Some stories stay in the maybe. Fade to black. — Thanks for playing Zara's route. Restart from the title to try for a different one.", "terminal": true }
+		}
+	},
+
+	"zara_filler": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "Zara", "text": "Heads-down right now — chasing a deadline that's chasing me back. Catch me later, yeah? Preferably with the good coffee.", "terminal": true }
+		}
+	},
+
+	"zara_after": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "Zara", "text": "That's the whole story, for now. Thanks for playing it out with me, GUSET. (Zara's route complete — restart from the title for a different ending, or go build the next character's route.)", "terminal": true }
+		}
+	}
+}

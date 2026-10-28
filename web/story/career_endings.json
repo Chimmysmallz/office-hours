@@ -1,0 +1,122 @@
+{
+ "end_burnout": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "You don't remember deciding to sit down on the office floor. You just are there, suddenly, and the room is very far away.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "",
+    "text": "The doctor says 'exhaustion' the way a mechanic says 'engine.' Three weeks of mandatory rest. Lighthouse launches without you.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "",
+    "text": "✖ ENDING: 'Burnout.' Energy is a meter for a reason. Next time, drink the coffee, take the lunch, sit on the rooftop.",
+    "terminal": true
+   }
+  }
+ },
+ "end_pariah": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 12. The Gala. Conversations stop when you walk up to them. Your invitation, you notice, came last.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "",
+    "text": "You did the work. Nobody wanted to do it with you. On Monday, HR suggests 'a fresh start in another department.'",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "",
+    "text": "✖ ENDING: 'Pariah.' Reputation is how the building feels about you when you're not in the room.",
+    "terminal": true
+   }
+  }
+ },
+ "end_outplayed": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 12. The Gala. Vaughn gives the launch speech. He thanks 'the team' and names none of you. Then he names himself, twice.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "",
+    "text": "The restructure memo lands on Monday. Your role is 'realigned.' Vaughn smiles at you in the lift like a cat at a bird feeder.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "",
+    "text": "✖ ENDING: 'Outplayed.' Somebody had to stand up to Vaughn. Nobody did.",
+    "terminal": true
+   }
+  }
+ },
+ "end_have_it_all": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 12. The Gala. You're on the stage for the launch toast. Someone you love is in the front row. Half the floor cheers your name.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "",
+    "text": "Nobody gets it all. But tonight, for one evening, it looks very much like you did.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "",
+    "text": "★ ULTIMATE ENDING: 'Have It All.' Career, reputation and love, all at once. Rare. Earned.",
+    "terminal": true
+   }
+  }
+ },
+ "end_promotion": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 12. The Gala. Your name is on the new org chart, one line higher than it was in Week 1.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "",
+    "text": "You go home alone, a little tired, very proud, with a better title and a heavier inbox.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "",
+    "text": "▲ CAREER ENDING: 'Promotion.' The work paid off.",
+    "terminal": true
+   }
+  }
+ },
+ "end_on_your_own": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 12. The Gala. Lighthouse launches. You clap with everyone else. It was a good quarter. Not a remarkable one.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "",
+    "text": "Walking home, you think about all the people you meant to get to know better. There's always next quarter.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "",
+    "text": "○ ENDING: 'On Your Own.' Life in the middle of the org chart. Try another route?",
+    "terminal": true
+   }
+  }
+ }
+}

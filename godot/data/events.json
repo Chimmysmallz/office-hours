@@ -1,0 +1,420 @@
+[
+ {
+  "id": "ev_printer",
+  "title": "Printer jam",
+  "text": "The printer is eating Priya's final pitch deck, page by page, with audible joy. She looks about to commit a crime.",
+  "choices": [
+   {
+    "text": "Wrestle the printer for her",
+    "effects": {
+     "affection_priya": 5,
+     "energy": -5
+    },
+    "result": "You emerge with toner on your face and her deck intact. 'Don't make it weird,' she says. It's the nicest thing she's said all week."
+   },
+   {
+    "text": "Email her the digital copy you kept",
+    "effects": {
+     "affection_priya": 3,
+     "career": 2
+    },
+    "result": "'You kept a backup of MY deck?' She looks suspicious, then grateful, then suspicious again."
+   },
+   {
+    "text": "Slip quietly away",
+    "effects": {
+     "energy": 2
+    },
+    "result": "You escape. Behind you, the printer sounds like it's winning."
+   }
+  ]
+ },
+ {
+  "id": "ev_birthday",
+  "title": "Birthday cake",
+  "text": "It's someone in Finance's birthday. There's a cake in the kitchen the size of a car tyre.",
+  "choices": [
+   {
+    "text": "Join in, sing badly, eat cake",
+    "effects": {
+     "reputation": 4,
+     "energy": 6
+    },
+    "result": "You sing the worst harmony the ninth floor has ever heard. People love it."
+   },
+   {
+    "text": "Grab a slice for Noah in the corner",
+    "effects": {
+     "affection_noah": 5,
+     "reputation": 1
+    },
+    "if": "noticed_noah",
+    "result": "Noah stares at the cake like nobody has ever brought him cake before. Possibly nobody has."
+   },
+   {
+    "text": "Keep working",
+    "effects": {
+     "career": 2
+    },
+    "result": "You hear the cheering from your desk. The spreadsheet does not cheer."
+   }
+  ]
+ },
+ {
+  "id": "ev_boss_drop",
+  "title": "Surprise visit",
+  "text": "Vaughn strolls the floor unannounced, asking random people 'what they're adding to Lighthouse.' He's heading your way.",
+  "choices": [
+   {
+    "text": "Give a crisp two-line answer",
+    "effects": {
+     "career": 4,
+     "energy": -3
+    },
+    "result": "He nods, mildly impressed. 'Concise. I like concise.' You feel slightly dirty for enjoying that."
+   },
+   {
+    "text": "Credit the whole team",
+    "effects": {
+     "reputation": 5,
+     "affection_marcus": 3
+    },
+    "result": "'Team player,' he says, like it's a diagnosis. Marcus, across the room, gives you a tiny nod."
+   },
+   {
+    "text": "Pretend to be on a call",
+    "effects": {
+     "energy": 1
+    },
+    "result": "You talk earnestly to nobody about 'synergies' until he leaves. Zara saw everything."
+   }
+  ]
+ },
+ {
+  "id": "ev_wifi",
+  "title": "Wi-Fi outage",
+  "text": "The office Wi-Fi dies. Forty people look up from their screens and remember the others exist.",
+  "choices": [
+   {
+    "text": "Start an impromptu whiteboard session",
+    "effects": {
+     "career": 3,
+     "reputation": 3,
+     "energy": -4
+    },
+    "result": "Without screens, ideas fly. Marcus says 'that's solid' twice in an hour, a new record."
+   },
+   {
+    "text": "Wander to the design pod",
+    "effects": {
+     "affection_kai": 5,
+     "energy": 3
+    },
+    "result": "Kai is delighted. 'Analogue hour! Pencils for everyone!'"
+   },
+   {
+    "text": "Take an early lunch",
+    "effects": {
+     "energy": 8
+    },
+    "result": "The café is empty and the soup is excellent."
+   }
+  ]
+ },
+ {
+  "id": "ev_rain",
+  "title": "Sudden downpour",
+  "text": "A storm hits right as people are heading out. Zara is standing at the door without an umbrella, staring at the sky like it owes her money.",
+  "choices": [
+   {
+    "text": "Share your umbrella",
+    "effects": {
+     "affection_zara": 6
+    },
+    "result": "It's a small umbrella. You both get half-soaked and laugh the whole way to the station."
+   },
+   {
+    "text": "Lend it to her and run for it",
+    "effects": {
+     "affection_zara": 4,
+     "energy": -4
+    },
+    "result": "You arrive home drenched. She texts a photo of your umbrella with a heart emoji."
+   }
+  ]
+ },
+ {
+  "id": "ev_mistake",
+  "title": "Spotted a mistake",
+  "text": "You notice a wrong number in the forecast that went out to the whole floor this morning. Noah built that model.",
+  "choices": [
+   {
+    "text": "Tell Noah privately",
+    "effects": {
+     "affection_noah": 6,
+     "career": 1
+    },
+    "if": "noticed_noah",
+    "result": "He fixes it in four minutes and sends a quiet correction. 'Thank you for not doing that in public,' he whispers."
+   },
+   {
+    "text": "Reply-all with the correction",
+    "effects": {
+     "career": 3,
+     "reputation": -3
+    },
+    "result": "You're right, and everyone knows you're right. Nobody thanks you for it."
+   },
+   {
+    "text": "Leave it",
+    "effects": {},
+    "result": "Someone else spots it on Thursday. It causes a small, avoidable panic."
+   }
+  ]
+ },
+ {
+  "id": "ev_lunch_invite",
+  "title": "Lunch crowd",
+  "text": "A group from Marketing invites you to their legendary Thursday lunch.",
+  "choices": [
+   {
+    "text": "Go",
+    "effects": {
+     "reputation": 5,
+     "energy": 4
+    },
+    "result": "Three hours of gossip compressed into one. You learn who actually runs this building (it's the receptionist)."
+   },
+   {
+    "text": "Politely decline",
+    "effects": {
+     "career": 2
+    },
+    "result": "They say 'next time' in a way that might mean it."
+   }
+  ]
+ },
+ {
+  "id": "ev_fire_drill",
+  "title": "Fire drill",
+  "text": "The alarm goes off. Fire drill. Everyone files out to the car park. Priya is standing alone, still holding her laptop.",
+  "choices": [
+   {
+    "text": "Stand with Priya and talk shop",
+    "effects": {
+     "affection_priya": 5
+    },
+    "result": "You argue about the Lighthouse rollout for twenty minutes. It's the most fun either of you has had all week."
+   },
+   {
+    "text": "Stand with Zara and gossip",
+    "effects": {
+     "affection_zara": 4,
+     "reputation": 1
+    },
+    "result": "Zara has a running commentary on everyone's fire-drill outfits. It's devastating."
+   },
+   {
+    "text": "Enjoy the sunshine alone",
+    "effects": {
+     "energy": 6
+    },
+    "result": "Ten quiet minutes in the sun. You hadn't realised how much you needed that."
+   }
+  ]
+ },
+ {
+  "id": "ev_late_request",
+  "title": "5pm request",
+  "text": "At 4:58pm an urgent request lands from Vaughn's office: 'Need this tonight.'",
+  "choices": [
+   {
+    "text": "Stay late and smash it",
+    "effects": {
+     "career": 6,
+     "energy": -14
+    },
+    "result": "Done by 10pm. Vaughn replies 'k.' One letter. For four hours."
+   },
+   {
+    "text": "Reply with a realistic deadline: tomorrow noon",
+    "effects": {
+     "reputation": 2,
+     "career": 1,
+     "affection_kai": 2
+    },
+    "result": "Silence, then 'fine.' Kai overhears and silently applauds."
+   },
+   {
+    "text": "Forward it to Marcus",
+    "effects": {
+     "affection_marcus": 2,
+     "career": -1
+    },
+    "result": "Marcus handles it. 'Next time, push back yourself,' he says, not unkindly."
+   }
+  ]
+ },
+ {
+  "id": "ev_plant",
+  "title": "The office plant",
+  "text": "The big fern by the lift is dying. Nobody owns it. Everybody has opinions.",
+  "choices": [
+   {
+    "text": "Adopt it",
+    "effects": {
+     "reputation": 3,
+     "affection_kai": 3
+    },
+    "result": "Within two weeks it's thriving. People start calling it 'your fern.' Kai draws it a tiny crown."
+   },
+   {
+    "text": "Leave it to fate",
+    "effects": {},
+    "result": "Fate, it turns out, does not water plants."
+   }
+  ]
+ },
+ {
+  "id": "ev_coffee_run",
+  "title": "Coffee run",
+  "text": "You're heading out for coffee. Someone shouts, 'Get one for me!' Then everyone does.",
+  "choices": [
+   {
+    "text": "Take everyone's order",
+    "effects": {
+     "reputation": 6,
+     "energy": -6
+    },
+    "result": "Eleven coffees, two trips, one burned hand. You're a legend by lunchtime."
+   },
+   {
+    "text": "Just get your own",
+    "effects": {
+     "energy": 8
+    },
+    "result": "Your coffee is perfect. The looks you get on the way back are less so."
+   }
+  ]
+ },
+ {
+  "id": "ev_award",
+  "title": "Shout-out",
+  "text": "Marcus mentions your work in the weekly update. Publicly. With your name in bold.",
+  "choices": [
+   {
+    "text": "Thank him and share the credit with Zara",
+    "effects": {
+     "affection_zara": 4,
+     "affection_marcus": 3,
+     "reputation": 3
+    },
+    "result": "Zara grins. 'Sharing credit? Who raised you? Lovely.'"
+   },
+   {
+    "text": "Enjoy it quietly",
+    "effects": {
+     "career": 3
+    },
+    "result": "You read it three times. Then a fourth, just to be sure."
+   }
+  ]
+ },
+ {
+  "id": "ev_noah_lunch",
+  "title": "Empty seat",
+  "if": "noticed_noah",
+  "text": "Noah is eating alone at the far end of the café again, reading a statistics paper for fun.",
+  "choices": [
+   {
+    "text": "Sit with him",
+    "effects": {
+     "affection_noah": 6,
+     "energy": 3
+    },
+    "result": "He explains Bayesian priors using a sandwich. You understand maybe half. He glows the whole time."
+   },
+   {
+    "text": "Wave and keep going",
+    "effects": {
+     "affection_noah": 1
+    },
+    "result": "He waves back, startled and pleased."
+   }
+  ]
+ },
+ {
+  "id": "ev_gossip",
+  "title": "Office gossip",
+  "text": "Someone in the kitchen asks you what you really think of Priya. Several ears lean in.",
+  "choices": [
+   {
+    "text": "'She's the sharpest person on this floor.'",
+    "effects": {
+     "affection_priya": 4,
+     "reputation": 2
+    },
+    "result": "It gets back to Priya within the hour. She says nothing. She brings you a coffee the next day."
+   },
+   {
+    "text": "Join in the gossip",
+    "effects": {
+     "reputation": -4,
+     "affection_priya": -6
+    },
+    "result": "It gets back to Priya within the hour too. She says nothing. That is much worse."
+   },
+   {
+    "text": "Change the subject",
+    "effects": {
+     "reputation": 1
+    },
+    "result": "You start talking about the weather with the intensity of a meteorologist. It works."
+   }
+  ]
+ },
+ {
+  "id": "ev_sick",
+  "title": "Feeling rough",
+  "text": "You wake up with a scratchy throat and the energy of a damp towel.",
+  "choices": [
+   {
+    "text": "Work from home today",
+    "effects": {
+     "energy": 10,
+     "career": -2
+    },
+    "result": "Tea, blankets, half-speed emails. You're better by evening."
+   },
+   {
+    "text": "Push through",
+    "effects": {
+     "energy": -10,
+     "career": 2
+    },
+    "result": "You make it through. Barely. Zara puts a lozenge on your keyboard without comment."
+   }
+  ]
+ },
+ {
+  "id": "ev_mentor",
+  "title": "Ask a question",
+  "text": "In the all-team meeting, nobody asks a question. The silence stretches. You have one.",
+  "choices": [
+   {
+    "text": "Ask it",
+    "effects": {
+     "career": 4,
+     "reputation": 3,
+     "affection_marcus": 2
+    },
+    "result": "It's a good question. Marcus takes notes. Two people message you afterwards: 'I was wondering that too.'"
+   },
+   {
+    "text": "Stay quiet",
+    "effects": {},
+    "result": "Someone else asks it a week later and gets the credit."
+   }
+  ]
+ }
+]

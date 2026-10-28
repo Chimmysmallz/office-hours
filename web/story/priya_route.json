@@ -1,0 +1,279 @@
+{
+	"p_a1_clash": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 1. Marcus drops a Lighthouse sub-task on the floor and lets two juniors race it: you and a woman with a whiteboard marker held like a scalpel.", "next": "n2" },
+			"n2": { "speaker": "Priya", "text": "So you're the new variable. I'm Priya. I've had this task modelled three ways since the meeting ended eight minutes ago. Try to make this interesting.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'Three ways in eight minutes. Cute. I only need one — the right one.'", "effects": { "affection_priya": 7, "career": 3 }, "next": "spar" },
+				{ "text": "'Nice to meet you too. What have you got so far?'", "effects": { "affection_priya": 3 }, "next": "earnest" },
+				{ "text": "'I don't really do races. I do results.'", "effects": { "reputation": 4 }, "next": "cool" }
+			]},
+			"spar": { "speaker": "Priya", "text": "...Ha. A mouth on the new hire. Good. Empty confidence bores me, but you actually delivered. Let's see if the model backs it up. Go.", "next": "end" },
+			"earnest": { "speaker": "Priya", "text": "I've got everything, obviously. What I don't have is time to babysit. Keep up or don't. This is how I know if you're worth talking to.", "next": "end" },
+			"cool": { "speaker": "Priya", "text": "Results. Finally, a person who speaks my language. Then prove it. Words are cheap and I've heard all of them.", "next": "end" },
+			"end": { "speaker": "", "text": "You finish neck and neck. She doesn't say 'good job.' She just looks at your work a half-second longer than she needs to. From Priya, you'll learn, that's practically a standing ovation.", "terminal": true }
+		}
+	},
+
+	"p_a1_test": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 2. Priya slides a folder onto your desk without a word. It's a flaw in the Lighthouse client model — a real one, buried deep. A test, obviously.", "next": "n2" },
+			"n2": { "speaker": "Priya", "text": "Found this at 2am. I could take it straight to Marcus and look brilliant alone. Instead I'm showing you. Consider that a compliment you haven't earned yet. What do you do with it?", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'We flag it together. Split credit. Stronger fix, better story.'", "effects": { "affection_priya": 9 }, "next": "together" },
+				{ "text": "'Why show me at all, if it makes you look brilliant alone?'", "effects": { "affection_priya": 6 }, "next": "why" },
+				{ "text": "'Take it to Marcus. It's your find. I'm not a charity case.'", "effects": { "reputation": 4, "career": 3 }, "next": "solo" }
+			]},
+			"together": { "speaker": "Priya", "text": "...Split credit. On MY find. You know how rare it is that anyone says that to me and means it? ...Don't answer. It's rare. Fine. Together. Just this once.", "next": "end" },
+			"why": { "speaker": "Priya", "text": "...Honestly? Because I wanted to see if you'd try to steal it. You didn't even flinch toward it. That tells me more than any spreadsheet. Noted, new hire.", "next": "end" },
+			"solo": { "speaker": "Priya", "text": "No charity. Good — I don't give it and I don't take it. You've got a spine and no interest in mine. That's the most refreshing thing that's happened to me all quarter.", "next": "end" },
+			"end": { "speaker": "", "text": "She takes the folder back. Whatever the test was, you get the sense you passed a version of it — and that passing Priya's tests is a dangerous, addictive little thrill.", "terminal": true }
+		}
+	},
+
+	"p_a1_crack": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 3. You catch Priya alone in the meeting room after hours, staring at a rejected proposal with a face that isn't armored for once.", "next": "n2" },
+			"n2": { "speaker": "Priya", "text": "Leadership passed on my strategy. 'Too aggressive.' Six weeks of work. You didn't see that. That version of me does not exist. Understood?", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'For what it's worth — I read that proposal. It wasn't too aggressive. It was too early. There's a difference.'", "effects": { "affection_priya": 9 }, "next": "seen" },
+				{ "text": "'I didn't see anything. But if I had, I'd have said it was good.'", "effects": { "affection_priya": 7 }, "next": "kind" },
+				{ "text": "'Understood. Your secret's safe.'", "effects": { "affection_priya": 4 }, "next": "safe" }
+			]},
+			"seen": { "speaker": "Priya", "text": "...Too early. Not too much. You have no idea what it does to me to hear it put that way. Three years of 'tone it down' and you just — okay. Okay. Thank you. We're never discussing this again.", "next": "end" },
+			"kind": { "speaker": "Priya", "text": "...You're being kind. I don't know what to do with kind. It's not a currency I trade in. But — noted. Filed. Under things I'll pretend didn't happen.", "next": "end" },
+			"safe": { "speaker": "Priya", "text": "Good. It stays a secret. ...You didn't have to leave it there, though, and you did. I'll remember that you knew when to stop pushing.", "next": "end" },
+			"end": { "speaker": "", "text": "She rebuilds the armor plate by plate as you watch. But you saw the person underneath it for exactly four seconds, and you can't unsee her now.", "terminal": true }
+		}
+	},
+
+	"p_a2_announce": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 4. The all-hands. One Lighthouse junior gets promoted to lead. The whole room does the math and lands on three names. Two of you have been finishing each other's models for a month.", "next": "n2" },
+			"n2": { "speaker": "Priya", "text": "So now it's official. You. Me. One chair. I'd tell you not to take it personally, but I would be lying, and I respect you too much to lie badly.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'Then let's make it a real fight. No sabotage. Just be better than me.'", "effects": { "affection_priya": 8, "set_flags": ["clean_fight_pact"] }, "next": "pact" },
+				{ "text": "'May the best of us win. I intend for that to be me.'", "effects": { "affection_priya": 6, "career": 4 }, "next": "confident" },
+				{ "text": "'I don't want a chair if the cost is you.'", "effects": { "affection_priya": 5 }, "next": "soft" }
+			]},
+			"pact": { "speaker": "Priya", "text": "A clean fight. God, do you know how rare that offer is in this building? Deal. Push me. I'll push back. Let's find out who we actually are when it's real.", "next": "end" },
+			"confident": { "speaker": "Priya", "text": "There it is. The teeth. Good — I don't respect people who pretend they don't want it. Come at me with everything. I'll do the same. It's the most honest thing between us.", "next": "end" },
+			"soft": { "speaker": "Priya", "text": "...Don't. Don't get soft on me now, it ruins the whole dynamic. If you throw the fight for me I'll never forgive you, and neither will I forgive myself. Fight me properly. That's the respect.", "next": "end" },
+			"end": { "speaker": "", "text": "The rivalry has a deadline now. The strange, electric thing growing underneath it doesn't. That's the problem, and neither of you says it out loud.", "terminal": true }
+		}
+	},
+
+	"p_a2_fork": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 6. It lands in your lap: a copy of Priya's draft Lighthouse strategy, mis-sent to you by an assistant. Her whole play, a week early. You could bury her with this. Nobody would ever know.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "Use it. Pre-empt her strategy in your own pitch and take the wind out of hers.", "effects": { "career": 14, "affection_priya": -10, "set_flags": ["betrayed_priya"] }, "next": "betray" },
+				{ "text": "Delete it unread past the first line, and tell her it happened.", "effects": { "affection_priya": 12, "reputation": 5, "set_flags": ["priya_respect"] }, "next": "fair" },
+				{ "text": "Walk it back to her desk yourself and hand it over.", "effects": { "affection_priya": 11, "reputation": 4, "set_flags": ["priya_respect"] }, "next": "return" }
+			]},
+			"betray": { "speaker": "", "text": "You use it. Your pitch lands hard precisely because it strangles hers before she can breathe. It works. It works beautifully. You feel sick about exactly none of it until you see her face when she realizes.", "next": "betrayend" },
+			"betrayend": { "speaker": "", "text": "You got closer to the chair today. You also just taught Priya that she was right about people all along. That's going to cost more than a promotion.", "terminal": true },
+			"fair": { "speaker": "Priya", "text": "You... deleted it. You had my entire strategy and you deleted it and then TOLD me. Who does that? Nobody does that. You lunatic. Okay. Okay. I owe you one, and I hate owing people, so consider me deeply annoyed and — thank you.", "next": "end" },
+			"return": { "speaker": "Priya", "text": "You walked it back. To my face. You could've buried me and instead you're standing at my desk being — decent. I don't know what to do with you. I really, genuinely do not.", "next": "end" },
+			"end": { "speaker": "", "text": "You didn't take the shot. In a building full of people who would have, that means something to her she doesn't have words for yet.", "terminal": true }
+		}
+	},
+
+	"p_a2_fallout": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "variants": [
+				{ "if": "betrayed_priya", "text": "Week 6. Priya finds you by the lift. The warmth is gone, replaced by something colder and more careful. She knows exactly what you did.", "next": "cold" },
+				{ "text": "Week 6. Priya drops into the chair beside yours, uninvited, two coffees in hand. She slides one to you. It's the good upstairs one.", "next": "warm" }
+			]},
+			"cold": { "speaker": "Priya", "text": "That was a clean kill. Genuinely well executed. I'd have done it too, once. I keep telling myself that. It doesn't help.", "next": "coldc" },
+			"coldc": { "speaker": "You", "choices": [
+				{ "text": "'Priya — I'm sorry. It was the job. It wasn't about you.'", "effects": { "affection_priya": 3 }, "next": "coldsorry" },
+				{ "text": "Say nothing. There's no version of this she wants to hear.", "effects": { "affection_priya": -2 }, "next": "coldsilent" }
+			]},
+			"coldsorry": { "speaker": "Priya", "text": "'It was the job.' That's what they all say. That's what HE said. You know what — fine. Lesson relearned. Trust no one, especially the ones who make you want to.", "next": "coldend" },
+			"coldsilent": { "speaker": "Priya", "text": "Nothing. Right. At least you're not insulting me with an apology. We're competitors now. Only that. It's cleaner this way. It's what I should've kept it as.", "next": "coldend" },
+			"coldend": { "speaker": "", "text": "She walks off. Whatever was building between you just got locked behind a door you may have welded shut yourself.", "terminal": true },
+			"warm": { "speaker": "Priya", "text": "I've been trying to figure out your angle for three days. What you did with my strategy — sorry, what you DIDN'T do — makes no strategic sense. So either you're an idiot, or you're the first person here who isn't playing me. I've decided you're not an idiot.", "next": "warmc" },
+			"warmc": { "speaker": "You", "choices": [
+				{ "text": "'No angle. I just don't want to win by becoming someone you'd be right about.'", "effects": { "affection_priya": 9 }, "next": "warma" },
+				{ "text": "'Maybe I just like the version of this where we're honest.'", "effects": { "affection_priya": 8 }, "next": "warma" }
+			]},
+			"warma": { "speaker": "Priya", "text": "...Someone I'd be right about. You caught that. From the water cooler, weeks ago. You've been paying attention to me this whole time. That's — nobody pays attention to me. They watch me. It's different. Drink your coffee before it's cold, new hire.", "next": "warmend" },
+			"warmend": { "speaker": "", "text": "She stays in the chair beside you for the rest of the afternoon, sparring over the model, closer than rivals have any business being.", "terminal": true }
+		}
+	},
+
+	"p_a2_wall": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "variants": [
+				{ "if": "betrayed_priya", "text": "Week 7. You corner her on the fire stairs — the only place she can't storm away from. She's still frost, but she stays. Barely.", "next": "n2" },
+				{ "text": "Week 7. Late. The fire stairs. You find Priya sitting on the top step, armor off, and for once she doesn't put it back on when she sees you.", "next": "n2" }
+			]},
+			"n2": { "speaker": "Priya", "text": "You want to know why I'm like this. Everyone does. Fine. My second year, I built something brilliant and I trusted the wrong person with it. A mentor. He put his name on it and let me thank HIM for the opportunity. I never made that mistake again. I made myself un-stealable-from instead. This — the armor — it works.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'It works. It's also lonely as hell, and you deserve more than un-stealable.'", "effects": { "affection_priya": 12, "set_flags": ["priya_wall"] }, "next": "open" },
+				{ "text": "'He was a coward. That was about him, not a flaw in you for trusting.'", "effects": { "affection_priya": 11, "set_flags": ["priya_wall"] }, "next": "open" },
+				{ "text": "'Makes sense. Armor's smart in a place like this.'", "effects": { "affection_priya": 3 }, "next": "guarded" }
+			]},
+			"open": { "speaker": "Priya", "text": "...I don't cry at work. I want that on the record. This is a — a stress response. To being SEEN, which I do not consent to. ...Don't move. Just. Stay there a second. This is nice. I hate that it's nice.", "next": "openend" },
+			"openend": { "speaker": "", "text": "The armor's on the step beside her, and she's letting you sit next to it. For Priya, that's the most naked thing in the world.", "terminal": true },
+			"guarded": { "speaker": "Priya", "text": "Smart. Right. Yeah. Armor's smart. ...I thought for a second you were going to say something else. Doesn't matter. Forget it. We should get back.", "next": "guardedend" },
+			"guardedend": { "speaker": "", "text": "She's back behind the plate before you've finished blinking. The door in the wall was open for a moment, and you talked past it.", "terminal": true }
+		}
+	},
+
+	"p_a2_night": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 8. The Lighthouse offsite. Everyone's downstairs getting loud. You find Priya on the fire escape of the hotel with a bottle and two glasses, like she was waiting.", "next": "n2" },
+			"n2": { "speaker": "Priya", "text": "One glass. We have a fight to finish next week and I refuse to lose because I let my guard down at an offsite. But — one glass. With you. Off the record.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'Off the record — I don't actually want to beat you. I want to be next to you.'", "effects": { "affection_priya": 11 }, "next": "confess" },
+				{ "text": "'One glass. And then we go back to being terrifying rivals in the morning.'", "effects": { "affection_priya": 7 }, "next": "banter" }
+			]},
+			"confess": { "speaker": "Priya", "text": "...You can't say that. We have a WEEK. You can't just — say the true thing on a fire escape and expect me to have a strategy for it. I don't have a strategy for you. That's the entire problem. That's been the problem since the water cooler.", "next": "end" },
+			"banter": { "speaker": "Priya", "text": "Terrifying rivals in the morning. My favourite kind of person. ...But right now, on this fire escape, you're not terrifying. You're kind of the opposite. Don't let it go to your head. Okay, let it go a little to your head.", "next": "end" },
+			"end": { "speaker": "", "text": "One glass turns into a long, quiet hour, shoulders touching, the fight forgotten. Four weeks left, and neither of you wants the morning to come.", "terminal": true }
+		}
+	},
+
+	"p_a3_looms": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 9. The decision lands next week. Priya intercepts you before your morning coffee, all business again — but her eyes give her away.", "next": "n2" },
+			"n2": { "speaker": "Priya", "text": "I need the real answer, not the gallant one. If they hand you the chair — do you take it? Because I need to know whether to armor up against you or not. Tell me true.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'I don't know yet. But I won't take it in a way that unmakes what we've got.'", "effects": { "affection_priya": 9 }, "next": "honest" },
+				{ "text": "'Yes. And I'd still want you. I'm not going to pretend I don't want both.'", "effects": { "affection_priya": 6, "career": 4 }, "next": "both" },
+				{ "text": "'Honestly? Half of me hopes they give it to you so I don't have to choose.'", "effects": { "affection_priya": 7 }, "next": "coward" }
+			]},
+			"honest": { "speaker": "Priya", "text": "That's the real answer. Good. I can plan around real. It's the pretty lies that ruin me. Thank you for not being pretty about it.", "next": "end" },
+			"both": { "speaker": "Priya", "text": "Both. Of course you want both, you greedy, honest thing. So do I. That's what makes this a knife fight I don't actually want to win. Fair warning: I'm still going to fight it well.", "next": "end" },
+			"coward": { "speaker": "Priya", "text": "Ha — the coward's hope. I've had it too. But don't wish the choice away. If they hand it to you, you take it and we deal with the mess like adults. I'd rather have the mess with you than a clean win without.", "next": "end" },
+			"end": { "speaker": "", "text": "She squares her shoulders and walks off to prepare for war. But she looked back once. Priya never looks back.", "terminal": true }
+		}
+	},
+
+	"p_a3_offer": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 10. Marcus closes the door. The lead is yours if you want it — you edged her out, barely, on the final pitch. Priya doesn't know yet. What do you do?", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'Make us co-leads. She's too good to lose and so is this.'", "effects": { "affection_priya": 10, "career": 6, "set_flags": ["priya_share", "priya_respect"] }, "next": "share" },
+				{ "text": "'I'll take it. I fought clean and I won. I won't apologize for that.'", "effects": { "career": 14, "set_flags": ["priya_took"] }, "next": "took" },
+				{ "text": "'Give it to Priya. She's carried more scars for this than I have.'", "effects": { "affection_priya": 12, "career": -6, "set_flags": ["priya_backed", "priya_respect"] }, "next": "backed" }
+			]},
+			"share": { "speaker": "Marcus", "text": "Co-leads. With Priya, of all people. That's either genius or a bloodbath waiting to happen. ...Pitch it to me properly and I'll take it up. Tell her yourself — she'll want to hear it from you, though she'd rather die than say so.", "next": "end" },
+			"took": { "speaker": "Marcus", "text": "It's yours. You earned it clean, and that matters. How you carry it past her desk in the next ten minutes — that's the part that decides what kind of lead you are.", "next": "end" },
+			"backed": { "speaker": "Marcus", "text": "You want me to give it to the person you just beat. ...That's a hell of a thing. I'll be honest, it tells me you'd have been good in the chair. Leave it with me. And be sure — Priya does not forgive being pitied.", "next": "end" },
+			"end": { "speaker": "", "text": "You leave the office holding your choice like something breakable. Down the aisle, Priya is about to learn what you did with the win.", "terminal": true }
+		}
+	},
+
+	"p_a3_react": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "variants": [
+				{ "if": "priya_share",  "text": "You find her first, before the org chart can. You tell her: you had it outright, and you asked them to split it with her.", "next": "share" },
+				{ "if": "priya_took",   "text": "She finds out from the announcement, not from you. She's at your desk before the applause dies down, unreadable.", "next": "took" },
+				{ "text": "Word travels fast. By noon she knows you were offered the chair and told Marcus to give it to her. She corners you, furious and undone.", "next": "backed" }
+			]},
+			"share": { "speaker": "Priya", "text": "You had it. CLEAN. And you asked them to hand me half of your win. Do you have any idea how that lands on a person who's spent her whole career sure she'd have to take everything alone?", "next": "sharec" },
+			"sharec": { "speaker": "You", "choices": [
+				{ "text": "'I don't want a version of the win where I had to beat you to get it.'", "effects": { "affection_priya": 10 }, "next": "sharea" },
+				{ "text": "'Un-stealable-from, remember? So I gave you something instead of taking one.'", "effects": { "affection_priya": 11 }, "next": "sharea" }
+			]},
+			"sharea": { "speaker": "Priya", "text": "...You remembered. 'Un-stealable-from.' You threw my own armor back at me as a GIFT. I am going to co-lead this launch with you and I am going to be insufferable about it and you are going to love it. Deal. Partner.", "next": "end" },
+			"took": { "speaker": "Priya", "text": "You won. Clean, like we said. I can't even be angry — that was the deal, and you kept it. Congratulations. Genuinely. It's just going to take me a minute to be genuine about it out loud.", "next": "tookc" },
+			"tookc": { "speaker": "You", "choices": [
+				{ "text": "'A clean fight was always the respect. This doesn't have to end us.'", "effects": { "affection_priya": 8 }, "next": "tooka" },
+				{ "text": "'You'd have taken it too. And I'd have congratulated you and meant it.'", "effects": { "affection_priya": 6 }, "next": "tooka" }
+			]},
+			"tooka": { "speaker": "Priya", "text": "...I would have taken it. And you would have been gracious, because you're irritatingly like that. Okay. Give me the weekend to be a professional about my feelings, and then — then let's see what's left when the fight's over.", "next": "end" },
+			"backed": { "speaker": "Priya", "text": "I did NOT ask you to do that. I don't want the chair as charity from the person I — do you have ANY idea what you've done? You've made it impossible to keep hating you as a coping strategy.", "next": "backedc" },
+			"backedc": { "speaker": "You", "choices": [
+				{ "text": "'It's not charity. You earned it in blood years ago. I just refused to let you lose it to me.'", "effects": { "affection_priya": 10 }, "next": "backeda" },
+				{ "text": "'I'd rather see you have it than have it myself. That's not pity. That's the truth.'", "effects": { "affection_priya": 9 }, "next": "backeda" }
+			]},
+			"backeda": { "speaker": "Priya", "text": "...In blood. You said in blood. Nobody has ever — okay. I'm keeping the chair. And I'm keeping you, because clearly you cannot be trusted to protect your own interests and someone has to. That someone is me now. Don't argue.", "next": "end" },
+			"end": { "speaker": "", "text": "One week to the gala. Whatever you two are, it survived the one thing that was built to destroy it.", "terminal": true }
+		}
+	},
+
+	"p_a3_before": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 11. The night before the launch and the gala. You find Priya on the fire escape, of course. It's become yours, the two of you. A rival's treaty line turned into something softer.", "next": "n2" },
+			"n2": { "speaker": "Priya", "text": "Big day tomorrow. Launch goes live, the fight's finally over, and we find out what's underneath all that competing we did. Terrifying. I don't do terrifying well. Present situation excepted.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'Whatever tomorrow decides about the launch — I already know what I want us to be.'", "effects": { "affection_priya": 8 }, "next": "sure" },
+				{ "text": "'One fight at a time. Let's get through tomorrow and see what's standing.'", "effects": { "affection_priya": 3 }, "next": "unsure" }
+			]},
+			"sure": { "speaker": "Priya", "text": "...You and your true things on fire escapes. Save me a dance tomorrow. I'll pretend to hate it. I will not, in fact, hate it. That's as close to a love confession as you're getting from me tonight.", "next": "end" },
+			"unsure": { "speaker": "Priya", "text": "One fight at a time. Sensible. Cowardly. Correct. ...Save me a dance anyway, in case tomorrow makes us both braver than we are right now.", "next": "end" },
+			"end": { "speaker": "", "text": "The city glows below the fire escape, oblivious. Tomorrow the fight ends. Whatever's been growing in its shadow finally gets to stand in the light.", "terminal": true }
+		}
+	},
+
+	"priya_end_partners": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 12. The Gala. Lighthouse launches to a packed, glittering room, and when leadership calls it a triumph, two names go up together — the two people who spent a whole quarter trying to out-think each other.", "next": "n2" },
+			"n2": { "speaker": "Priya", "text": "Co-leads. Partners. The un-stealable-from woman, sharing a win on purpose. If you'd told me that in week one I'd have had you escorted out. And now look at us. Revolting. I love it. Don't tell anyone I said 'love.'", "next": "n3" },
+			"n3": { "speaker": "", "text": "She holds out her hand on the dance floor — a challenge and a surrender in the same gesture, because with Priya they were always the same thing.", "next": "n4" },
+			"n4": { "speaker": "Priya", "text": "You promised me a dance. Try to keep up. You never could, quite.", "next": "end" },
+			"end": { "speaker": "", "text": "★ TRUE ENDING — 'Rivals, Reforged'. The best fight you ever had, you both won. Fade to black. — Thanks for playing Priya's route.", "terminal": true }
+		}
+	},
+
+	"priya_end_spark": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 12. The Gala. Lighthouse launches. One of you got the chair; the fight is finally, genuinely over. What's left is quieter and realer than the competition ever was.", "next": "n2" },
+			"n2": { "speaker": "Priya", "text": "We spent a quarter armed to the teeth and it still ended here, with me letting you see the wobbly parts. I let ONE person past the armor in five years. Congratulations, it's you. Don't waste it.", "next": "n3" },
+			"n3": { "speaker": "", "text": "It isn't tidy — careers rarely are, and neither is she. But she finds you across the room, drops the professional face, and stays.", "next": "end" },
+			"end": { "speaker": "", "text": "♥ ENDING — 'Past the Armor'. Not simple. Real, though — and with Priya, real is the rarest thing she has to give. Fade to black. — Thanks for playing Priya's route.", "terminal": true }
+		}
+	},
+
+	"priya_end_rivals": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 12. The Gala. Lighthouse launches. You and Priya clink glasses as the thing you both understood best — worthy rivals, clean fighters, mutual and total respect. It never quite tipped into more.", "next": "n2" },
+			"n2": { "speaker": "Priya", "text": "Best competition I ever had. You kept me honest, and I don't say that to anyone. Whatever that was on the fire escape — maybe it needed a braver quarter than this one. But I respect you more than anyone in this building, and from me, that's the whole vault.", "next": "n3" },
+			"n3": { "speaker": "", "text": "She toasts you, sharp and sincere, and moves on. No bitterness. Just two people who sharpened each other and never quite reached for the rest.", "next": "end" },
+			"end": { "speaker": "", "text": "▲ ENDING — 'Worthy Rivals'. Respect without the romance. With Priya, that's no small thing. Fade to black. — Thanks for playing Priya's route.", "terminal": true }
+		}
+	},
+
+	"priya_end_burned": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 12. The Gala. Lighthouse launches. Across the room, Priya lifts her glass to you — polite, cold, complete. The warmth you almost had is sealed behind the armor for good.", "next": "n2" },
+			"n2": { "speaker": "Priya", "text": "You played it well. I mean that. You also taught me I was right the first time — that the smart move is to trust no one, especially the ones who make you want to. So. Thank you for the reminder. It's a useful one.", "next": "n3" },
+			"n3": { "speaker": "", "text": "She turns back to the room, unreachable, exactly as un-stealable-from as she promised herself she'd stay. You proved her point. It wins you nothing you'll want later.", "next": "end" },
+			"end": { "speaker": "", "text": "— ENDING — 'Point Proven'. Some walls you help build higher. Fade to black. — Thanks for playing Priya's route. Restart from the title to try for a different one.", "terminal": true }
+		}
+	},
+
+	"priya_filler": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "Priya", "text": "I'm three moves deep on the Lighthouse model and you're interrupting my flow. Come back when I've won this round, and bring something interesting.", "terminal": true }
+		}
+	},
+
+	"priya_after": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "Priya", "text": "That's the whole fight, start to finish. Don't get sentimental about it. (Priya's route complete — restart from the title for a different ending, or go find someone else on this floor worth your time.)", "terminal": true }
+		}
+	}
+}

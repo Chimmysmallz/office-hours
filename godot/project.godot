@@ -1,0 +1,31 @@
+; Office Hours — Starter (Godot 4 dating-sim / life-sim skeleton)
+; Open this folder in Godot 4.3+ (it will auto-import), then press Play (F5).
+
+config_version=5
+
+[application]
+
+config/name="Office Hours — Starter"
+run/main_scene="res://scenes/Title.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+
+[autoload]
+
+GameState="*res://scripts/autoload/GameState.gd"
+DialogueManager="*res://scripts/autoload/DialogueManager.gd"
+StoryDirector="*res://scripts/autoload/StoryDirector.gd"
+SceneRouter="*res://scripts/autoload/SceneRouter.gd"
+SaveManager="*res://scripts/autoload/SaveManager.gd"
+
+[display]
+
+window/size/viewport_width=1152
+window/size/viewport_height=648
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation="landscape"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

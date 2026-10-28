@@ -1,0 +1,22 @@
+# Secrets: never commit these
+.env
+.env.*
+*.pem
+*.key
+secrets.*
+
+# Godot
+godot/.godot/
+godot/export_presets.cfg
+godot/build/
+
+# Python
+__pycache__/
+*.pyc
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

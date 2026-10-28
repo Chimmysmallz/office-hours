@@ -1,0 +1,234 @@
+{
+	"n_a1_notice": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 1. There's a desk in the corner half-hidden behind two monitors. You almost walk past it — most people do. Then you don't.", "next": "n2" },
+			"n2": { "speaker": "Noah", "text": "...Oh. Hi. You're — you actually stopped. People don't usually stop here. I'm Noah. Data. I make the numbers behave.", "effects": { "affection_noah": 6, "set_flags": ["noticed_noah"] }, "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'Someone's got to keep the numbers honest. I'm glad it's you.'", "effects": { "affection_noah": 7 }, "next": "warm" },
+				{ "text": "'Why does no one stop? You're right here.'", "effects": { "affection_noah": 6 }, "next": "why" },
+				{ "text": "'What are the monitors telling you today?'", "effects": { "affection_noah": 5 }, "next": "data" }
+			]},
+			"warm": { "speaker": "Noah", "text": "...That's a strangely nice thing to say to the guy behind the monitors. I'll — I'll remember you said that.", "next": "end" },
+			"why": { "speaker": "Noah", "text": "Because I'm easy to walk past. I've kind of arranged it that way. It's quieter back here. But it's — not unwelcome. You. Stopping.", "next": "end" },
+			"data": { "speaker": "Noah", "text": "Right now? That the Lighthouse forecast is more optimistic than the actual data supports. But nobody asks the corner desk, so.", "next": "end" },
+			"end": { "speaker": "", "text": "You go back to your day. But you noticed him now — and that turns out to be the whole beginning of something quiet.", "terminal": true }
+		}
+	},
+
+	"n_a1_data": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 2. Noah waves you over — a small, uncertain gesture, like he's not sure he's allowed to.", "next": "n2" },
+			"n2": { "speaker": "Noah", "text": "Can I show you something? I found a pattern in the Q2 churn nobody's looking at. It's — it's kind of beautiful, actually. Sorry. That's a weird word for a spreadsheet.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'It's not weird. Show me the beautiful spreadsheet.'", "effects": { "affection_noah": 8 }, "next": "show" },
+				{ "text": "'You get excited about this stuff. I like that.'", "effects": { "affection_noah": 7 }, "next": "show" }
+			]},
+			"show": { "speaker": "Noah", "text": "Okay. See how it dips every third week, right before payday? People downgrade, then re-subscribe. It's the whole company breathing. I've never shown anyone that. They just want the summary slide.", "next": "n3" },
+			"n3": { "speaker": "", "text": "For a few minutes he forgets to be invisible. He's animated, quick, funny in a dry way you didn't expect. Then he catches himself and dims back down.", "next": "end" },
+			"end": { "speaker": "Noah", "text": "Anyway. Thanks for looking. Most people don't look.", "terminal": true }
+		}
+	},
+
+	"n_a1_lunch": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 3. You find Noah eating lunch alone at the corner desk, headphones half-off. You sit down across from him without asking.", "next": "n2" },
+			"n2": { "speaker": "Noah", "text": "You can — yeah. Sit. I don't really do the lunch-room thing. Too much noise, too many people performing being happy. This is better. Is this weird? This is probably weird.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'It's not weird. Quiet's nice. I like it here.'", "effects": { "affection_noah": 8 }, "next": "quiet" },
+				{ "text": "'We can just sit. We don't have to fill the silence.'", "effects": { "affection_noah": 9 }, "next": "silence" }
+			]},
+			"quiet": { "speaker": "Noah", "text": "...Yeah. It is nice. You're easy to be quiet around. That's rarer than people think.", "next": "end" },
+			"silence": { "speaker": "", "text": "So you don't. You eat in a comfortable, unhurried quiet, the office noise a wall away. Once, he glances up and catches you looking, and neither of you looks away for a second too long.", "next": "end" },
+			"end": { "speaker": "", "text": "It's the least dramatic lunch of your life, and somehow you can't stop thinking about it afterward.", "terminal": true }
+		}
+	},
+
+	"n_a2_overlooked": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 4. The promotion's announced — the Lighthouse lead. Noah isn't even in the conversation. Nobody thought to consider the corner desk.", "next": "n2" },
+			"n2": { "speaker": "Noah", "text": "Don't. I can see you doing the sympathetic face. It's fine. I'm the guy who makes the winners look good. I've made peace with it. Mostly. Ninety percent.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'Ninety percent isn't peace. What's the other ten?'", "effects": { "affection_noah": 8 }, "next": "ten" },
+				{ "text": "'Being overlooked and being unimportant aren't the same thing.'", "effects": { "affection_noah": 9 }, "next": "matter" }
+			]},
+			"ten": { "speaker": "Noah", "text": "The other ten percent thinks maybe I made myself invisible so no one could tell me I wasn't good enough. Safer to be unseen than to be seen and passed over. ...I don't say that out loud. Ever. Huh.", "next": "end" },
+			"matter": { "speaker": "Noah", "text": "...You really believe that. I can tell you actually believe that. Do you know how long it's been since someone made me feel important without needing anything from me? I don't. That's the point.", "next": "end" },
+			"end": { "speaker": "", "text": "He goes back to his monitors. But something in him is a little less resigned than it was an hour ago.", "terminal": true }
+		}
+	},
+
+	"n_a2_open": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 5. You've been thinking about it. About Noah, and the corner, and the ten percent. You bring him a coffee and a question.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'What if I helped you get seen? Present your churn model to Marcus. You'd blow them away.'", "effects": { "affection_noah": 6, "set_flags": ["noah_seen"] }, "next": "seen" },
+				{ "text": "'I don't want to change you. I just don't want to be the only one who sees you.'", "effects": { "affection_noah": 10, "set_flags": ["noah_accepted"] }, "next": "accept" },
+				{ "text": "'Whatever you want. Spotlight or corner. I'm on your side either way.'", "effects": { "affection_noah": 8, "set_flags": ["noah_accepted"] }, "next": "accept" }
+			]},
+			"seen": { "speaker": "Noah", "text": "...You want to put me in front of Marcus. That's — terrifying, and also nobody's ever offered. Okay. Maybe. If you're there. I'd need you there.", "next": "end" },
+			"accept": { "speaker": "Noah", "text": "...You don't want to fix me. Everyone wants to fix me — 'speak up, network, self-advocate.' You just want to — see me. I don't have a defence built for that. I'm a little wrecked, honestly. In a good way.", "next": "end" },
+			"end": { "speaker": "", "text": "It's the closest he's come to reaching back. Quiet, but unmistakable.", "terminal": true }
+		}
+	},
+
+	"n_a2_fallout": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "variants": [
+				{ "if": "noah_seen", "text": "Week 6. You set it up: ten minutes with Marcus, Noah's churn model on the big screen. Noah's hands won't stop shaking, but he showed up.", "next": "seen" },
+				{ "text": "Week 6. Nothing changes on the surface — Noah stays in his corner. But he saves you the seat beside him now, every day, without a word about it.", "next": "accept" }
+			]},
+			"seen": { "speaker": "Noah", "text": "I did it. I actually — Marcus said 'that's solid.' Which apparently is a huge deal? People clapped. It was awful and amazing. I threw up a little after. Don't tell anyone.", "next": "seenc" },
+			"seenc": { "speaker": "You", "choices": [
+				{ "text": "'You were brilliant up there. I just opened the door — you walked through it.'", "effects": { "affection_noah": 10 }, "next": "a" },
+				{ "text": "'I've never been prouder of anyone. Corner desk changed the room today.'", "effects": { "affection_noah": 9 }, "next": "a" }
+			]},
+			"accept": { "speaker": "Noah", "text": "I keep waiting for you to get bored of the quiet. Of me. People do. But you keep sitting down. Why do you keep sitting down?", "next": "acceptc" },
+			"acceptc": { "speaker": "You", "choices": [
+				{ "text": "'Because it's my favourite part of the day. That's the whole reason.'", "effects": { "affection_noah": 10 }, "next": "a" },
+				{ "text": "'I'm not going to get bored of you, Noah. I've been trying to and I can't.'", "effects": { "affection_noah": 9 }, "next": "a" }
+			]},
+			"a": { "speaker": "Noah", "text": "...Okay. Okay. I'm going to choose to believe you. That's a big thing for me — believing someone. So. Don't make me regret it. I don't think you will.", "next": "end" },
+			"end": { "speaker": "", "text": "Something settles between you, warm and unhurried. No fireworks. Just a door quietly opening.", "terminal": true }
+		}
+	},
+
+	"n_a2_confide": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 7. Late. Everyone's gone. Noah is still at his monitors, and for once he doesn't dim when you approach.", "next": "n2" },
+			"n2": { "speaker": "Noah", "text": "Can I tell you the real reason I stay invisible? My last job — I had ideas, I spoke up, I was 'promising.' And when it fell apart, I was the most visible person to blame. So I got small. Small people don't get blamed. Small people are safe.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'Safe and unseen isn't the same as safe and happy. You deserve to be happy.'", "effects": { "affection_noah": 12, "set_flags": ["noah_wall"] }, "next": "open" },
+				{ "text": "'You don't have to be small with me. There's no blame here. Just me.'", "effects": { "affection_noah": 11, "set_flags": ["noah_wall"] }, "next": "open" },
+				{ "text": "'That makes sense. Small is smart in a place like this.'", "effects": { "affection_noah": 3 }, "next": "guard" }
+			]},
+			"open": { "speaker": "Noah", "text": "...I haven't felt safe AND seen in a long time. I didn't think you could have both. You're kind of proving me wrong about that. It's disorienting. Don't stop.", "next": "openend" },
+			"openend": { "speaker": "", "text": "He takes his glasses off, rubs his eyes, and lets you see him tired and unguarded. It's the most naked thing he's ever done.", "terminal": true },
+			"guard": { "speaker": "Noah", "text": "Yeah. Smart. Exactly. ...I thought you might say something else. It's fine. Forget I said any of it. I should finish this run.", "next": "guardend" },
+			"guardend": { "speaker": "", "text": "He puts the monitors back up like a wall. The moment closes, gently, on its own.", "terminal": true }
+		}
+	},
+
+	"n_a2_rain": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 8. It's pouring when you both leave. You end up sharing the narrow shelter of the building's awning, waiting it out, shoulders almost touching.", "next": "n2" },
+			"n2": { "speaker": "Noah", "text": "I like the rain. It makes everyone go quiet. The whole loud world just... hushes. It's the only time the outside feels like the inside of my head.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'Then let's just stand here. No rush. I like the inside of your head.'", "effects": { "affection_noah": 11 }, "next": "close" },
+				{ "text": "'We could make a run for it — or we could not.'", "effects": { "affection_noah": 8 }, "next": "close" }
+			]},
+			"close": { "speaker": "", "text": "He doesn't run. Neither do you. He leans his head against yours, just barely, and you stay like that while the rain comes down — two quiet people in a hushed world, no words needed.", "next": "n3" },
+			"n3": { "speaker": "Noah", "text": "...I don't want the rain to stop. Is that allowed? To not want the rain to stop?", "next": "end" },
+			"end": { "speaker": "", "text": "Two weeks to the gala. And somehow the quietest route has become the one you can't stop thinking about.", "terminal": true }
+		}
+	},
+
+	"n_a3_choice": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 10. The Lighthouse launch is close. Marcus, of all people, floats an idea: a real analytics role, out of the corner, with a voice in the room. For Noah. He comes to you first, panicked.", "next": "n2" },
+			"n2": { "speaker": "Noah", "text": "They want to give me a seat at the actual table. Visible. Named. The exact thing I built my whole self to avoid. I don't know if I can. I don't know if I want to. What do I do?", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'Take the seat — and I'll be right beside it. You're not doing visible alone.'", "effects": { "affection_noah": 10, "set_flags": ["noah_bond"] }, "next": "take" },
+				{ "text": "'You don't have to. The corner's not failure. I love you in the corner too.'", "effects": { "affection_noah": 11, "set_flags": ["noah_bond"] }, "next": "stay" },
+				{ "text": "'Only you can answer that. But whatever you pick, you've got me.'", "effects": { "affection_noah": 8, "set_flags": ["noah_bond"] }, "next": "either" }
+			]},
+			"take": { "speaker": "Noah", "text": "...Beside it. You'd sit beside me while I'm terrified in a room full of people. Okay. Okay. Then maybe I can. With you there, maybe visible isn't the scariest thing in the world.", "next": "end" },
+			"stay": { "speaker": "Noah", "text": "You said — you love me in the corner. You said it like it was nothing. Like it's just true. ...I heard it. I'm keeping it. Whatever I decide about the seat, I'm keeping THAT.", "next": "end" },
+			"either": { "speaker": "Noah", "text": "'Whatever you pick, you've got me.' That's the first time a choice hasn't felt like a trap. Because the outcome I actually care about — you — isn't on the table. It's already mine. Isn't it?", "next": "end" },
+			"end": { "speaker": "", "text": "One week to the gala. For the first time, Noah is deciding something instead of hiding from it.", "terminal": true }
+		}
+	},
+
+	"n_a3_react": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "variants": [
+				{ "if": "noah_bond", "text": "Week 10. Noah finds you at your desk, steadier than you've ever seen him, glasses pushed up, decision made.", "next": "bond" },
+				{ "text": "Week 10. Noah finds you, quiet as ever, working something over behind his eyes.", "next": "bond" }
+			]},
+			"bond": { "speaker": "Noah", "text": "I made a choice. About the seat, about the corner, about all of it. But I realised the choice underneath all the choices was already made a while ago. It was you. Whatever room I'm in, I want you in it.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'Then that's settled. Any room. Corner or table. Me and you.'", "effects": { "affection_noah": 9 }, "next": "a" },
+				{ "text": "'I noticed you when no one else did. I'm not about to stop now.'", "effects": { "affection_noah": 10 }, "next": "a" }
+			]},
+			"a": { "speaker": "Noah", "text": "...You noticed me. Out of a whole floor of louder, shinier people, you stopped at the corner desk. I'm never going to be over that. Save me a spot at the gala. Somewhere quiet. Near the edge. Our kind of place.", "next": "end" },
+			"end": { "speaker": "", "text": "The quietest route in the whole office, and it just became the surest thing in it.", "terminal": true }
+		}
+	},
+
+	"n_a3_before": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 11. The night before the gala. You find Noah on the fire-escape landing outside the analytics floor — his rooftop, quieter than the actual roof.", "next": "n2" },
+			"n2": { "speaker": "Noah", "text": "Big loud night tomorrow. Not really my scene. But you'll be there, so it's my scene now, I guess. Funny how that works.", "next": "c1" },
+			"c1": { "speaker": "You", "choices": [
+				{ "text": "'Find me by the quiet edge. I'll be looking for you the whole night.'", "effects": { "affection_noah": 8 }, "next": "sure" },
+				{ "text": "'One loud night. Then back to our corner. Deal?'", "effects": { "affection_noah": 7 }, "next": "sure" }
+			]},
+			"sure": { "speaker": "Noah", "text": "Deal. The quiet edge. I'll be the one who looks like he'd rather be anywhere else — until you show up, and then I'll be the one who looks exactly where he wants to be.", "next": "end" },
+			"end": { "speaker": "", "text": "The rain's long gone. The city's quiet. Tomorrow the loud world gets its night — but the quiet thing you two built is the part that's going to last.", "terminal": true }
+		}
+	},
+
+	"noah_end_seen": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 12. The Gala. The room is loud and bright and Noah hates it — but he's here, by the quiet edge, exactly where he said he'd be.", "next": "n2" },
+			"n2": { "speaker": "", "text": "The Lighthouse numbers on the big screen? His model. His work, finally with his name on it. Marcus makes a point of saying so, out loud, to the whole room. Noah goes very red and doesn't dim, not even a little.", "next": "n3" },
+			"n3": { "speaker": "Noah", "text": "A whole floor of people just saw me. And it's fine. It's actually fine. Because the one person whose seeing ever mattered saw me first, in a corner, when I was invisible. The rest is just noise now.", "next": "n4" },
+			"n4": { "speaker": "", "text": "He finds your hand in the crowd without looking, the way you find something you already know is there.", "next": "end" },
+			"end": { "speaker": "", "text": "★ TRUE ENDING — 'Seen'. You didn't fix him or fix the room. You just refused to walk past. Fade to black. — Thanks for playing Noah's hidden route.", "terminal": true }
+		}
+	},
+
+	"noah_end_quiet": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 12. The Gala. You slip away from the noise and find Noah exactly where you knew he'd be — the quiet edge, two drinks, one saved for you.", "next": "n2" },
+			"n2": { "speaker": "Noah", "text": "I let you all the way in. Do you know I've never done that? Not once. It's terrifying and it's the best thing I've ever done. We're not loud. We're never going to be loud. But we're real. That's better.", "next": "n3" },
+			"n3": { "speaker": "", "text": "You stand together at the edge of the party, watching everyone else perform, perfectly content to be the two quietest people in the building.", "next": "end" },
+			"end": { "speaker": "", "text": "♥ ENDING — 'The Quiet Edge'. No fireworks. Just two people who finally feel safe being seen. Fade to black. — Thanks for playing Noah's hidden route.", "terminal": true }
+		}
+	},
+
+	"noah_end_friends": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 12. The Gala. Noah gives you a small wave from the corner of the room — glad you came, glad you're you, but the thing between you stayed gentle and unspoken.", "next": "n2" },
+			"n2": { "speaker": "Noah", "text": "You're the person who stopped at the corner desk. I won't forget that — not ever. Whatever this was, it made the floor a warmer place to be invisible on. Thank you for seeing me, even a little.", "next": "n3" },
+			"n3": { "speaker": "", "text": "It's not a heartbreak. It's a good, quiet friendship that maybe could have been more, on a braver quarter.", "next": "end" },
+			"end": { "speaker": "", "text": "— ENDING — 'Noticed'. Sometimes seeing someone is its own kind of gift. Fade to black. — Thanks for playing Noah's hidden route.", "terminal": true }
+		}
+	},
+
+	"noah_end_faded": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "", "text": "Week 12. The Gala. You look for Noah at the quiet edge, but he isn't there. The corner desk was empty when you passed it earlier, too.", "next": "n2" },
+			"n2": { "speaker": "", "text": "Later you'll hear he left early, the way he does. You noticed him once — but noticing someone and staying with them are different things, and somewhere in the noise, he faded back to invisible.", "next": "end" },
+			"end": { "speaker": "", "text": "— ENDING — 'Faded'. Some people you have to keep choosing, or they slip back to the corner. Fade to black. — Restart and pay closer attention. Thanks for playing.", "terminal": true }
+		}
+	},
+
+	"noah_filler": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "Noah", "text": "I'm mid-thought on a data run — one more pass and it'll behave. Come back and sit with me in a bit? The quiet's better with you in it.", "terminal": true }
+		}
+	},
+
+	"noah_after": {
+		"start": "n1",
+		"nodes": {
+			"n1": { "speaker": "Noah", "text": "That's the whole quiet story. Thank you for stopping at the corner desk. (Noah's route complete — restart for a different ending, or go find someone louder.)", "terminal": true }
+		}
+	}
+}

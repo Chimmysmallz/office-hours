@@ -1,0 +1,9 @@
+[
+	{ "id": "burnout",      "priority": 100, "conditions": { "energy_max": 0 } },
+	{ "id": "pariah",       "priority": 90,  "conditions": { "reputation_max": 20 } },
+	{ "id": "outplayed",    "priority": 90,  "conditions": { "flag_missing": "exposed_vaughn", "career_max": 40 } },
+	{ "id": "have_it_all",  "priority": 50,  "conditions": { "any_affection_min": 70, "career_min": 70, "reputation_min": 60 } },
+	{ "id": "romance_zara", "priority": 30,  "conditions": { "top_affection": "zara", "affection_min": 60, "flag": "zara_wall_revealed" } },
+	{ "id": "promotion",    "priority": 20,  "conditions": { "career_min": 70 } },
+	{ "id": "on_your_own",  "priority": 10,  "conditions": {} }
+]

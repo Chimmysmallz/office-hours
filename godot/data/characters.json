@@ -1,0 +1,7 @@
+{
+	"zara":   { "display_name": "Zara",   "role": "Desk neighbor", "route_theme": "Trust & vulnerability", "wall_flag": "zara_wall_revealed", "commit_threshold": 60 },
+	"marcus": { "display_name": "Marcus", "role": "Team lead",     "route_theme": "Crossing professional lines", "wall_flag": "marcus_wall_broken", "commit_threshold": 65 },
+	"priya":  { "display_name": "Priya",  "role": "Project rival", "route_theme": "Enemies to lovers", "wall_flag": "priya_trust_earned", "commit_threshold": 60 },
+	"kai":    { "display_name": "Kai",    "role": "Designer",      "route_theme": "Work-life balance", "wall_flag": "kai_values_clash", "commit_threshold": 55 },
+	"noah":   { "display_name": "Noah",   "role": "Data analyst",  "route_theme": "Slow burn", "hidden": true, "unlock_flag": "noticed_noah", "commit_threshold": 55 }
+}
