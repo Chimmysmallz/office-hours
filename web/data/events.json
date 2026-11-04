@@ -416,5 +416,69 @@
     "result": "Someone else asks it a week later and gets the credit."
    }
   ]
+ },
+ {
+  "id": "ev_vaughn_door",
+  "title": "Vaughn's door",
+  "if": "vaughn_pending",
+  "not": "stood_up_to_vaughn",
+  "text": "Vaughn leans on the edge of your desk as if he owns it, which, technically, he partly does. \"Still thinking about my offer? I do admire a careful mind. I admire a decisive one more.\"",
+  "choices": [
+   {
+    "text": "\"I've thought about it. The answer is no.\"",
+    "effects": {
+     "reputation": 4,
+     "career": -2,
+     "set_flags": [
+      "stood_up_to_vaughn"
+     ]
+    },
+    "result": "He smiles like a closing door. Across the floor, two people who heard you pretend very hard that they didn't. By lunch, Zara knows."
+   },
+   {
+    "text": "\"Still thinking.\"",
+    "effects": {
+     "career": 2,
+     "reputation": -2
+    },
+    "result": "\"Take your time,\" he says. It sounds less like patience every time."
+   }
+  ]
+ },
+ {
+  "id": "ev_vaughn_number",
+  "title": "A number that doesn't add up",
+  "not": "stood_up_to_vaughn",
+  "text": "Vaughn forwards you a client report with one figure highlighted in yellow. \"Round that up a little before it goes out. Nobody reads past page two.\"",
+  "choices": [
+   {
+    "text": "Send it back with the correct figure, copying Marcus",
+    "effects": {
+     "reputation": 5,
+     "career": -2,
+     "set_flags": [
+      "stood_up_to_vaughn"
+     ]
+    },
+    "result": "The report goes out accurate. Vaughn does not reply. Marcus replies with one word: 'Good.'"
+   },
+   {
+    "text": "Round it up. It's only a little",
+    "effects": {
+     "career": 4,
+     "reputation": -3
+    },
+    "result": "Nobody reads past page two. You did, though. You'll remember it."
+   },
+   {
+    "text": "Quietly ask Noah to double-check it first",
+    "effects": {
+     "reputation": 2,
+     "affection_noah": 3
+    },
+    "if": "noticed_noah",
+    "result": "Noah confirms the original number in four minutes and sends a polite, devastating correction. Vaughn drops it."
+   }
+  ]
  }
 ]

@@ -103,7 +103,7 @@
    "n5": {
     "speaker": "Kai",
     "text": "See? You look human again. People forget that the work gets better when you leave it alone for an hour.",
-    "next": "end"
+    "next": "kl_more_br"
    },
    "deadline": {
     "speaker": "Kai",
@@ -113,12 +113,47 @@
    "n7": {
     "speaker": "",
     "text": "Twenty minutes later, a muffin appears beside your keyboard, with a tiny drawing of you on the napkin, scowling at a spreadsheet.",
-    "next": "end"
+    "next": "kl_more_br"
    },
    "end": {
     "speaker": "",
     "text": "You catch yourself smiling at nothing in particular for the rest of the afternoon.",
     "terminal": true
+   },
+   "kl_more_br": {
+    "branch": [
+     {
+      "not": "__never__",
+      "next": "kl_more_1"
+     },
+     {
+      "next": "end"
+     }
+    ]
+   },
+   "kl_more_1": {
+    "speaker": "",
+    "text": "Back at your desk, a sticky note appears on your monitor in Kai's handwriting: 'Lunch is a human right. This is your one warning. Next time I bring a whistle.'",
+    "next": "kl_more_2"
+   },
+   "kl_more_2": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "Write back: 'Tomorrow. 12:30. Bring the whistle anyway.'",
+      "effects": {
+       "affection_kai": 4
+      },
+      "next": "end"
+     },
+     {
+      "text": "Stick it to your notebook and keep it.",
+      "effects": {
+       "affection_kai": 3
+      },
+      "next": "end"
+     }
+    ]
    }
   }
  },
@@ -439,22 +474,67 @@
    "know": {
     "speaker": "Kai",
     "text": "...Yeah. I did. I just wanted someone to say it back to me in my own words. Thanks. Delete. Done.",
-    "next": "end"
+    "next": "kw_more_br"
    },
    "money": {
     "speaker": "Kai",
     "text": "Maybe. People always think it'll be different. ...I'm going to sleep on it.",
-    "next": "end"
+    "next": "kw_more_br"
    },
    "here": {
     "speaker": "Kai",
     "text": "That's... a very good reason not to go somewhere else, actually. Huh.",
-    "next": "end"
+    "next": "kw_more_br"
    },
    "end": {
     "speaker": "",
     "text": "They switch the lamp off, and for once they leave before you do.",
     "terminal": true
+   },
+   "kw_more_br": {
+    "branch": [
+     {
+      "not": "__never__",
+      "next": "kw_more_1"
+     },
+     {
+      "next": "end"
+     }
+    ]
+   },
+   "kw_more_1": {
+    "speaker": "",
+    "text": "On the way to the lift, Kai stops at the window. The city is doing its usual night-time showing off.",
+    "next": "kw_more_2"
+   },
+   "kw_more_2": {
+    "speaker": "Kai",
+    "text": "Here's the thing nobody tells you about being good at a job you hate. People keep offering you more of it. Double the money is just double the thing that made you stop drawing on the train.",
+    "next": "kw_more_3"
+   },
+   "kw_more_3": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Then don't sell them the train.'",
+      "effects": {
+       "affection_kai": 4
+      },
+      "next": "kw_more_4"
+     },
+     {
+      "text": "'What do you draw on the train now?'",
+      "effects": {
+       "affection_kai": 5
+      },
+      "next": "kw_more_4"
+     }
+    ]
+   },
+   "kw_more_4": {
+    "speaker": "Kai",
+    "text": "Commuters. Pigeons. The back of your head, once, when you fell asleep on the way to the client site. It's a very good head. Don't let it go to it.",
+    "next": "end"
    }
   }
  },
@@ -510,7 +590,7 @@
    "n5": {
     "speaker": "Kai",
     "text": "You did this for me? Badly — sorry, but badly. You did it badly for me. Nobody's ever done anything badly for me before.",
-    "next": "end"
+    "next": "kd_more_br"
    },
    "call": {
     "speaker": "Kai",
@@ -520,17 +600,60 @@
    "n7": {
     "speaker": "",
     "text": "It is not fine. You can hear it in the way they say it three times.",
-    "next": "end"
+    "next": "kd_more_br"
    },
    "noon": {
     "speaker": "Marcus",
     "text": "Noon. Not a minute later. ...You're getting good at this, you know. Protecting people.",
-    "next": "end"
+    "next": "kd_more_br"
    },
    "end": {
     "speaker": "",
     "text": "The files arrive at 11:52, and they are gorgeous.",
     "terminal": true
+   },
+   "kd_more_br": {
+    "branch": [
+     {
+      "not": "__never__",
+      "next": "kd_more_1"
+     },
+     {
+      "next": "end"
+     }
+    ]
+   },
+   "kd_more_1": {
+    "speaker": "Kai",
+    "text": "Next time something's on fire at six, call me. Not to come in. Just to tell me it's on fire. I'd rather know than find out you stayed until midnight on my account.",
+    "next": "kd_more_2"
+   },
+   "kd_more_2": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Deal. Fires get reported. Weekends stay yours.'",
+      "effects": {
+       "affection_kai": 5,
+       "set_flags": [
+        "kai_balance"
+       ]
+      },
+      "next": "kd_more_3"
+     },
+     {
+      "text": "'You'd come in anyway. I know you.'",
+      "effects": {
+       "affection_kai": 3
+      },
+      "next": "kd_more_3"
+     }
+    ]
+   },
+   "kd_more_3": {
+    "speaker": "Kai",
+    "text": "...Maybe. For you, I might. Don't tell anyone. It ruins my whole brand.",
+    "next": "end"
    }
   }
  },
@@ -540,7 +663,7 @@
    "n1": {
     "speaker": "",
     "text": "Week 10. Kai finds you at the café with a printed email and a face that can't decide what it's doing.",
-    "next": "n2"
+    "next": "cb_frog_br"
    },
    "n2": {
     "speaker": "Kai",
@@ -595,11 +718,27 @@
     "speaker": "",
     "text": "Kai folds the email into a tiny paper frog and puts it in your pocket.",
     "terminal": true
+   },
+   "cb_frog_br": {
+    "branch": [
+     {
+      "if": "kai_date",
+      "next": "cb_frog_1"
+     },
+     {
+      "next": "n2"
+     }
+    ]
+   },
+   "cb_frog_1": {
+    "speaker": "Kai",
+    "text": "The frog says hi, by the way. He lives on my windowsill now. He would absolutely hate the move.",
+    "next": "n2"
    }
   }
  },
  "k_a3_before": {
-  "start": "n1",
+  "start": "kb_pre_br",
   "nodes": {
    "n1": {
     "speaker": "",
@@ -644,6 +783,51 @@
     "speaker": "",
     "text": "The gala is next week.",
     "terminal": true
+   },
+   "kb_pre_br": {
+    "branch": [
+     {
+      "not": "__never__",
+      "next": "kb_pre_1"
+     },
+     {
+      "next": "n1"
+     }
+    ]
+   },
+   "kb_pre_1": {
+    "speaker": "",
+    "text": "Week 11. Launch week. Kai has stopped pretending to be calm and started reorganising the design pod's pens by colour, then by length, then by vibe.",
+    "next": "kb_pre_2"
+   },
+   "kb_pre_2": {
+    "speaker": "Kai",
+    "text": "Don't look at me. I'm fine. I'm a professional. I've only redone the loading animation nine times, which is a normal number of times.",
+    "next": "kb_pre_3"
+   },
+   "kb_pre_3": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "Take the mouse out of their hand. 'Nine is plenty.'",
+      "effects": {
+       "affection_kai": 5
+      },
+      "next": "kb_pre_4"
+     },
+     {
+      "text": "'Show me the ninth one.'",
+      "effects": {
+       "affection_kai": 4
+      },
+      "next": "kb_pre_4"
+     }
+    ]
+   },
+   "kb_pre_4": {
+    "speaker": "",
+    "text": "The ninth one is beautiful. So were the other eight. You tell them so, and for a second Kai looks like someone who has never heard that sentence in a workplace before.",
+    "next": "n1"
    }
   }
  },
@@ -658,7 +842,7 @@
    "n2": {
     "speaker": "Kai",
     "text": "It's ten. We said we'd leave at ten, remember? Real life. Dumplings. The frog misses you.",
-    "next": "n3"
+    "next": "cb_fridge_br"
    },
    "n3": {
     "speaker": "",
@@ -674,6 +858,43 @@
     "speaker": "",
     "text": "♥ ROMANCE ENDING: 'Log Off.' You chose a life with a weekend in it, and someone to share it with. Thanks for playing Kai's route.",
     "terminal": true
+   },
+   "cb_fridge_br": {
+    "branch": [
+     {
+      "if": "kai_seen",
+      "next": "cb_fridge_1"
+     },
+     {
+      "next": "kt_more_br"
+     }
+    ]
+   },
+   "cb_fridge_1": {
+    "speaker": "Kai",
+    "text": "You know the napkin drawing? My mum has it on her fridge now. I sent her a photo of yours. She said, and I quote, 'So this is the person.' I didn't correct her.",
+    "next": "kt_more_br"
+   },
+   "kt_more_br": {
+    "branch": [
+     {
+      "not": "__never__",
+      "next": "kt_more_1"
+     },
+     {
+      "next": "n3"
+     }
+    ]
+   },
+   "kt_more_1": {
+    "speaker": "",
+    "text": "Outside, the air is cool and the street is loud and nobody knows or cares that a launch just happened upstairs.",
+    "next": "kt_more_2"
+   },
+   "kt_more_2": {
+    "speaker": "Kai",
+    "text": "Do you know what I'm going to do tomorrow? Absolutely nothing. I'm going to do nothing so well they'll put it in a museum. And you're invited.",
+    "next": "n3"
    }
   }
  },
@@ -688,12 +909,28 @@
    "n2": {
     "speaker": "Kai",
     "text": "You're brilliant, you know. I just can't be the person waiting for you to log off. Call me when you're ready. I mean it. I'll pick up.",
-    "next": "n3"
+    "next": "cb_postcard_br"
    },
    "n3": {
     "speaker": "",
     "text": "♡ BITTERSWEET ENDING: 'Call Me When You Log Off.' The feeling was real. The timing wasn't. Thanks for playing Kai's route.",
     "terminal": true
+   },
+   "cb_postcard_br": {
+    "branch": [
+     {
+      "if": "kai_brave",
+      "next": "cb_postcard_1"
+     },
+     {
+      "next": "n3"
+     }
+    ]
+   },
+   "cb_postcard_1": {
+    "speaker": "",
+    "text": "Three weeks later, a postcard arrives from across the sea. On the back, a tiny drawing of a frog in a very small suitcase. No words. You understand it perfectly.",
+    "next": "n3"
    }
   }
  },
@@ -708,12 +945,28 @@
    "n2": {
     "speaker": "",
     "text": "It's not a love story. It's something sturdy and warm and full of muffins with tiny drawings on the napkins.",
-    "next": "n3"
+    "next": "kf_more_br"
    },
    "n3": {
     "speaker": "",
     "text": "◆ FRIENDSHIP ENDING: 'Official Work Best Friend.' Thanks for playing Kai's route.",
     "terminal": true
+   },
+   "kf_more_br": {
+    "branch": [
+     {
+      "not": "__never__",
+      "next": "kf_more_1"
+     },
+     {
+      "next": "n3"
+     }
+    ]
+   },
+   "kf_more_1": {
+    "speaker": "Kai",
+    "text": "For the record, if you ever need someone to tell you your slides are ugly and your shoes are perfect, I'm always available. Weekdays only. Until six.",
+    "next": "n3"
    }
   }
  },
@@ -728,12 +981,28 @@
    "n2": {
     "speaker": "",
     "text": "They wave from across the room, friendly and far away. The rain checks expired quietly, just like they said.",
-    "next": "n3"
+    "next": "km_more_br"
    },
    "n3": {
     "speaker": "",
     "text": "○ ENDING: 'Rain Check.' Thanks for playing Kai's route.",
     "terminal": true
+   },
+   "km_more_br": {
+    "branch": [
+     {
+      "not": "__never__",
+      "next": "km_more_1"
+     },
+     {
+      "next": "n3"
+     }
+    ]
+   },
+   "km_more_1": {
+    "speaker": "",
+    "text": "Later, you find a drawing of the rooftop bench pinned to the design pod wall. Only one figure on it now, reading alone.",
+    "next": "n3"
    }
   }
  },
@@ -753,6 +1022,283 @@
    "n1": {
     "speaker": "Kai",
     "text": "Saturday market? The frog wants a friend. A matching frog. Don't argue.",
+    "terminal": true
+   }
+  }
+ },
+ "k_a2_call": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 8. Lunch at the café. Kai's phone buzzes for the third time. They stare at the screen as if it might bite.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Kai",
+    "text": "My mum. She calls every Thursday to ask whether I've 'got a proper job yet.' I'm leading design on a launch the CFO is personally watching. Apparently that's still 'drawing.'",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Answer it. On speaker. I'll back you up.'",
+      "effects": {
+       "affection_kai": 7
+      },
+      "next": "speaker"
+     },
+     {
+      "text": "'You don't have to pick up today.'",
+      "effects": {
+       "affection_kai": 6
+      },
+      "next": "skip"
+     },
+     {
+      "text": "'Maybe she just worries about you.'",
+      "effects": {
+       "affection_kai": 3
+      },
+      "next": "worry"
+     }
+    ]
+   },
+   "speaker": {
+    "speaker": "",
+    "text": "Kai answers. Their mum's voice fills the café: warm, sharp and entirely unconvinced. You lean in. 'Hi. I work with Kai. Their launch screen goes up in the lobby next week. People are already taking photos of it.'",
+    "next": "n5"
+   },
+   "n5": {
+    "speaker": "",
+    "text": "There is a long pause on the line. Then: 'Photos? Send me one.'",
+    "next": "n6"
+   },
+   "n6": {
+    "speaker": "Kai",
+    "text": "She asked for a photo. She has never once in my life asked for a photo. You absolute menace. Thank you.",
+    "next": "mid"
+   },
+   "skip": {
+    "speaker": "Kai",
+    "text": "...Huh. Nobody's ever said that to me. I always pick up, and then I spend the afternoon feeling like a hobby.",
+    "next": "n8"
+   },
+   "n8": {
+    "speaker": "Kai",
+    "text": "I'll call her tonight. On my terms. With a photo of the launch screen. That'll confuse her for a week.",
+    "next": "mid"
+   },
+   "worry": {
+    "speaker": "Kai",
+    "text": "She does. That's the annoying part. She worries like people worry about the weather: constantly, and with no plan. ...Fine. I'll send her the photo. Happy?",
+    "next": "mid"
+   },
+   "mid": {
+    "speaker": "",
+    "text": "For the rest of lunch, Kai draws on a napkin: a tiny lobby, a tiny launch screen, and a tiny you standing in front of it.",
+    "next": "n11"
+   },
+   "n11": {
+    "speaker": "Kai",
+    "text": "Can I tell you something embarrassing? The no-weekends thing isn't only about burning out. Every weekend I worked at the old place, I was trying to prove her wrong. It never worked. You can't overtime your way into someone's approval.",
+    "next": "n12"
+   },
+   "n12": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'You don't have to prove anything to me.'",
+      "effects": {
+       "affection_kai": 8,
+       "set_flags": [
+        "kai_seen"
+       ]
+      },
+      "next": "e1"
+     },
+     {
+      "text": "'So what would you do with a weekend that was really yours?'",
+      "effects": {
+       "affection_kai": 7
+      },
+      "next": "e2"
+     }
+    ]
+   },
+   "e1": {
+    "speaker": "Kai",
+    "text": "...Careful. Say things like that and I might start believing them.",
+    "next": "end"
+   },
+   "e2": {
+    "speaker": "Kai",
+    "text": "Sleep in. The market. Draw something nobody's paying for. And, honestly? Spend it with someone who doesn't ask what I've achieved by Sunday.",
+    "next": "n15"
+   },
+   "n15": {
+    "speaker": "",
+    "text": "They don't look at you when they say it. They don't need to.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "Kai folds the napkin and tucks it into your shirt pocket. 'For the fridge,' they say. 'Everyone needs one drawing on the fridge.'",
+    "terminal": true
+   }
+  }
+ },
+ "k_a3_show": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 9. A tiny gallery above a bike shop. Kai has six drawings on the wall, a bowl of crisps and the expression of someone awaiting sentencing.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Kai",
+    "text": "It's not a real show. It's a 'community wall.' Nobody's coming. Which is fine. Which is ideal, actually.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "",
+    "text": "Twelve people come. One of them is a woman from a big design studio across the sea, and she looks at the drawings for a very long time.",
+    "next": "n4"
+   },
+   "n4": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Go and talk to her. I'll guard the crisps.'",
+      "effects": {
+       "affection_kai": 6,
+       "set_flags": [
+        "kai_brave"
+       ]
+      },
+      "next": "brave"
+     },
+     {
+      "text": "'Stay here with me. Let the work do the talking.'",
+      "effects": {
+       "affection_kai": 5
+      },
+      "next": "stay"
+     },
+     {
+      "text": "Look closer at the drawings yourself.",
+      "effects": {
+       "affection_kai": 7
+      },
+      "next": "look"
+     }
+    ]
+   },
+   "brave": {
+    "speaker": "",
+    "text": "Kai goes. You watch them talk with their hands, the way they do when they forget to be nervous. When they come back, there's a business card in their fist.",
+    "next": "n6"
+   },
+   "n6": {
+    "speaker": "Kai",
+    "text": "She wants to 'have a conversation.' People like her don't have conversations. They make offers. ...Oh no.",
+    "next": "mid"
+   },
+   "stay": {
+    "speaker": "Kai",
+    "text": "The work talks. Right. The work is very quiet and I'm going to be sick.",
+    "next": "n8"
+   },
+   "n8": {
+    "speaker": "",
+    "text": "Ten minutes later the woman comes to them. There's a business card. Kai holds it as if it might go off.",
+    "next": "mid"
+   },
+   "look": {
+    "speaker": "",
+    "text": "Third drawing from the left: the rooftop. Two figures on a bench. One asleep on a rolled-up jacket, one reading a terrible detective novel.",
+    "next": "n10"
+   },
+   "n10": {
+    "branch": [
+     {
+      "if": "kai_balance",
+      "next": "lk1"
+     },
+     {
+      "next": "lk2"
+     }
+    ]
+   },
+   "lk1": {
+    "speaker": "Kai",
+    "text": "...I didn't think you'd notice. Everyone else thinks it's 'a study in light.' It's a study in the best afternoon of my quarter.",
+    "next": "card"
+   },
+   "lk2": {
+    "speaker": "Kai",
+    "text": "It's from the day you didn't come up for a break. I drew the person I wished had been there. Then I drew them as you anyway.",
+    "next": "card"
+   },
+   "card": {
+    "speaker": "",
+    "text": "Behind you, the woman from the studio slips Kai a business card on her way out.",
+    "next": "mid"
+   },
+   "mid": {
+    "speaker": "Kai",
+    "text": "If they offer me something, it'll be far from here. You know that, right? You'd tell me to go. You're annoyingly good at telling people to go and be brave.",
+    "next": "n15"
+   },
+   "n15": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'I'd tell you to go. And I'd mean it.'",
+      "effects": {
+       "affection_kai": 6,
+       "set_flags": [
+        "kai_balance"
+       ]
+      },
+      "next": "go"
+     },
+     {
+      "text": "'I'd tell you to go. Then I'd miss you terribly.'",
+      "effects": {
+       "affection_kai": 9
+      },
+      "next": "miss"
+     },
+     {
+      "text": "'Let's not talk about leaving tonight. It's your show.'",
+      "effects": {
+       "affection_kai": 5
+      },
+      "next": "tonight"
+     }
+    ]
+   },
+   "go": {
+    "speaker": "Kai",
+    "text": "You would. That's the most infuriating thing about you, and the best.",
+    "next": "end"
+   },
+   "miss": {
+    "speaker": "Kai",
+    "text": "...Terribly. Okay. I'm putting that on the wall too. Metaphorically. Possibly literally.",
+    "next": "end"
+   },
+   "tonight": {
+    "speaker": "Kai",
+    "text": "My show. Yes. Six drawings and a bowl of crisps. Officially the most successful night of my life.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "You walk Kai home past shuttered shops, the business card a small white weight in their pocket. Neither of you mentions it. Both of you think about it all the way.",
     "terminal": true
    }
   }

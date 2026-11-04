@@ -355,7 +355,7 @@
    "n3": {
     "speaker": "Marcus",
     "text": "I told her I'd watch the video. She said, 'You always watch the video, Marcus.' She's right. I'm a world-class video watcher.",
-    "next": "n4"
+    "next": "cb_lonely_br"
    },
    "n4": {
     "speaker": "You",
@@ -415,6 +415,22 @@
     "speaker": "",
     "text": "For the first time, he isn't unreadable at all. He looks tired, and a little lonely, and very human.",
     "terminal": true
+   },
+   "cb_lonely_br": {
+    "branch": [
+     {
+      "if": "marcus_noticed_lonely",
+      "next": "cb_lonely_1"
+     },
+     {
+      "next": "n4"
+     }
+    ]
+   },
+   "cb_lonely_1": {
+    "speaker": "Marcus",
+    "text": "You said it in week two, by the coffee machine. 'Sounds lonely, up in the corner office.' I've thought about that more than I'd like to admit.",
+    "next": "n4"
    }
   }
  },
@@ -424,7 +440,7 @@
    "n1": {
     "speaker": "",
     "text": "Week 6. Vaughn intercepts you in the meeting room, all charm and expensive watch.",
-    "next": "n2"
+    "next": "cb_metv_br"
    },
    "n2": {
     "speaker": "Vaughn",
@@ -508,6 +524,38 @@
     "speaker": "",
     "text": "Marcus waves at you through the glass on your way out. You don't quite manage to wave back.",
     "terminal": true
+   },
+   "cb_metv_br": {
+    "branch": [
+     {
+      "if": "met_vaughn",
+      "next": "cb_metv_1"
+     },
+     {
+      "next": "cb_pend_br"
+     }
+    ]
+   },
+   "cb_metv_1": {
+    "speaker": "Vaughn",
+    "text": "We met on your first day. I told you my door was open. I'm holding it open now. Don't make me hold it forever.",
+    "next": "cb_pend_br"
+   },
+   "cb_pend_br": {
+    "branch": [
+     {
+      "if": "vaughn_pending",
+      "next": "cb_pend_1"
+     },
+     {
+      "next": "n2"
+     }
+    ]
+   },
+   "cb_pend_1": {
+    "speaker": "Vaughn",
+    "text": "You've already kept me waiting once. Most people only get to do that once.",
+    "next": "n2"
    }
   }
  },
@@ -652,7 +700,7 @@
    "n7": {
     "speaker": "Marcus",
     "text": "You handled that better than most directors would. ...I meant what I said in there. About declaring it. Before, not after.",
-    "next": "end"
+    "next": "cb_spy_hr_br"
    },
    "accuse": {
     "speaker": "",
@@ -662,12 +710,28 @@
    "n9": {
     "speaker": "Marcus",
     "text": "You're not wrong. But you can't win that fight in that room. Next time, let me take the hit. That's my job.",
-    "next": "end"
+    "next": "cb_spy_hr_br"
    },
    "end": {
     "speaker": "",
     "text": "It blows over. Mostly. People look at the two of you slightly longer than they used to.",
     "terminal": true
+   },
+   "cb_spy_hr_br": {
+    "branch": [
+     {
+      "if": "marcus_spy",
+      "next": "cb_spy_hr_1"
+     },
+     {
+      "next": "end"
+     }
+    ]
+   },
+   "cb_spy_hr_1": {
+    "speaker": "",
+    "text": "On your way out, you pass Vaughn's office. He gives you a small nod, like a man checking a delivery has arrived. Marcus sees it.",
+    "next": "end"
    }
   }
  },
@@ -682,12 +746,12 @@
    "n2": {
     "speaker": "Marcus",
     "text": "The CFO has offered me a director role. Strategy, two floors up. After launch I wouldn't run Lighthouse anymore. Someone else would. I wouldn't manage you.",
-    "next": "n3"
+    "next": "closed_br"
    },
    "n3": {
     "speaker": "Marcus",
     "text": "I haven't said yes. I wanted to ask you first, which is a very unprofessional sentence, and I'm saying it anyway.",
-    "next": "n4"
+    "next": "cb_loyal_br"
    },
    "n4": {
     "speaker": "You",
@@ -738,6 +802,38 @@
     "speaker": "",
     "text": "The sun goes down behind the city. He doesn't check his phone once.",
     "terminal": true
+   },
+   "cb_loyal_br": {
+    "branch": [
+     {
+      "if": "marcus_loyal",
+      "next": "cb_loyal_1"
+     },
+     {
+      "next": "n4"
+     }
+    ]
+   },
+   "cb_loyal_1": {
+    "speaker": "Marcus",
+    "text": "You warned me about Vaughn when it could have cost you. The CFO knows that too. It's part of why this offer exists at all.",
+    "next": "n4"
+   },
+   "closed_br": {
+    "branch": [
+     {
+      "if": "marcus_closed",
+      "next": "closed"
+     },
+     {
+      "next": "n3"
+     }
+    ]
+   },
+   "closed": {
+    "speaker": "Marcus",
+    "text": "I haven't said yes. I wanted your view first, as someone on my team. Purely professionally. You made that boundary clear in the taxi, and you were right to.",
+    "next": "cb_loyal_br"
    }
   }
  },
@@ -812,12 +908,33 @@
    "n4": {
     "speaker": "",
     "text": "You say yes. He laughs like a man who's been holding his breath since a taxi in the rain.",
-    "next": "n5"
+    "next": "ma_more_br"
    },
    "n5": {
     "speaker": "",
     "text": "♥ ROMANCE ENDING: 'Before, Not After.' You waited until it was right, and it was worth the wait. Thanks for playing Marcus's route.",
     "terminal": true
+   },
+   "ma_more_br": {
+    "branch": [
+     {
+      "not": "__never__",
+      "next": "ma_more_1"
+     },
+     {
+      "next": "n5"
+     }
+    ]
+   },
+   "ma_more_1": {
+    "speaker": "",
+    "text": "Dinner is at a place with no whiteboards and terrible lighting. He orders for himself, then asks what you'd like, then actually listens to the answer.",
+    "next": "ma_more_2"
+   },
+   "ma_more_2": {
+    "speaker": "Marcus",
+    "text": "I have a confession. I made a slide about tonight. One idea. It just said: 'Don't overthink it.' I overthought it anyway.",
+    "next": "n5"
    }
   }
  },
@@ -907,6 +1024,209 @@
    "n1": {
     "speaker": "Marcus",
     "text": "Lunch on Thursday? I found a place with no whiteboards. It's very relaxing. Slightly unsettling.",
+    "terminal": true
+   }
+  }
+ },
+ "m_a3_reckoning": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 9. Vaughn's restructure memo leaks a week early. Two names from Lighthouse are on it. Marcus calls you into the meeting room and closes the glass door, which fools nobody.",
+    "next": "n2"
+   },
+   "n2": {
+    "branch": [
+     {
+      "if": "marcus_spy",
+      "next": "spy"
+     },
+     {
+      "if": [
+       "marcus_loyal"
+      ],
+      "next": "ally"
+     },
+     {
+      "if": "exposed_vaughn",
+      "next": "ally"
+     },
+     {
+      "next": "neu"
+     }
+    ]
+   },
+   "spy": {
+    "speaker": "Marcus",
+    "text": "Before we talk about the memo, I need to ask you something, and I need you not to lie to me. Vaughn knew about the cuts before I'd told a single person. Somebody told him. Was it you?",
+    "next": "n4"
+   },
+   "n4": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Yes. He dangled the lead in front of me. I'm sorry.'",
+      "effects": {
+       "affection_marcus": 4,
+       "set_flags": [
+        "marcus_confessed"
+       ]
+      },
+      "next": "conf"
+     },
+     {
+      "text": "'No. Of course not.'",
+      "effects": {
+       "affection_marcus": -10,
+       "career": 3,
+       "set_flags": [
+        "marcus_lied"
+       ]
+      },
+      "next": "lie"
+     }
+    ]
+   },
+   "conf": {
+    "speaker": "Marcus",
+    "text": "...Thank you for not lying. That's the only reason we're still having this conversation.",
+    "next": "n6"
+   },
+   "n6": {
+    "speaker": "",
+    "text": "He is quiet for a long time. Outside the glass, the floor pretends not to watch.",
+    "next": "n7"
+   },
+   "n7": {
+    "speaker": "Marcus",
+    "text": "I can forgive a mistake. I can't build anything on a lie. You just made sure I don't have to. Now help me fix what you broke.",
+    "next": "plan"
+   },
+   "lie": {
+    "speaker": "",
+    "text": "He looks at you the way he looked at your first slides: like he has already counted every bullet point.",
+    "next": "n9"
+   },
+   "n9": {
+    "speaker": "Marcus",
+    "text": "Okay.",
+    "next": "plan"
+   },
+   "ally": {
+    "speaker": "Marcus",
+    "text": "Vaughn's memo. You warned me this was coming before anyone else did. I've got a way to stop it, and it only works if someone in the room has the numbers.",
+    "next": "n11"
+   },
+   "n11": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'I'll bring Noah's data. And mine.'",
+      "effects": {
+       "affection_marcus": 6,
+       "career": 4
+      },
+      "next": "plan"
+     },
+     {
+      "text": "'Tell me what you need.'",
+      "effects": {
+       "affection_marcus": 5
+      },
+      "next": "plan"
+     }
+    ]
+   },
+   "neu": {
+    "speaker": "Marcus",
+    "text": "Two names. People who did nothing but good work. I can fight it, but I'll lose if I fight it alone.",
+    "next": "n13"
+   },
+   "n13": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Then you won't fight it alone.'",
+      "effects": {
+       "affection_marcus": 6,
+       "set_flags": [
+        "marcus_loyal"
+       ]
+      },
+      "next": "plan"
+     },
+     {
+      "text": "'Pick your battles. It's Vaughn.'",
+      "effects": {
+       "affection_marcus": -3,
+       "career": 2
+      },
+      "next": "alone"
+     }
+    ]
+   },
+   "plan": {
+    "speaker": "",
+    "text": "You spend the evening building the case: what those two people delivered, what Lighthouse loses without them, and what the cuts actually save. Laid out on a single slide, the cuts look absurd.",
+    "next": "n15"
+   },
+   "n15": {
+    "speaker": "Marcus",
+    "text": "One idea per slide. ...Look at that. You were listening.",
+    "next": "n16"
+   },
+   "n16": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'We take it to the CFO. Together.'",
+      "effects": {
+       "affection_marcus": 5,
+       "reputation": 4,
+       "career": 3,
+       "set_flags": [
+        "stood_up_to_vaughn"
+       ]
+      },
+      "next": "cfo"
+     },
+     {
+      "text": "'You present it. It's your fight, and they trust you.'",
+      "effects": {
+       "affection_marcus": 3,
+       "career": 2,
+       "set_flags": [
+        "stood_up_to_vaughn"
+       ]
+      },
+      "next": "him"
+     }
+    ]
+   },
+   "cfo": {
+    "speaker": "",
+    "text": "The CFO reads the slide twice, asks three questions and cancels the cuts before the meeting ends. Vaughn hears about it in the lift. You hear about it from the whole floor.",
+    "next": "n18"
+   },
+   "n18": {
+    "speaker": "Marcus",
+    "text": "That's solid. ...That's very solid.",
+    "next": "end"
+   },
+   "him": {
+    "speaker": "",
+    "text": "Marcus presents. The cuts are cancelled. In the corridor afterwards he says your name like he's about to say something else. He shakes your hand instead, and holds it a beat too long.",
+    "next": "end"
+   },
+   "alone": {
+    "speaker": "",
+    "text": "Marcus fights it alone. He wins one name back and loses the other. 'One out of two,' he says, to nobody in particular. 'I'd hoped for a second pair of hands.'",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "Two weeks to the gala. Vaughn, people say, has started taking the stairs.",
     "terminal": true
    }
   }

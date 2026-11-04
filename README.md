@@ -2,25 +2,39 @@
 
 A browser-based office life-sim and dating story. You have just joined Project Lighthouse at Meridian, a fictional company in an unnamed city. You have eleven weeks before the launch gala. Five colleagues, five storylines, twenty-six endings, and only three time slots a day to spend.
 
-**Play it:** open `index.html` in any modern browser on desktop or mobile. There is nothing to install and no internet connection is needed.
+**Play it online:** [chimmysmallz.github.io/office-hours](https://chimmysmallz.github.io/office-hours/)
+
+You can also open `index.html` in any modern browser. There is nothing to install and no internet connection is needed.
+
+## Playing on a phone
+
+Office Hours is built for phones first.
+
+- **Hold your phone sideways.** The game plays in landscape and shows a reminder if the phone is upright.
+- **iPhone (Safari):** for full screen without the browser bars, tap **Share**, then **Add to Home Screen**, and open the game from the new icon. It saves your progress in the same way.
+- **Android (Chrome):** the game switches to full screen when you first tap the title screen.
+- Everything is tap-only: tap people and objects to interact, and tap the text box to move the conversation on. Pop-up panels keep their buttons on screen, so there is no scrolling to find **Next** or **Start**.
 
 ---
 
 ## What is in the game
 
-- **Five romance routes.** Zara (trust and vulnerability), Priya (enemies to lovers), Noah (a hidden slow burn), Marcus (crossing professional lines) and Kai (work-life balance). Each has its own scenes and four endings.
-- **Six career endings**, including a rare "Have It All", and three bad endings to avoid: Burnout, Pariah and Outplayed.
+- **Five romance routes.** Zara (trust and vulnerability), Priya (enemies to lovers), Noah (a hidden slow burn), Marcus (crossing professional lines) and Kai (work-life balance). Each has its own scenes and four endings. Every route now runs to roughly 2,400 to 3,900 words.
+- **One shared timeline.** The five stories happen in the same office in the same quarter. The Lighthouse lead role is offered once, and whatever you decide, everyone reacts to it. Get close to two people at once and the office starts to talk. At the gala you choose who to walk across the room to, and the others notice.
+- **Choices that come back.** Promises, betrayals and small kindnesses are remembered and paid off later, sometimes weeks later.
+- **Seven career endings**, including "Have It All" (career, reputation, love, and standing up to Vaughn), the middle-ground "A Seat at the Table", and three bad endings to avoid: Burnout, Pariah and Outplayed. Twenty-seven endings in total.
+- **Activities with decisions.** Every activity is a small choice or mini-game: sort your inbox under pressure, build a three-slide pitch, choose who to sit with at lunch, decide what goes first in the sprint, plus the dance-off rhythm game at the stereo.
+- **Eight player characters** to choose from, all drawn in the same style as the cast.
 - **Four rooms** in the Meridian tower: the ninth-floor office, the meeting room, the ground-floor café and the rooftop terrace. A tower map with a working lift moves you between them.
 - **Character schedules.** Colleagues move between rooms through the day. A pink **!** means someone has a new story moment waiting.
-- **Three meters.** Energy, Career and Reputation, shown as rings that pulse red when you are in danger. Repeating the same activity earns less each time.
-- **Sixteen random office events**, from printer jams to fire drills, each a quick choice with a trade-off.
-- **A dance-off rhythm game** at the office stereo.
+- **Three meters.** Energy, Career and Reputation, shown as rings that pulse red when you are in danger. Repeating the same activity earns less, and the top of each meter takes real effort to reach.
+- **Eighteen random office events**, from printer jams to fire drills, plus rumours that react to your love life.
 - **An orientation guide** in which the cast teaches you the game, with small interactive demos.
 - **Quality of life:** text speed, skip for lines already read, auto-advance, a conversation log, autosave every evening and three manual save slots.
 - **An endings gallery** that persists across playthroughs, with hints for locked endings.
-- **Sound** generated in the browser: room music, character themes, office ambience and effects.
+- **An original soundtrack.** Four short pieces, one per room, composed for the game and played by instruments built into the page, plus a theme for each character and office ambience.
 
----
+In numbers: 119 scenes, about 20,000 words of dialogue (around 90 minutes of reading per full set of routes) and 254 player choices.
 
 ## Repository layout
 
@@ -91,7 +105,7 @@ Suitable for ages 13 and up. Mild workplace romance (a few kisses, nothing expli
 
 ## About the Godot version
 
-The `godot/` folder holds the original Godot 4 starter project. It now includes the new Marcus and Kai story files, the office events and the new art, so the content is ready. However, the Godot code has not yet been updated with the newer features of the web version: the Marcus and Kai routes, the extra rooms, the office events, the orientation guide, the tower map and the endings gallery. Open `godot/project.godot` in Godot 4.3 or newer to run it. Instructions for adding the art are in `godot/ASSETS_GUIDE.md`.
+The `godot/` folder holds the original Godot 4 starter project. It includes the art and an earlier version of the story files. The newest story files in `web/story/` use features the Godot code does not understand yet (shared-timeline branches), so they have not been copied across. The Godot code has also not been updated with the newer features of the web version: the Marcus and Kai routes, the extra rooms, the office events, the orientation guide, the tower map and the endings gallery. Open `godot/project.godot` in Godot 4.3 or newer to run it. Instructions for adding the art are in `godot/ASSETS_GUIDE.md`.
 
 ---
 

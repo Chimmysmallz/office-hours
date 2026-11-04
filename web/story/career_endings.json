@@ -118,5 +118,25 @@
     "terminal": true
    }
   }
+ },
+ "end_steady": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 12. The Gala. You are not on the stage tonight, and you are not hiding at the back either. You are somewhere better: in the middle of the room, where people come to find you.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "",
+    "text": "Marcus mentions your name in his speech. Two people from other teams ask what you're working on next. Your inbox has an invitation to the planning meeting for the next big project.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "",
+    "text": "▲ CAREER ENDING: 'A Seat at the Table.' You did good work and kept your life. Not the corner office, but a voice in the room that matters.",
+    "terminal": true
+   }
+  }
  }
 }

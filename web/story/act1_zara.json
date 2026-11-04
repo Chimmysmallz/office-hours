@@ -1,244 +1,964 @@
 {
-	"a1_arrival": {
-		"start": "n1",
-		"nodes": {
-			"n1": { "speaker": "", "text": "Week 1. 8:54am. You're standing in the Meridian lobby holding a laptop bag, a welcome folder, and a lanyard that says 'GUSET' because someone in HR can't spell.", "next": "n2" },
-			"n2": { "speaker": "", "text": "The receptionist has stepped away. A woman with a coffee and a knowing look clocks you from the lift.", "next": "n3" },
-			"n3": { "speaker": "Zara", "text": "Let me guess. Ninth floor, Project Lighthouse, no idea which desk is yours, and — ", "next": "n4" },
-			"n4": { "speaker": "Zara", "text": "— oh, that badge says GUSET. Incredible. Day one and you're already a typo. I'm keeping that.", "next": "c1" },
-			"c1": { "speaker": "You", "choices": [
-				{ "text": "'Please don't tell anyone about GUSET.'", "effects": { "affection_zara": 7 }, "next": "guset" },
-				{ "text": "'Ninth floor, that's me. Lead the way?'", "effects": { "affection_zara": 4 }, "next": "lead" },
-				{ "text": "'You clocked all that from a lift. Should I be worried?'", "effects": { "affection_zara": 6 }, "next": "clock" }
-			]},
-			"guset": { "speaker": "Zara", "text": "Absolutely I'm telling everyone. It's the best thing that's happened to this floor all quarter. Come on, GUSET, you're next to me.", "next": "n5" },
-			"lead": { "speaker": "Zara", "text": "Efficient. I respect it. Follow me — and try not to make eye contact with the coffee machine on this floor, it can smell fear.", "next": "n5" },
-			"clock": { "speaker": "Zara", "text": "Deeply worried. I notice everything. It's a gift and a personality flaw. I'm Zara — you're right next to me, unfortunately for you.", "next": "n5" },
-			"n5": { "speaker": "", "text": "She walks you to the lift like she's done this a hundred times and never once enjoyed it as much as today.", "next": "c2" },
-			"c2": { "speaker": "You", "choices": [
-				{ "text": "'So what's the survival advice for the ninth floor?'", "effects": { "affection_zara": 6 }, "next": "advice" },
-				{ "text": "'Is Lighthouse as intense as everyone says?'", "effects": { "career": 3 }, "next": "intense" }
-			]},
-			"advice": { "speaker": "Zara", "text": "Rule one: upstairs coffee, never this floor. Rule two: if Vaughn compliments your work, check your back for a knife. Rule three: sit with me at lunch or the wolves get you.", "next": "end" },
-			"intense": { "speaker": "Zara", "text": "It's the whole quarter riding on one launch, so — yes. But intense is survivable with the right desk neighbour. Lucky you.", "next": "end" },
-			"end": { "speaker": "", "text": "The lift doors close on the two of you. First morning, and it already doesn't feel like a place you'll dread.", "terminal": true }
-		}
-	},
-
-	"a1_tour": {
-		"start": "n1",
-		"nodes": {
-			"n1": { "speaker": "", "text": "Zara gives you the thirty-second floor tour, which is really just her opinions on everyone, delivered under her breath.", "next": "n2" },
-			"n2": { "speaker": "Zara", "text": "Corner office: Marcus, our lead. Calm, fair, a little unreadable. If he likes your work he says 'that's solid,' and that's basically a parade.", "next": "n3" },
-			"n3": { "speaker": "Marcus", "text": "New hire. Welcome to Lighthouse. Keep your head down, ask good questions, and we'll get along. That's solid advice, take it.", "next": "n4" },
-			"n4": { "speaker": "Zara", "text": "By the whiteboard: Priya. Brilliant, sharp, and gunning for exactly what I'm gunning for. Watch her. Actually — don't, she'll notice.", "next": "n5" },
-			"n5": { "speaker": "Priya", "text": "The famous new hire. GUSET, was it? Word travels. Do try to keep up on Lighthouse — I don't slow down for anyone.", "next": "n6" },
-			"n6": { "speaker": "", "text": "Further along, a man with a too-smooth smile intercepts you. Zara's whole body language changes.", "next": "n7" },
-			"n7": { "speaker": "Vaughn", "text": "Vaughn. Senior director. I like to know the new talent early. My door's always open — remember that when the quarter gets... competitive.", "effects": { "set_flags": ["met_vaughn"] }, "next": "c1" },
-			"c1": { "speaker": "You", "choices": [
-				{ "text": "'Thanks — but I'm pretty happy at my desk.' (stay close to Zara)", "effects": { "affection_zara": 6 }, "next": "loyal" },
-				{ "text": "'Good to know. I'll remember that.' (keep options open)", "effects": { "career": 3 }, "next": "open" }
-			]},
-			"loyal": { "speaker": "Zara", "text": "Nicely dodged. He collects people. You're not a collectible.", "next": "n8" },
-			"open": { "speaker": "Zara", "text": "...Careful with that one. His open door leads somewhere you don't want to go. Anyway — moving on.", "next": "n8" },
-			"n8": { "speaker": "Zara", "text": "Design pod: Kai. They do the pretty half of Lighthouse and flirt with the whole building. Harmless. Mostly.", "next": "n9" },
-			"n9": { "speaker": "Kai", "text": "Ooh, fresh blood. Hi, I'm Kai, I make things beautiful and deadlines miserable. We're going to be friends, I can tell.", "next": "n10" },
-			"n10": { "speaker": "", "text": "In the corner, half-hidden behind two monitors, someone barely looks up. Zara doesn't even mention him.", "next": "c2" },
-			"c2": { "speaker": "You", "choices": [
-				{ "text": "Stop and say hi to the guy in the corner.", "effects": { "affection_noah": 6, "set_flags": ["noticed_noah"] }, "next": "noah" },
-				{ "text": "Keep walking with Zara.", "effects": { "affection_zara": 3 }, "next": "skip" }
-			]},
-			"noah": { "speaker": "Noah", "text": "...Oh. Hi. Noah. Data. Most people don't stop. That was — nice, actually. See you around, maybe.", "next": "end" },
-			"skip": { "speaker": "Zara", "text": "That's Noah, I think? Analytics. Keeps to himself. Anyway — that's the whole zoo. Welcome to it.", "next": "end" },
-			"end": { "speaker": "", "text": "You've met the floor. Somewhere in this room is your future — the project, the rivals, and the one person you already can't stop noticing.", "terminal": true }
-		}
-	},
-
-	"a1_task": {
-		"start": "n1",
-		"nodes": {
-			"n1": { "speaker": "", "text": "Your first real Lighthouse task lands in your inbox: clean up the Q2 model before the noon sync. It's more tangled than it looks.", "next": "n2" },
-			"n2": { "speaker": "Zara", "text": "First task. Trial by spreadsheet. I can walk you through it, or you can white-knuckle it solo and impress Marcus. Your call, GUSET.", "next": "c1" },
-			"c1": { "speaker": "You", "choices": [
-				{ "text": "'Walk me through it. I'd rather learn it right.'", "effects": { "affection_zara": 7 }, "next": "together" },
-				{ "text": "'I'll take a run at it solo first.'", "effects": { "career": 6 }, "next": "solo" },
-				{ "text": "'Race you. Loser buys the good coffee.'", "effects": { "affection_zara": 5, "career": 3 }, "next": "race" }
-			]},
-			"together": { "speaker": "Zara", "text": "Smart. Pull your chair over. See this tab? This is where dreams go to die. Watch.", "next": "together2" },
-			"together2": { "speaker": "", "text": "She's a good teacher — patient, funny, a little too close as she points at your screen. You get it done by eleven, and you learned something. Both of you did.", "next": "end" },
-			"solo": { "speaker": "", "text": "You grind it out yourself. It's rough, but you hand Marcus something workable. 'That's... solid,' he says, and Zara mouths 'a PARADE' from across the aisle.", "next": "endsolo" },
-			"race": { "speaker": "Zara", "text": "Oh, it's ON. No mercy for the new kid.", "next": "race2" },
-			"race2": { "speaker": "", "text": "She wins by four minutes and gloats insufferably. You don't mind losing nearly as much as you should. You owe her a good coffee — which is, you suspect, exactly what she wanted.", "next": "end" },
-			"endsolo": { "speaker": "", "text": "You proved something today. Whether it was to Marcus or to yourself, you're not sure yet.", "terminal": true },
-			"end": { "speaker": "", "text": "First task, survived. The floor feels a little less like a maze already.", "terminal": true }
-		}
-	},
-
-	"a1_coffee": {
-		"start": "n1",
-		"nodes": {
-			"n1": { "speaker": "", "text": "Mid-afternoon slump. Zara stands, stretches, and jerks her head toward the stairwell. 'Come on. Upstairs coffee. You've earned the good machine.'", "next": "n2" },
-			"n2": { "speaker": "Zara", "text": "So. GUSET. Three days in. Regretting it yet?", "next": "c1" },
-			"c1": { "speaker": "You", "choices": [
-				{ "text": "'Honestly? Best part's the company at desk 13.'", "effects": { "affection_zara": 8 }, "next": "smooth" },
-				{ "text": "'Ask me after the launch when I've slept.'", "effects": { "affection_zara": 5 }, "next": "tired" },
-				{ "text": "'Not yet. This place grows on you.'", "effects": { "affection_zara": 4 }, "next": "warm" }
-			]},
-			"smooth": { "speaker": "Zara", "text": "...Wow. Just going to say that, out loud, by the coffee machine, like it's nothing. Bold. I'll allow it.", "next": "n3" },
-			"tired": { "speaker": "Zara", "text": "Ha. Honest. Sleep is a myth here — we run on caffeine and spite. You'll fit right in.", "next": "n3" },
-			"warm": { "speaker": "Zara", "text": "It does, doesn't it. Against your better judgment. That's Meridian.", "next": "n3" },
-			"n3": { "speaker": "Zara", "text": "Can I tell you something a little too real for a coffee break? I've been the 'promising one' here for three years. I need Lighthouse to turn promising into something. It's kind of everything for me.", "next": "c2" },
-			"c2": { "speaker": "You", "choices": [
-				{ "text": "'Then it will. You're the sharpest person here.'", "effects": { "affection_zara": 8 }, "next": "believe" },
-				{ "text": "'No pressure or anything, huh.'", "effects": { "affection_zara": 4 }, "next": "joke" }
-			]},
-			"believe": { "speaker": "Zara", "text": "...Careful. Keep saying things like that and I'll actually start believing them. That's dangerous for a person like me.", "next": "end" },
-			"joke": { "speaker": "Zara", "text": "None whatsoever. I'm perfectly calm. This is my calm face. ...Thanks for listening, though. Genuinely.", "next": "end" },
-			"end": { "speaker": "", "text": "You go back down two floors and somehow closer than you went up.", "terminal": true }
-		}
-	},
-
-	"a1_priya": {
-		"start": "n1",
-		"nodes": {
-			"n1": { "speaker": "", "text": "Week 2. You're refilling at the printer when Priya materialises beside you, all crisp edges and calculation.", "next": "n2" },
-			"n2": { "speaker": "Priya", "text": "A word of advice, new hire. Zara's lovely. She's also my competition for the Lighthouse lead, and she'll be yours too before long. Don't get so cosy you forget that.", "next": "c1" },
-			"c1": { "speaker": "You", "choices": [
-				{ "text": "'Zara's a colleague and a friend. That's not going to change.'", "effects": { "affection_zara": 7 }, "next": "loyal" },
-				{ "text": "'Noted. I don't rattle easily.'", "effects": { "reputation": 4 }, "next": "cool" },
-				{ "text": "'Sounds like you're the one who's rattled.'", "effects": { "affection_priya": 4, "reputation": 2 }, "next": "spar" }
-			]},
-			"loyal": { "speaker": "Priya", "text": "How sweet. We'll see how that holds when the promotion's real and it's her name or yours. It always changes. Enjoy the honeymoon.", "next": "end" },
-			"cool": { "speaker": "Priya", "text": "Good. Rattled people make mistakes, and I don't intend to. Welcome to the real game, new hire.", "next": "end" },
-			"spar": { "speaker": "Priya", "text": "...Ha. Okay. You've got a spine. I'll give you that much. Most of them don't. This'll be more interesting than I thought.", "next": "end" },
-			"end": { "speaker": "", "text": "Back at your desk, Zara reads your face in half a second. 'Priya got to you. What did she say?' You realise the promotion's already a shadow on the floor — and it's only week two.", "terminal": true }
-		}
-	},
-
-	"a1_latenight": {
-		"start": "n1",
-		"nodes": {
-			"n1": { "speaker": "", "text": "9pm. The floor is empty except for the two of you and a Lighthouse deadline that refuses to be finished. Zara slides a takeout carton across the aisle.", "next": "n2" },
-			"n2": { "speaker": "Zara", "text": "I over-ordered. It's a defence mechanism. Sit. Eat. Suffer with me. Misery loves noodles.", "next": "c1" },
-			"c1": { "speaker": "You", "choices": [
-				{ "text": "'What made you want this job, really?'", "effects": { "affection_zara": 8 }, "next": "why" },
-				{ "text": "'Let's crush this deck and get out of here.'", "effects": { "career": 5, "affection_zara": 2 }, "next": "work" }
-			]},
-			"why": { "speaker": "Zara", "text": "Honestly? My family thinks 'analyst at Meridian' is a phase before a real career. Lighthouse is me proving it's not. To them. To me. To Priya, a little, if I'm honest.", "next": "n3" },
-			"n3": { "speaker": "Zara", "text": "...I don't say that to people. Blame the noodles and the terrible hour.", "next": "c2" },
-			"c2": { "speaker": "You", "choices": [
-				{ "text": "'For what it's worth, you don't have anything to prove to me.'", "effects": { "affection_zara": 9 }, "next": "soft" },
-				{ "text": "'Then let's make sure they all see it. Together.'", "effects": { "affection_zara": 6, "career": 3 }, "next": "ally" }
-			]},
-			"soft": { "speaker": "Zara", "text": "...You keep doing that. Saying the thing that gets right under my ribs. Stop it. Don't stop it. I don't know.", "next": "end" },
-			"ally": { "speaker": "Zara", "text": "Together. God, that's a nice word after three years of 'on your own, kid.' Okay. Partners on this.", "next": "end" },
-			"work": { "speaker": "Zara", "text": "A professional. Devastating. Fine — but you're taking half these noodles, I refuse to carry the guilt home alone.", "next": "end" },
-			"end": { "speaker": "", "text": "You finish at eleven. It's late, and you're exhausted, and you can't remember the last time work felt this much like something else.", "terminal": true }
-		}
-	},
-
-	"a1_lobby": {
-		"start": "n1",
-		"nodes": {
-			"n1": { "speaker": "", "text": "The lift down is slow. It's just the two of you, tired and a little punch-drunk, watching the floor numbers count down.", "next": "n2" },
-			"n2": { "speaker": "Zara", "text": "This is the part of the night where I usually say something too honest and then blame it on being tired. So. Fair warning.", "next": "c1" },
-			"c1": { "speaker": "You", "choices": [
-				{ "text": "'Say it. I won't hold it against you.'", "effects": { "affection_zara": 8, "set_flags": ["zara_spark"] }, "next": "honest" },
-				{ "text": "'Get home, get some sleep. It'll keep.'", "effects": { "affection_zara": 4 }, "next": "gentle" }
-			]},
-			"honest": { "speaker": "Zara", "text": "...I'm glad it was you at that desk. That's all. That's the too-honest thing. Okay, doors are opening, we never speak of this, goodnight.", "next": "end" },
-			"gentle": { "speaker": "Zara", "text": "...Yeah. You're right. Rain check on the honesty. Get home safe, GUSET.", "next": "end" },
-			"end": { "speaker": "", "text": "You walk out into the cool night. Somewhere behind you the lift closes, and you're smiling at nothing.", "terminal": true }
-		}
-	},
-
-	"a1_marcus": {
-		"start": "n1",
-		"nodes": {
-			"n1": { "speaker": "", "text": "Week 3. Marcus waves you into his office. Zara watches you go with a raised eyebrow.", "next": "n2" },
-			"n2": { "speaker": "Marcus", "text": "You've settled in fast. Good instincts, plays well with the team. I'll be honest with you, because you'll hear it soon anyway.", "next": "n3" },
-			"n3": { "speaker": "Marcus", "text": "There's a lead role opening on Lighthouse at the end of the quarter. One of the juniors gets it. You're in the conversation. So is Zara. So is Priya. I'd rather you knew than found out in a rumour.", "next": "c1" },
-			"c1": { "speaker": "You", "choices": [
-				{ "text": "'I appreciate the honesty. I'll earn it fairly.'", "effects": { "reputation": 6 }, "next": "fair" },
-				{ "text": "'What matters most to you in whoever leads?'", "effects": { "career": 5, "affection_marcus": 3 }, "next": "ask" },
-				{ "text": "'Zara's wanted this for years. She's ready.'", "effects": { "affection_zara": 8 }, "next": "champion" }
-			]},
-			"fair": { "speaker": "Marcus", "text": "Fairly. Good. That's rarer than it should be around here. Keep it that way when it gets tight — and it will get tight.", "next": "end" },
-			"ask": { "speaker": "Marcus", "text": "Someone who lifts the team instead of climbing over it. Talent I can find anywhere. That, I can't. Remember I said so.", "next": "end" },
-			"champion": { "speaker": "Marcus", "text": "...Interesting. Championing your competition. That tells me more about you than any spreadsheet could. Noted.", "next": "end" },
-			"end": { "speaker": "", "text": "You leave the office knowing the thing that's going to test everything — you and Zara included — now has a name and a deadline.", "terminal": true }
-		}
-	},
-
-	"a1_rooftop": {
-		"start": "n1",
-		"nodes": {
-			"n1": { "speaker": "", "text": "Lunch. Zara tips her head toward the stairwell. 'Come on. I'm showing you the one genuinely good thing about this building.'", "next": "n2" },
-			"n2": { "speaker": "", "text": "The rooftop. The whole city laid out, warm and loud and far below. She leans on the railing like it's an old friend.", "next": "n3" },
-			"n3": { "speaker": "Zara", "text": "I come up here when the floor gets to be too much. You're the first person I've ever brought. So, you know. Don't make it a thing.", "next": "c1" },
-			"c1": { "speaker": "You", "choices": [
-				{ "text": "'Why me?'", "effects": { "affection_zara": 9 }, "next": "whyme" },
-				{ "text": "'Secret's safe. I'll guard the rooftop with my life.'", "effects": { "affection_zara": 6 }, "next": "guard" },
-				{ "text": "'Even with the promotion thing hanging over us?'", "effects": { "affection_zara": 5 }, "next": "real" }
-			]},
-			"whyme": { "speaker": "Zara", "text": "...Because you're easy to be around. Do you know how rare that is? I spend all day with my guard up. Up here, with you, I forget to.", "next": "spark" },
-			"guard": { "speaker": "Zara", "text": "Good. Because this is the only place I don't have to perform. Don't take that away.", "next": "spark" },
-			"real": { "speaker": "Zara", "text": "...Yeah. Even with that. Maybe especially with that. Up here it doesn't feel like it has to come between us. Down there's a different story.", "next": "spark" },
-			"spark": { "speaker": "", "text": "For a moment neither of you says anything. The city hums. The moment stretches, comfortable and just slightly electric.", "next": "c2" },
-			"c2": { "speaker": "You", "choices": [
-				{ "text": "'For what it's worth, you're pretty easy to be around too.'", "effects": { "affection_zara": 9, "set_flags": ["zara_spark"] }, "next": "close" },
-				{ "text": "'We should head back before someone notices.'", "effects": { "affection_zara": 3 }, "next": "retreat" }
-			]},
-			"close": { "speaker": "Zara", "text": "...Okay. We should go back down before I say the next thing, because I will absolutely overthink it for a week.", "next": "end" },
-			"retreat": { "speaker": "Zara", "text": "...Yeah. Back to reality. Come up whenever, though. Just — maybe when I'm hiding, not when I'm being sensible.", "next": "end" },
-			"end": { "speaker": "", "text": "You head back down. Whatever this is, it stopped being nothing a while ago.", "terminal": true }
-		}
-	},
-
-	"a1_afterwork": {
-		"start": "n1",
-		"nodes": {
-			"n1": { "speaker": "", "text": "Friday. The team scatters for the weekend. Zara lingers by your desk, jacket half on, pretending to look for something.", "next": "n2" },
-			"n2": { "speaker": "Zara", "text": "So there's a not-terrible bar around the corner. I'm going. You could also go. To the same place. At the same time. As friends. Or whatever. God, I'm bad at this.", "next": "c1" },
-			"c1": { "speaker": "You", "choices": [
-				{ "text": "'Are you asking me for a drink, Zara?'", "effects": { "affection_zara": 8 }, "next": "yes" },
-				{ "text": "'Lead the way. I could use it.'", "effects": { "affection_zara": 6 }, "next": "sure" }
-			]},
-			"yes": { "speaker": "Zara", "text": "...I'm asking you for a drink. Yes. Badly. Please put me out of my misery and say yes.", "next": "bar" },
-			"sure": { "speaker": "Zara", "text": "Oh thank god, a normal response. Come on.", "next": "bar" },
-			"bar": { "speaker": "", "text": "The bar is warm and half-empty and perfect. Two drinks in, the work armour is off and it's just two people talking.", "next": "n3" },
-			"n3": { "speaker": "Zara", "text": "Okay, real question. When Priya cornered you about the promotion — did it work? Are you already sizing me up as competition?", "next": "c2" },
-			"c2": { "speaker": "You", "choices": [
-				{ "text": "'I'm sitting here with you on a Friday. What do you think?'", "effects": { "affection_zara": 10 }, "next": "warm" },
-				{ "text": "'I won't lie — I want the lead. I also want this. Both can be true.'", "effects": { "affection_zara": 7, "career": 4 }, "next": "honest" },
-				{ "text": "'Let's not let a promotion write our story for us.'", "effects": { "affection_zara": 8 }, "next": "story" }
-			]},
-			"warm": { "speaker": "Zara", "text": "...Fair point. Damn it. You keep disarming me and I keep letting you. That should worry me more than it does.", "next": "close" },
-			"honest": { "speaker": "Zara", "text": "...You know what, thank you for not pretending. I'd rather the honest version of you than a comfortable lie. Both can be true. We'll figure out the both later.", "next": "close" },
-			"story": { "speaker": "Zara", "text": "...Yeah. Let's not. I like our story. I'd like to see where it goes before the office gets a vote.", "next": "close" },
-			"close": { "speaker": "", "text": "You talk until the bar starts stacking chairs. On the pavement outside, there's a pause — the kind that could tip either way.", "next": "c3" },
-			"c3": { "speaker": "You", "choices": [
-				{ "text": "'This was the best part of my week.'", "effects": { "affection_zara": 8, "set_flags": ["zara_spark"] }, "next": "end" },
-				{ "text": "'Same time next week?'", "effects": { "affection_zara": 6, "set_flags": ["zara_spark"] }, "next": "endnext" }
-			]},
-			"endnext": { "speaker": "Zara", "text": "Same time next week. It's a date. ...I said date. I'm leaving now. Goodnight, GUSET.", "terminal": true },
-			"end": { "speaker": "Zara", "text": "...Mine too. Don't let that go to your head. Okay, maybe a little to your head. Goodnight, GUSET.", "terminal": true }
-		}
-	},
-
-	"a1_monday": {
-		"start": "n1",
-		"nodes": {
-			"n1": { "speaker": "", "text": "Monday. Week 4. The weekend glow lasts exactly until you step off the lift and feel the change in the air.", "next": "n2" },
-			"n2": { "speaker": "", "text": "There's a printed memo on every desk. An all-hands is scheduled for this morning. Zara catches your eye across the aisle, and you both already know what it's about.", "next": "n3" },
-			"n3": { "speaker": "Zara", "text": "Whatever they say in there — this weekend was real. Hold onto that. Because I have a feeling things are about to get complicated.", "next": "c1" },
-			"c1": { "speaker": "You", "choices": [
-				{ "text": "'Complicated doesn't scare me. Not with you.'", "effects": { "affection_zara": 7 }, "next": "brave" },
-				{ "text": "'Then let's promise to stay honest, whatever happens.'", "effects": { "affection_zara": 6 }, "next": "promise" }
-			]},
-			"brave": { "speaker": "Zara", "text": "...Okay. Okay. Hold that thought. We're going to need it.", "next": "end" },
-			"promise": { "speaker": "Zara", "text": "Honest. Whatever happens. Deal. Shake on it before I lose my nerve — and before Marcus starts talking.", "next": "end" },
-			"end": { "speaker": "", "text": "The all-hands is starting. Act 1 is over — you know these people now, and you know what you're walking into. Everything that happens next, happens because this part was real.", "terminal": true }
-		}
-	}
+ "a1_arrival": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 1. 8:54am. You're standing in the Meridian lobby holding a laptop bag, a welcome folder, and a lanyard that says 'GUSET' because someone in HR can't spell.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "",
+    "text": "The receptionist has stepped away. A woman with a coffee and a knowing look clocks you from the lift.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "Zara",
+    "text": "Let me guess. Ninth floor, Project Lighthouse, no idea which desk is yours, and — ",
+    "next": "n4"
+   },
+   "n4": {
+    "speaker": "Zara",
+    "text": "— oh, that badge says GUSET. Incredible. Day one and you're already a typo. I'm keeping that.",
+    "next": "c1"
+   },
+   "c1": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Please don't tell anyone about GUSET.'",
+      "effects": {
+       "affection_zara": 7
+      },
+      "next": "guset"
+     },
+     {
+      "text": "'Ninth floor, that's me. Lead the way?'",
+      "effects": {
+       "affection_zara": 4
+      },
+      "next": "lead"
+     },
+     {
+      "text": "'You clocked all that from a lift. Should I be worried?'",
+      "effects": {
+       "affection_zara": 6
+      },
+      "next": "clock"
+     }
+    ]
+   },
+   "guset": {
+    "speaker": "Zara",
+    "text": "Absolutely I'm telling everyone. It's the best thing that's happened to this floor all quarter. Come on, GUSET, you're next to me.",
+    "next": "n5"
+   },
+   "lead": {
+    "speaker": "Zara",
+    "text": "Efficient. I respect it. Follow me — and try not to make eye contact with the coffee machine on this floor, it can smell fear.",
+    "next": "n5"
+   },
+   "clock": {
+    "speaker": "Zara",
+    "text": "Deeply worried. I notice everything. It's a gift and a personality flaw. I'm Zara — you're right next to me, unfortunately for you.",
+    "next": "n5"
+   },
+   "n5": {
+    "speaker": "",
+    "text": "She walks you to the lift like she's done this a hundred times and never once enjoyed it as much as today.",
+    "next": "c2"
+   },
+   "c2": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'So what's the survival advice for the ninth floor?'",
+      "effects": {
+       "affection_zara": 6
+      },
+      "next": "advice"
+     },
+     {
+      "text": "'Is Lighthouse as intense as everyone says?'",
+      "effects": {
+       "career": 3
+      },
+      "next": "intense"
+     }
+    ]
+   },
+   "advice": {
+    "speaker": "Zara",
+    "text": "Rule one: upstairs coffee, never this floor. Rule two: if Vaughn compliments your work, check your back for a knife. Rule three: sit with me at lunch or the wolves get you.",
+    "next": "end"
+   },
+   "intense": {
+    "speaker": "Zara",
+    "text": "It's the whole quarter riding on one launch, so — yes. But intense is survivable with the right desk neighbour. Lucky you.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "The lift doors close on the two of you. First morning, and it already doesn't feel like a place you'll dread.",
+    "terminal": true
+   }
+  }
+ },
+ "a1_tour": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Zara gives you the thirty-second floor tour, which is really just her opinions on everyone, delivered under her breath.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Zara",
+    "text": "Corner office: Marcus, our lead. Calm, fair, a little unreadable. If he likes your work he says 'that's solid,' and that's basically a parade.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "Marcus",
+    "text": "New hire. Welcome to Lighthouse. Keep your head down, ask good questions, and we'll get along. That's solid advice, take it.",
+    "next": "n4"
+   },
+   "n4": {
+    "speaker": "Zara",
+    "text": "By the whiteboard: Priya. Brilliant, sharp, and gunning for exactly what I'm gunning for. Watch her. Actually — don't, she'll notice.",
+    "next": "n5"
+   },
+   "n5": {
+    "speaker": "Priya",
+    "text": "The famous new hire. GUSET, was it? Word travels. Do try to keep up on Lighthouse — I don't slow down for anyone.",
+    "next": "n6"
+   },
+   "n6": {
+    "speaker": "",
+    "text": "Further along, a man with a too-smooth smile intercepts you. Zara's whole body language changes.",
+    "next": "n7"
+   },
+   "n7": {
+    "speaker": "Vaughn",
+    "text": "Vaughn. Senior director. I like to know the new talent early. My door's always open — remember that when the quarter gets... competitive.",
+    "effects": {
+     "set_flags": [
+      "met_vaughn"
+     ]
+    },
+    "next": "c1"
+   },
+   "c1": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Thanks — but I'm pretty happy at my desk.' (stay close to Zara)",
+      "effects": {
+       "affection_zara": 6
+      },
+      "next": "loyal"
+     },
+     {
+      "text": "'Good to know. I'll remember that.' (keep options open)",
+      "effects": {
+       "career": 3
+      },
+      "next": "open"
+     }
+    ]
+   },
+   "loyal": {
+    "speaker": "Zara",
+    "text": "Nicely dodged. He collects people. You're not a collectible.",
+    "next": "n8"
+   },
+   "open": {
+    "speaker": "Zara",
+    "text": "...Careful with that one. His open door leads somewhere you don't want to go. Anyway — moving on.",
+    "next": "n8"
+   },
+   "n8": {
+    "speaker": "Zara",
+    "text": "Design pod: Kai. They do the pretty half of Lighthouse and flirt with the whole building. Harmless. Mostly.",
+    "next": "n9"
+   },
+   "n9": {
+    "speaker": "Kai",
+    "text": "Ooh, fresh blood. Hi, I'm Kai, I make things beautiful and deadlines miserable. We're going to be friends, I can tell.",
+    "next": "n10"
+   },
+   "n10": {
+    "speaker": "",
+    "text": "In the corner, half-hidden behind two monitors, someone barely looks up. Zara doesn't even mention him.",
+    "next": "c2"
+   },
+   "c2": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "Stop and say hi to the guy in the corner.",
+      "effects": {
+       "affection_noah": 6,
+       "set_flags": [
+        "noticed_noah"
+       ]
+      },
+      "next": "noah"
+     },
+     {
+      "text": "Keep walking with Zara.",
+      "effects": {
+       "affection_zara": 3
+      },
+      "next": "skip"
+     }
+    ]
+   },
+   "noah": {
+    "speaker": "Noah",
+    "text": "...Oh. Hi. Noah. Data. Most people don't stop. That was — nice, actually. See you around, maybe.",
+    "next": "end"
+   },
+   "skip": {
+    "speaker": "Zara",
+    "text": "That's Noah, I think? Analytics. Keeps to himself. Anyway — that's the whole zoo. Welcome to it.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "You've met the floor. Somewhere in this room is your future — the project, the rivals, and the one person you already can't stop noticing.",
+    "terminal": true
+   }
+  }
+ },
+ "a1_task": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Your first real Lighthouse task lands in your inbox: clean up the Q2 model before the noon sync. It's more tangled than it looks.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Zara",
+    "text": "First task. Trial by spreadsheet. I can walk you through it, or you can white-knuckle it solo and impress Marcus. Your call, GUSET.",
+    "next": "c1"
+   },
+   "c1": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Walk me through it. I'd rather learn it right.'",
+      "effects": {
+       "affection_zara": 7
+      },
+      "next": "together"
+     },
+     {
+      "text": "'I'll take a run at it solo first.'",
+      "effects": {
+       "career": 6
+      },
+      "next": "solo"
+     },
+     {
+      "text": "'Race you. Loser buys the good coffee.'",
+      "effects": {
+       "affection_zara": 5,
+       "career": 3
+      },
+      "next": "race"
+     }
+    ]
+   },
+   "together": {
+    "speaker": "Zara",
+    "text": "Smart. Pull your chair over. See this tab? This is where dreams go to die. Watch.",
+    "next": "together2"
+   },
+   "together2": {
+    "speaker": "",
+    "text": "She's a good teacher — patient, funny, a little too close as she points at your screen. You get it done by eleven, and you learned something. Both of you did.",
+    "next": "end"
+   },
+   "solo": {
+    "speaker": "",
+    "text": "You grind it out yourself. It's rough, but you hand Marcus something workable. 'That's... solid,' he says, and Zara mouths 'a PARADE' from across the aisle.",
+    "next": "endsolo"
+   },
+   "race": {
+    "speaker": "Zara",
+    "text": "Oh, it's ON. No mercy for the new kid.",
+    "next": "race2"
+   },
+   "race2": {
+    "speaker": "",
+    "text": "She wins by four minutes and gloats insufferably. You don't mind losing nearly as much as you should. You owe her a good coffee — which is, you suspect, exactly what she wanted.",
+    "next": "end"
+   },
+   "endsolo": {
+    "speaker": "",
+    "text": "You proved something today. Whether it was to Marcus or to yourself, you're not sure yet.",
+    "terminal": true
+   },
+   "end": {
+    "speaker": "",
+    "text": "First task, survived. The floor feels a little less like a maze already.",
+    "terminal": true
+   }
+  }
+ },
+ "a1_coffee": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Mid-afternoon slump. Zara stands, stretches, and jerks her head toward the stairwell. 'Come on. Upstairs coffee. You've earned the good machine.'",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Zara",
+    "text": "So. GUSET. Three days in. Regretting it yet?",
+    "next": "c1"
+   },
+   "c1": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Honestly? Best part's the company at desk 13.'",
+      "effects": {
+       "affection_zara": 8
+      },
+      "next": "smooth"
+     },
+     {
+      "text": "'Ask me after the launch when I've slept.'",
+      "effects": {
+       "affection_zara": 5
+      },
+      "next": "tired"
+     },
+     {
+      "text": "'Not yet. This place grows on you.'",
+      "effects": {
+       "affection_zara": 4
+      },
+      "next": "warm"
+     }
+    ]
+   },
+   "smooth": {
+    "speaker": "Zara",
+    "text": "...Wow. Just going to say that, out loud, by the coffee machine, like it's nothing. Bold. I'll allow it.",
+    "next": "n3"
+   },
+   "tired": {
+    "speaker": "Zara",
+    "text": "Ha. Honest. Sleep is a myth here — we run on caffeine and spite. You'll fit right in.",
+    "next": "n3"
+   },
+   "warm": {
+    "speaker": "Zara",
+    "text": "It does, doesn't it. Against your better judgment. That's Meridian.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "Zara",
+    "text": "Can I tell you something a little too real for a coffee break? I've been the 'promising one' here for three years. I need Lighthouse to turn promising into something. It's kind of everything for me.",
+    "next": "c2"
+   },
+   "c2": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Then it will. You're the sharpest person here.'",
+      "effects": {
+       "affection_zara": 8
+      },
+      "next": "believe"
+     },
+     {
+      "text": "'No pressure or anything, huh.'",
+      "effects": {
+       "affection_zara": 4
+      },
+      "next": "joke"
+     }
+    ]
+   },
+   "believe": {
+    "speaker": "Zara",
+    "text": "...Careful. Keep saying things like that and I'll actually start believing them. That's dangerous for a person like me.",
+    "next": "end"
+   },
+   "joke": {
+    "speaker": "Zara",
+    "text": "None whatsoever. I'm perfectly calm. This is my calm face. ...Thanks for listening, though. Genuinely.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "You go back down two floors and somehow closer than you went up.",
+    "terminal": true
+   }
+  }
+ },
+ "a1_priya": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 2. You're refilling at the printer when Priya materialises beside you, all crisp edges and calculation.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Priya",
+    "text": "A word of advice, new hire. Zara's lovely. She's also my competition for the Lighthouse lead, and she'll be yours too before long. Don't get so cosy you forget that.",
+    "next": "c1"
+   },
+   "c1": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Zara's a colleague and a friend. That's not going to change.'",
+      "effects": {
+       "affection_zara": 7
+      },
+      "next": "loyal"
+     },
+     {
+      "text": "'Noted. I don't rattle easily.'",
+      "effects": {
+       "reputation": 4
+      },
+      "next": "cool"
+     },
+     {
+      "text": "'Sounds like you're the one who's rattled.'",
+      "effects": {
+       "affection_priya": 4,
+       "reputation": 2
+      },
+      "next": "spar"
+     }
+    ]
+   },
+   "loyal": {
+    "speaker": "Priya",
+    "text": "How sweet. We'll see how that holds when the promotion's real and it's her name or yours. It always changes. Enjoy the honeymoon.",
+    "next": "end"
+   },
+   "cool": {
+    "speaker": "Priya",
+    "text": "Good. Rattled people make mistakes, and I don't intend to. Welcome to the real game, new hire.",
+    "next": "end"
+   },
+   "spar": {
+    "speaker": "Priya",
+    "text": "...Ha. Okay. You've got a spine. I'll give you that much. Most of them don't. This'll be more interesting than I thought.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "Back at your desk, Zara reads your face in half a second. 'Priya got to you. What did she say?' You realise the promotion's already a shadow on the floor — and it's only week two.",
+    "terminal": true
+   }
+  }
+ },
+ "a1_latenight": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "9pm. The floor is empty except for the two of you and a Lighthouse deadline that refuses to be finished. Zara slides a takeout carton across the aisle.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Zara",
+    "text": "I over-ordered. It's a defence mechanism. Sit. Eat. Suffer with me. Misery loves noodles.",
+    "next": "c1"
+   },
+   "c1": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'What made you want this job, really?'",
+      "effects": {
+       "affection_zara": 8
+      },
+      "next": "why"
+     },
+     {
+      "text": "'Let's crush this deck and get out of here.'",
+      "effects": {
+       "career": 5,
+       "affection_zara": 2
+      },
+      "next": "work"
+     }
+    ]
+   },
+   "why": {
+    "speaker": "Zara",
+    "text": "Honestly? My family thinks 'analyst at Meridian' is a phase before a real career. Lighthouse is me proving it's not. To them. To me. To Priya, a little, if I'm honest.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "Zara",
+    "text": "...I don't say that to people. Blame the noodles and the terrible hour.",
+    "next": "c2"
+   },
+   "c2": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'For what it's worth, you don't have anything to prove to me.'",
+      "effects": {
+       "affection_zara": 9
+      },
+      "next": "soft"
+     },
+     {
+      "text": "'Then let's make sure they all see it. Together.'",
+      "effects": {
+       "affection_zara": 6,
+       "career": 3
+      },
+      "next": "ally"
+     }
+    ]
+   },
+   "soft": {
+    "speaker": "Zara",
+    "text": "...You keep doing that. Saying the thing that gets right under my ribs. Stop it. Don't stop it. I don't know.",
+    "next": "end"
+   },
+   "ally": {
+    "speaker": "Zara",
+    "text": "Together. God, that's a nice word after three years of 'on your own, kid.' Okay. Partners on this.",
+    "next": "end"
+   },
+   "work": {
+    "speaker": "Zara",
+    "text": "A professional. Devastating. Fine — but you're taking half these noodles, I refuse to carry the guilt home alone.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "You finish at eleven. It's late, and you're exhausted, and you can't remember the last time work felt this much like something else.",
+    "terminal": true
+   }
+  }
+ },
+ "a1_lobby": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "The lift down is slow. It's just the two of you, tired and a little punch-drunk, watching the floor numbers count down.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Zara",
+    "text": "This is the part of the night where I usually say something too honest and then blame it on being tired. So. Fair warning.",
+    "next": "c1"
+   },
+   "c1": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Say it. I won't hold it against you.'",
+      "effects": {
+       "affection_zara": 8,
+       "set_flags": [
+        "zara_spark"
+       ]
+      },
+      "next": "honest"
+     },
+     {
+      "text": "'Get home, get some sleep. It'll keep.'",
+      "effects": {
+       "affection_zara": 4
+      },
+      "next": "gentle"
+     }
+    ]
+   },
+   "honest": {
+    "speaker": "Zara",
+    "text": "...I'm glad it was you at that desk. That's all. That's the too-honest thing. Okay, doors are opening, we never speak of this, goodnight.",
+    "next": "end"
+   },
+   "gentle": {
+    "speaker": "Zara",
+    "text": "...Yeah. You're right. Rain check on the honesty. Get home safe, GUSET.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "You walk out into the cool night. Somewhere behind you the lift closes, and you're smiling at nothing.",
+    "terminal": true
+   }
+  }
+ },
+ "a1_marcus": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Week 3. Marcus waves you into his office. Zara watches you go with a raised eyebrow.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Marcus",
+    "text": "You've settled in fast. Good instincts, plays well with the team. I'll be honest with you, because you'll hear it soon anyway.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "Marcus",
+    "text": "There's a lead role opening on Lighthouse at the end of the quarter. One of the juniors gets it. You're in the conversation. So is Zara. So is Priya. I'd rather you knew than found out in a rumour.",
+    "next": "c1"
+   },
+   "c1": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'I appreciate the honesty. I'll earn it fairly.'",
+      "effects": {
+       "reputation": 6
+      },
+      "next": "fair"
+     },
+     {
+      "text": "'What matters most to you in whoever leads?'",
+      "effects": {
+       "career": 5,
+       "affection_marcus": 3
+      },
+      "next": "ask"
+     },
+     {
+      "text": "'Zara's wanted this for years. She's ready.'",
+      "effects": {
+       "affection_zara": 8
+      },
+      "next": "champion"
+     }
+    ]
+   },
+   "fair": {
+    "speaker": "Marcus",
+    "text": "Fairly. Good. That's rarer than it should be around here. Keep it that way when it gets tight — and it will get tight.",
+    "next": "end"
+   },
+   "ask": {
+    "speaker": "Marcus",
+    "text": "Someone who lifts the team instead of climbing over it. Talent I can find anywhere. That, I can't. Remember I said so.",
+    "next": "end"
+   },
+   "champion": {
+    "speaker": "Marcus",
+    "text": "...Interesting. Championing your competition. That tells me more about you than any spreadsheet could. Noted.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "You leave the office knowing the thing that's going to test everything — you and Zara included — now has a name and a deadline.",
+    "terminal": true
+   }
+  }
+ },
+ "a1_rooftop": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Lunch. Zara tips her head toward the stairwell. 'Come on. I'm showing you the one genuinely good thing about this building.'",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "",
+    "text": "The rooftop. The whole city laid out, warm and loud and far below. She leans on the railing like it's an old friend.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "Zara",
+    "text": "I come up here when the floor gets to be too much. You're the first person I've ever brought. So, you know. Don't make it a thing.",
+    "next": "c1"
+   },
+   "c1": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Why me?'",
+      "effects": {
+       "affection_zara": 9
+      },
+      "next": "whyme"
+     },
+     {
+      "text": "'Secret's safe. I'll guard the rooftop with my life.'",
+      "effects": {
+       "affection_zara": 6
+      },
+      "next": "guard"
+     },
+     {
+      "text": "'Even with the promotion thing hanging over us?'",
+      "effects": {
+       "affection_zara": 5
+      },
+      "next": "real"
+     }
+    ]
+   },
+   "whyme": {
+    "speaker": "Zara",
+    "text": "...Because you're easy to be around. Do you know how rare that is? I spend all day with my guard up. Up here, with you, I forget to.",
+    "next": "spark"
+   },
+   "guard": {
+    "speaker": "Zara",
+    "text": "Good. Because this is the only place I don't have to perform. Don't take that away.",
+    "next": "spark"
+   },
+   "real": {
+    "speaker": "Zara",
+    "text": "...Yeah. Even with that. Maybe especially with that. Up here it doesn't feel like it has to come between us. Down there's a different story.",
+    "next": "spark"
+   },
+   "spark": {
+    "speaker": "",
+    "text": "For a moment neither of you says anything. The city hums. The moment stretches, comfortable and just slightly electric.",
+    "next": "c2"
+   },
+   "c2": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'For what it's worth, you're pretty easy to be around too.'",
+      "effects": {
+       "affection_zara": 9,
+       "set_flags": [
+        "zara_spark"
+       ]
+      },
+      "next": "close"
+     },
+     {
+      "text": "'We should head back before someone notices.'",
+      "effects": {
+       "affection_zara": 3
+      },
+      "next": "retreat"
+     }
+    ]
+   },
+   "close": {
+    "speaker": "Zara",
+    "text": "...Okay. We should go back down before I say the next thing, because I will absolutely overthink it for a week.",
+    "next": "end"
+   },
+   "retreat": {
+    "speaker": "Zara",
+    "text": "...Yeah. Back to reality. Come up whenever, though. Just — maybe when I'm hiding, not when I'm being sensible.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "You head back down. Whatever this is, it stopped being nothing a while ago.",
+    "terminal": true
+   }
+  }
+ },
+ "a1_afterwork": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Friday. The team scatters for the weekend. Zara lingers by your desk, jacket half on, pretending to look for something.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "Zara",
+    "text": "So there's a not-terrible bar around the corner. I'm going. You could also go. To the same place. At the same time. As friends. Or whatever. God, I'm bad at this.",
+    "next": "c1"
+   },
+   "c1": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Are you asking me for a drink, Zara?'",
+      "effects": {
+       "affection_zara": 8
+      },
+      "next": "yes"
+     },
+     {
+      "text": "'Lead the way. I could use it.'",
+      "effects": {
+       "affection_zara": 6
+      },
+      "next": "sure"
+     }
+    ]
+   },
+   "yes": {
+    "speaker": "Zara",
+    "text": "...I'm asking you for a drink. Yes. Badly. Please put me out of my misery and say yes.",
+    "next": "bar"
+   },
+   "sure": {
+    "speaker": "Zara",
+    "text": "Oh thank god, a normal response. Come on.",
+    "next": "bar"
+   },
+   "bar": {
+    "speaker": "",
+    "text": "The bar is warm and half-empty and perfect. Two drinks in, the work armour is off and it's just two people talking.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "Zara",
+    "text": "Okay, real question. When Priya cornered you about the promotion — did it work? Are you already sizing me up as competition?",
+    "next": "c2"
+   },
+   "c2": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'I'm sitting here with you on a Friday. What do you think?'",
+      "effects": {
+       "affection_zara": 10
+      },
+      "next": "warm"
+     },
+     {
+      "text": "'I won't lie — I want the lead. I also want this. Both can be true.'",
+      "effects": {
+       "affection_zara": 7,
+       "career": 4
+      },
+      "next": "honest"
+     },
+     {
+      "text": "'Let's not let a promotion write our story for us.'",
+      "effects": {
+       "affection_zara": 8
+      },
+      "next": "story"
+     }
+    ]
+   },
+   "warm": {
+    "speaker": "Zara",
+    "text": "...Fair point. Damn it. You keep disarming me and I keep letting you. That should worry me more than it does.",
+    "next": "close"
+   },
+   "honest": {
+    "speaker": "Zara",
+    "text": "...You know what, thank you for not pretending. I'd rather the honest version of you than a comfortable lie. Both can be true. We'll figure out the both later.",
+    "next": "close"
+   },
+   "story": {
+    "speaker": "Zara",
+    "text": "...Yeah. Let's not. I like our story. I'd like to see where it goes before the office gets a vote.",
+    "next": "close"
+   },
+   "close": {
+    "speaker": "",
+    "text": "You talk until the bar starts stacking chairs. On the pavement outside, there's a pause — the kind that could tip either way.",
+    "next": "c3"
+   },
+   "c3": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'This was the best part of my week.'",
+      "effects": {
+       "affection_zara": 8,
+       "set_flags": [
+        "zara_spark"
+       ]
+      },
+      "next": "end"
+     },
+     {
+      "text": "'Same time next week?'",
+      "effects": {
+       "affection_zara": 6,
+       "set_flags": [
+        "zara_spark"
+       ]
+      },
+      "next": "endnext"
+     }
+    ]
+   },
+   "endnext": {
+    "speaker": "Zara",
+    "text": "Same time next week. It's a date. ...I said date. I'm leaving now. Goodnight, GUSET.",
+    "terminal": true
+   },
+   "end": {
+    "speaker": "Zara",
+    "text": "...Mine too. Don't let that go to your head. Okay, maybe a little to your head. Goodnight, GUSET.",
+    "terminal": true
+   }
+  }
+ },
+ "a1_monday": {
+  "start": "n1",
+  "nodes": {
+   "n1": {
+    "speaker": "",
+    "text": "Monday. Week 4. The weekend glow lasts exactly until you step off the lift and feel the change in the air.",
+    "next": "n2"
+   },
+   "n2": {
+    "speaker": "",
+    "text": "There's a printed memo on every desk. An all-hands is scheduled for this morning. Zara catches your eye across the aisle, and you both already know what it's about.",
+    "next": "n3"
+   },
+   "n3": {
+    "speaker": "Zara",
+    "text": "Whatever they say in there — this weekend was real. Hold onto that. Because I have a feeling things are about to get complicated.",
+    "next": "c1"
+   },
+   "c1": {
+    "speaker": "You",
+    "choices": [
+     {
+      "text": "'Complicated doesn't scare me. Not with you.'",
+      "effects": {
+       "affection_zara": 7
+      },
+      "next": "brave"
+     },
+     {
+      "text": "'Then let's promise to stay honest, whatever happens.'",
+      "effects": {
+       "affection_zara": 6
+      },
+      "next": "promise"
+     }
+    ]
+   },
+   "brave": {
+    "speaker": "Zara",
+    "text": "...Okay. Okay. Hold that thought. We're going to need it.",
+    "next": "end"
+   },
+   "promise": {
+    "speaker": "Zara",
+    "text": "Honest. Whatever happens. Deal. Shake on it before I lose my nerve — and before Marcus starts talking.",
+    "next": "end"
+   },
+   "end": {
+    "speaker": "",
+    "text": "The all-hands is starting. Act 1 is over — you know these people now, and you know what you're walking into. Everything that happens next, happens because this part was real.",
+    "terminal": true
+   }
+  }
+ }
 }
